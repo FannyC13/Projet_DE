@@ -1,0 +1,1274 @@
+2024.04.04 17:31:43 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE' for client Visual Studio Code 1.87.2.
+17:31:48.384 [pool-1-thread-8] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+17:31:48.399 [pool-1-thread-8] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+17:31:48.399 [pool-1-thread-8] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+17:31:48.414 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+17:31:48.415 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+17:31:48.425 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+17:31:48.426 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+17:31:48.427 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+17:31:48.435 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/fchan/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+17:31:48.455 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+17:31:48.456 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+17:31:48.457 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+17:31:48.457 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+17:31:48.457 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+17:31:48.457 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+17:31:48.474 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+17:31:48.474 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+17:31:48.477 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+17:31:48.479 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+17:31:48.479 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+17:31:48.722 [pool-1-thread-8] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\metals (H2 2.2)
+17:31:48.722 [pool-1-thread-8] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+17:31:48.722 [pool-1-thread-8] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+17:31:48.724 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+17:31:48.725 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+17:31:48.735 [pool-1-thread-8] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+17:31:48.740 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+17:31:48.740 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+17:31:48.758 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+17:31:48.769 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+17:31:48.788 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+17:31:48.789 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+17:31:48.789 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+17:31:48.790 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+17:31:48.790 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+17:31:48.792 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+17:31:48.792 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+17:31:48.792 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+17:31:48.793 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+17:31:48.793 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+17:31:48.799 [pool-1-thread-8] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+17:31:48.807 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.046s)
+17:31:48.813 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+17:31:48.824 [pool-1-thread-8] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+17:31:48.831 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing  ...
+17:31:48.859 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 1: CREATE TABLE IF NOT EXISTS "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL,
+    CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+) AS SELECT -1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', CURRENT_TIMESTAMP, 0, TRUE
+17:31:48.860 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 14: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+17:31:48.862 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: CREATE TABLE IF NOT EXISTS "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL,
+    CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+) AS SELECT -1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', CURRENT_TIMESTAMP, 0, TRUE
+17:31:48.869 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.869 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+17:31:48.874 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.874 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Created Schema History table "PUBLIC"."flyway_schema_history"
+17:31:48.888 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": << Empty Schema >>
+17:31:48.890 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V1__Create_tables.sql ...
+17:31:48.893 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 4: -- The relationship between library dependency sources under .metals/readonly/**
+-- and build targets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table dependency_source(
+  text_document_uri varchar primary key,
+  build_target_uri varchar not null
+)
+17:31:48.894 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 12: -- The relationship between library dependency sources under .metals/readonly/**
+-- and worksheets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table worksheet_dependency_source(
+  text_document_uri varchar primary key,
+  worksheet_uri varchar not null
+)
+17:31:48.896 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 19: -- The relationship between what library dependency sources under .metals/readonly/**
+-- map to which build targets.
+create table sbt_digest(
+  md5 varchar,
+  status tinyint not null,
+  when_recorded timestamp
+)
+17:31:48.897 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 27: -- Which window/showMessage and window/showMessageRequest dialogues have been dismissed
+-- by the user via "Don't show again" or closed by clicking on "x".
+create table dismissed_notification(
+  id int,
+  when_dismissed timestamp,
+  when_expires timestamp
+)
+17:31:48.898 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 34: -- The choice of build tool when multiple build tool files are found in a workspace
+create table chosen_build_tool(
+  build_tool varchar primary key
+)
+17:31:48.900 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "1 - Create tables" ...
+17:31:48.902 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "1 - Create tables"
+17:31:48.905 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between library dependency sources under .metals/readonly/**
+-- and build targets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table dependency_source(
+  text_document_uri varchar primary key,
+  build_target_uri varchar not null
+)
+17:31:48.908 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.908 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between library dependency sources under .metals/readonly/**
+-- and worksheets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table worksheet_dependency_source(
+  text_document_uri varchar primary key,
+  worksheet_uri varchar not null
+)
+17:31:48.910 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.911 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between what library dependency sources under .metals/readonly/**
+-- map to which build targets.
+create table sbt_digest(
+  md5 varchar,
+  status tinyint not null,
+  when_recorded timestamp
+)
+17:31:48.913 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.914 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Which window/showMessage and window/showMessageRequest dialogues have been dismissed
+-- by the user via "Don't show again" or closed by clicking on "x".
+create table dismissed_notification(
+  id int,
+  when_dismissed timestamp,
+  when_expires timestamp
+)
+17:31:48.915 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.916 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The choice of build tool when multiple build tool files are found in a workspace
+create table chosen_build_tool(
+  build_tool varchar primary key
+)
+17:31:48.918 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.918 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "1 - Create tables"
+17:31:48.930 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+17:31:48.941 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V2__Server_discovery.sql ...
+17:31:48.945 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 4: -- For each unique combination of installed build servers we select one server.
+-- The md5 checksum is computed from the names of the installed build servers, and
+-- the selected server is the server which the user chose for this workspace.
+create table chosen_build_server(
+  md5 varchar primary key,
+  selected_server varchar,
+  when_recorded timestamp
+)
+17:31:48.945 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "2 - Server discovery" ...
+17:31:48.946 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "2 - Server discovery"
+17:31:48.946 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- For each unique combination of installed build servers we select one server.
+-- The md5 checksum is computed from the names of the installed build servers, and
+-- the selected server is the server which the user chose for this workspace.
+create table chosen_build_server(
+  md5 varchar primary key,
+  selected_server varchar,
+  when_recorded timestamp
+)
+17:31:48.948 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.949 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "2 - Server discovery"
+17:31:48.955 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+17:31:48.961 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V3__Jar_symbols.sql ...
+17:31:48.964 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 2: -- Indexed jars, the MD5 digest of path, modified time and size as key
+create table indexed_jar(
+  id int auto_increment unique,
+  md5 varchar primary key
+)
+17:31:48.965 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 7: -- Top Level Symbols per jar, allow for multiple jars with same symbols and paths
+create table toplevel_symbol(
+  symbol varchar not null,
+  path varchar not null,
+  jar int,
+  foreign key (jar) references indexed_jar (id) on delete cascade,
+  primary key (jar, path, symbol)
+)
+17:31:48.970 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 15: -- Create index to speedup lookup of jar symbols
+create index toplevel_symbol_jar on toplevel_symbol(jar)
+17:31:48.971 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "3 - Jar symbols" ...
+17:31:48.974 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "3 - Jar symbols"
+17:31:48.974 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Indexed jars, the MD5 digest of path, modified time and size as key
+create table indexed_jar(
+  id int auto_increment unique,
+  md5 varchar primary key
+)
+17:31:48.988 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:48.989 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Top Level Symbols per jar, allow for multiple jars with same symbols and paths
+create table toplevel_symbol(
+  symbol varchar not null,
+  path varchar not null,
+  jar int,
+  foreign key (jar) references indexed_jar (id) on delete cascade,
+  primary key (jar, path, symbol)
+)
+17:31:49.007 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:49.008 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Create index to speedup lookup of jar symbols
+create index toplevel_symbol_jar on toplevel_symbol(jar)
+17:31:49.010 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:49.010 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "3 - Jar symbols"
+17:31:49.015 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+17:31:49.025 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V4__Fingerprints.sql ...
+17:31:49.028 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 2: -- Fingerprints saved between invocations
+create table fingerprints(
+  path varchar not null,
+  text varchar not null,
+  md5 varchar not null,
+  id int auto_increment unique
+)
+17:31:49.028 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "4 - Fingerprints" ...
+17:31:49.029 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "4 - Fingerprints"
+17:31:49.036 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Fingerprints saved between invocations
+create table fingerprints(
+  path varchar not null,
+  text varchar not null,
+  md5 varchar not null,
+  id int auto_increment unique
+)
+17:31:49.039 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+17:31:49.039 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "4 - Fingerprints"
+17:31:49.041 [pool-1-thread-8] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+17:31:49.057 [pool-1-thread-8] INFO org.flywaydb.core.internal.command.DbMigrate -- Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.069s)
+17:31:49.094 [pool-1-thread-8] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 38 of 100M
+2024.04.04 17:31:49 WARN  no build tool detected in workspace 'C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2024.04.04 17:31:49 WARN  Build server is not auto-connectable.
+2024.04.04 17:33:17 INFO  
+2024.04.04 17:33:17 INFO  Template applied in C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.\scala3
+2024.04.04 17:33:17 INFO  
+2024.04.04 17:33:17 INFO  time: ran 'giter8.Giter8' in 7.08s
+2024.04.04 17:34:56 INFO  running 'C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals16520086594260224423\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.04 17:34:57 ERROR [info] [launcher] getting org.scala-sbt sbt 1.9.9  (this may take some time)...
+2024.04.04 17:35:07 INFO  [info] welcome to sbt 1.9.9 (Oracle Corporation Java 11.0.0.1)
+2024.04.04 17:35:11 INFO  [info] loading global plugins from C:\Users\fchan\.sbt\1.0\plugins
+2024.04.04 17:35:26 INFO  [info] loading settings for project scala3-build-build from metals.sbt ...
+2024.04.04 17:35:26 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project\project
+2024.04.04 17:35:30 INFO  [info] loading settings for project scala3-build from metals.sbt ...
+2024.04.04 17:35:30 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project
+2024.04.04 17:35:38 INFO  [success] Generated .bloop\scala3-build.json
+2024.04.04 17:35:38 INFO  [success] Total time: 7 s, completed 4 avr. 2024 à 17:35:38
+2024.04.04 17:35:43 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.04 17:35:43 INFO  [info] set current project to scala3 (in build file:/C:/Users/fchan/OneDrive%20-%20Efrei/M1/Semetre%208/Data%20Engineering/Project/Projet_DE/scala3/)
+2024.04.04 17:35:55 INFO  [success] Generated .bloop\root-test.json
+2024.04.04 17:35:55 INFO  [success] Generated .bloop\root.json
+2024.04.04 17:35:55 INFO  [success] Total time: 11 s, completed 4 avr. 2024 à 17:35:55
+2024.04.04 17:35:56 INFO  no build target found for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.04.04 17:35:58 INFO  time: ran 'sbt bloopInstall' in 1m1s
+2024.04.04 17:35:58 INFO  Attempting to connect to the build server...
+2024.04.04 17:35:58 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.04 17:36:07 INFO  time: code lens generation in 16s
+2024.04.04 17:36:07 INFO  time: code lens generation in 44s
+2024.04.04 17:36:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.04 17:36:13 INFO  time: Connected to build server in 15s
+2024.04.04 17:36:13 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.04 17:36:14 INFO  time: Imported build in 0.49s
+2024.04.04 17:36:15 INFO  Failed to resolve mtags for 3.4.1
+2024.04.04 17:36:28 INFO  time: indexed workspace in 13s
+2024.04.04 17:36:29 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:36:30 INFO  compiling root (1 scala source)
+2024.04.04 17:36:47 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:36:47 INFO  compiling root-test (1 scala source)
+2024.04.04 17:36:49 INFO  time: compiled root in 18s
+2024.04.04 17:36:54 INFO  time: compiled root-test in 6.53s
+2024.04.04 17:36:57 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:36:57 INFO  compiling root (1 scala source)
+2024.04.04 17:36:59 INFO  time: compiled root in 1.4s
+2024.04.04 17:36:59 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:06 INFO  compiling root (1 scala source)
+2024.04.04 17:37:06 INFO  time: compiled root in 0.44s
+2024.04.04 17:37:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:07 INFO  compiling root (1 scala source)
+2024.04.04 17:37:07 INFO  time: compiled root in 0.81s
+2024.04.04 17:37:08 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:15 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:15 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:15 INFO  compiling root (1 scala source)
+2024.04.04 17:37:15 INFO  time: compiled root in 88ms
+2024.04.04 17:37:16 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:17 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:17 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:18 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:18 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:37:19 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:19 INFO  compiling root (1 scala source)
+2024.04.04 17:37:20 INFO  time: compiled root in 1.1s
+2024.04.04 17:37:23 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:23 INFO  compiling root (1 scala source)
+2024.04.04 17:37:25 INFO  time: compiled root in 1.45s
+2024.04.04 17:37:34 INFO  Report absolute-path: ### java.lang.IllegalArgumentException: Illegal character in opaque part at index 22: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+
+Uri: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+
+
+#### Error stacktrace:
+
+```
+java.base/java.net.URI.create(URI.java:883)
+	scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:177)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:706)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:703)
+	scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePathSafe(MetalsEnrichments.scala:689)
+	scala.meta.internal.metals.WorkspaceLspService.getServiceFor(WorkspaceLspService.scala:262)
+	scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:703)
+	scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	java.base/java.lang.Thread.run(Thread.java:834)
+```
+
+avr. 04, 2024 5:37:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "jar:file%3A///C%3A/Program%20Files/Java/jdk-11.0.0.1/lib/src.zip%21/java.base/java/time/Instant.java",
+      "languageId": "java",
+      "version": 1,
+      "text": "/*\n * Copyright (c) 2012, 2018, Oracle and/or its affiliates. All rights reserved.\n * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.\n *\n * This code is free software; you can redistribute it and/or modify it\n * under the terms of the GNU General Public License version 2 only, as\n * published by the Free Software Foundation.  Oracle designates this\n * particular file as subject to the \"Classpath\" exception as provided\n * by Oracle in the LICENSE file that accompanied this code.\n *\n * This code is distributed in the hope that it will be useful, but WITHOUT\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or\n * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License\n * version 2 for more details (a copy is included in the LICENSE file that\n * accompanied this code).\n *\n * You should have received a copy of the GNU General Public License version\n * 2 along with this work; if not, write to the Free Software Foundation,\n * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.\n *\n * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA\n * or visit www.oracle.com if you need additional information or have any\n * questions.\n */\n\n/*\n * This file is available under and governed by the GNU General Public\n * License version 2 only, as published by the Free Software Foundation.\n * However, the following notice accompanied the original version of this\n * file:\n *\n * Copyright (c) 2007-2012, Stephen Colebourne \u0026 Michael Nascimento Santos\n *\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n *  * Redistributions of source code must retain the above copyright notice,\n *    this list of conditions and the following disclaimer.\n *\n *  * Redistributions in binary form must reproduce the above copyright notice,\n *    this list of conditions and the following disclaimer in the documentation\n *    and/or other materials provided with the distribution.\n *\n *  * Neither the name of JSR-310 nor the names of its contributors\n *    may be used to endorse or promote products derived from this software\n *    without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR\n * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\n * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\n * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\n * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\n * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\n * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\npackage java.time;\n\nimport static java.time.LocalTime.NANOS_PER_SECOND;\nimport static java.time.LocalTime.SECONDS_PER_DAY;\nimport static java.time.LocalTime.SECONDS_PER_HOUR;\nimport static java.time.LocalTime.SECONDS_PER_MINUTE;\nimport static java.time.temporal.ChronoField.INSTANT_SECONDS;\nimport static java.time.temporal.ChronoField.MICRO_OF_SECOND;\nimport static java.time.temporal.ChronoField.MILLI_OF_SECOND;\nimport static java.time.temporal.ChronoField.NANO_OF_SECOND;\nimport static java.time.temporal.ChronoUnit.DAYS;\nimport static java.time.temporal.ChronoUnit.NANOS;\n\nimport java.io.DataInput;\nimport java.io.DataOutput;\nimport java.io.IOException;\nimport java.io.InvalidObjectException;\nimport java.io.ObjectInputStream;\nimport java.io.Serializable;\nimport java.time.format.DateTimeFormatter;\nimport java.time.format.DateTimeParseException;\nimport java.time.temporal.ChronoField;\nimport java.time.temporal.ChronoUnit;\nimport java.time.temporal.Temporal;\nimport java.time.temporal.TemporalAccessor;\nimport java.time.temporal.TemporalAdjuster;\nimport java.time.temporal.TemporalAmount;\nimport java.time.temporal.TemporalField;\nimport java.time.temporal.TemporalQueries;\nimport java.time.temporal.TemporalQuery;\nimport java.time.temporal.TemporalUnit;\nimport java.time.temporal.UnsupportedTemporalTypeException;\nimport java.time.temporal.ValueRange;\nimport java.util.Objects;\n\n/**\n * An instantaneous point on the time-line.\n * \u003cp\u003e\n * This class models a single instantaneous point on the time-line.\n * This might be used to record event time-stamps in the application.\n * \u003cp\u003e\n * The range of an instant requires the storage of a number larger than a {@code long}.\n * To achieve this, the class stores a {@code long} representing epoch-seconds and an\n * {@code int} representing nanosecond-of-second, which will always be between 0 and 999,999,999.\n * The epoch-seconds are measured from the standard Java epoch of {@code 1970-01-01T00:00:00Z}\n * where instants after the epoch have positive values, and earlier instants have negative values.\n * For both the epoch-second and nanosecond parts, a larger value is always later on the time-line\n * than a smaller value.\n *\n * \u003ch3\u003eTime-scale\u003c/h3\u003e\n * \u003cp\u003e\n * The length of the solar day is the standard way that humans measure time.\n * This has traditionally been subdivided into 24 hours of 60 minutes of 60 seconds,\n * forming a 86400 second day.\n * \u003cp\u003e\n * Modern timekeeping is based on atomic clocks which precisely define an SI second\n * relative to the transitions of a Caesium atom. The length of an SI second was defined\n * to be very close to the 86400th fraction of a day.\n * \u003cp\u003e\n * Unfortunately, as the Earth rotates the length of the day varies.\n * In addition, over time the average length of the day is getting longer as the Earth slows.\n * As a result, the length of a solar day in 2012 is slightly longer than 86400 SI seconds.\n * The actual length of any given day and the amount by which the Earth is slowing\n * are not predictable and can only be determined by measurement.\n * The UT1 time-scale captures the accurate length of day, but is only available some\n * time after the day has completed.\n * \u003cp\u003e\n * The UTC time-scale is a standard approach to bundle up all the additional fractions\n * of a second from UT1 into whole seconds, known as \u003ci\u003eleap-seconds\u003c/i\u003e.\n * A leap-second may be added or removed depending on the Earth\u0027s rotational changes.\n * As such, UTC permits a day to have 86399 SI seconds or 86401 SI seconds where\n * necessary in order to keep the day aligned with the Sun.\n * \u003cp\u003e\n * The modern UTC time-scale was introduced in 1972, introducing the concept of whole leap-seconds.\n * Between 1958 and 1972, the definition of UTC was complex, with minor sub-second leaps and\n * alterations to the length of the notional second. As of 2012, discussions are underway\n * to change the definition of UTC again, with the potential to remove leap seconds or\n * introduce other changes.\n * \u003cp\u003e\n * Given the complexity of accurate timekeeping described above, this Java API defines\n * its own time-scale, the \u003ci\u003eJava Time-Scale\u003c/i\u003e.\n * \u003cp\u003e\n * The Java Time-Scale divides each calendar day into exactly 86400\n * subdivisions, known as seconds.  These seconds may differ from the\n * SI second.  It closely matches the de facto international civil time\n * scale, the definition of which changes from time to time.\n * \u003cp\u003e\n * The Java Time-Scale has slightly different definitions for different\n * segments of the time-line, each based on the consensus international\n * time scale that is used as the basis for civil time. Whenever the\n * internationally-agreed time scale is modified or replaced, a new\n * segment of the Java Time-Scale must be defined for it.  Each segment\n * must meet these requirements:\n * \u003cul\u003e\n * \u003cli\u003ethe Java Time-Scale shall closely match the underlying international\n *  civil time scale;\u003c/li\u003e\n * \u003cli\u003ethe Java Time-Scale shall exactly match the international civil\n *  time scale at noon each day;\u003c/li\u003e\n * \u003cli\u003ethe Java Time-Scale shall have a precisely-defined relationship to\n *  the international civil time scale.\u003c/li\u003e\n * \u003c/ul\u003e\n * There are currently, as of 2013, two segments in the Java time-scale.\n * \u003cp\u003e\n * For the segment from 1972-11-03 (exact boundary discussed below) until\n * further notice, the consensus international time scale is UTC (with\n * leap seconds).  In this segment, the Java Time-Scale is identical to\n * \u003ca href\u003d\"http://www.cl.cam.ac.uk/~mgk25/time/utc-sls/\"\u003eUTC-SLS\u003c/a\u003e.\n * This is identical to UTC on days that do not have a leap second.\n * On days that do have a leap second, the leap second is spread equally\n * over the last 1000 seconds of the day, maintaining the appearance of\n * exactly 86400 seconds per day.\n * \u003cp\u003e\n * For the segment prior to 1972-11-03, extending back arbitrarily far,\n * the consensus international time scale is defined to be UT1, applied\n * proleptically, which is equivalent to the (mean) solar time on the\n * prime meridian (Greenwich). In this segment, the Java Time-Scale is\n * identical to the consensus international time scale. The exact\n * boundary between the two segments is the instant where UT1 \u003d UTC\n * between 1972-11-03T00:00 and 1972-11-04T12:00.\n * \u003cp\u003e\n * Implementations of the Java time-scale using the JSR-310 API are not\n * required to provide any clock that is sub-second accurate, or that\n * progresses monotonically or smoothly. Implementations are therefore\n * not required to actually perform the UTC-SLS slew or to otherwise be\n * aware of leap seconds. JSR-310 does, however, require that\n * implementations must document the approach they use when defining a\n * clock representing the current instant.\n * See {@link Clock} for details on the available clocks.\n * \u003cp\u003e\n * The Java time-scale is used for all date-time classes.\n * This includes {@code Instant}, {@code LocalDate}, {@code LocalTime}, {@code OffsetDateTime},\n * {@code ZonedDateTime} and {@code Duration}.\n *\n * \u003cp\u003e\n * This is a \u003ca href\u003d\"{@docRoot}/java.base/java/lang/doc-files/ValueBased.html\"\u003evalue-based\u003c/a\u003e\n * class; use of identity-sensitive operations (including reference equality\n * ({@code \u003d\u003d}), identity hash code, or synchronization) on instances of\n * {@code Instant} may have unpredictable results and should be avoided.\n * The {@code equals} method should be used for comparisons.\n *\n * @implSpec\n * This class is immutable and thread-safe.\n *\n * @since 1.8\n */\npublic final class Instant\n        implements Temporal, TemporalAdjuster, Comparable\u003cInstant\u003e, Serializable {\n\n    /**\n     * Constant for the 1970-01-01T00:00:00Z epoch instant.\n     */\n    public static final Instant EPOCH \u003d new Instant(0, 0);\n    /**\n     * The minimum supported epoch second.\n     */\n    private static final long MIN_SECOND \u003d -31557014167219200L;\n    /**\n     * The maximum supported epoch second.\n     */\n    private static final long MAX_SECOND \u003d 31556889864403199L;\n    /**\n     * The minimum supported {@code Instant}, \u0027-1000000000-01-01T00:00Z\u0027.\n     * This could be used by an application as a \"far past\" instant.\n     * \u003cp\u003e\n     * This is one year earlier than the minimum {@code LocalDateTime}.\n     * This provides sufficient values to handle the range of {@code ZoneOffset}\n     * which affect the instant in addition to the local date-time.\n     * The value is also chosen such that the value of the year fits in\n     * an {@code int}.\n     */\n    public static final Instant MIN \u003d Instant.ofEpochSecond(MIN_SECOND, 0);\n    /**\n     * The maximum supported {@code Instant}, \u00271000000000-12-31T23:59:59.999999999Z\u0027.\n     * This could be used by an application as a \"far future\" instant.\n     * \u003cp\u003e\n     * This is one year later than the maximum {@code LocalDateTime}.\n     * This provides sufficient values to handle the range of {@code ZoneOffset}\n     * which affect the instant in addition to the local date-time.\n     * The value is also chosen such that the value of the year fits in\n     * an {@code int}.\n     */\n    public static final Instant MAX \u003d Instant.ofEpochSecond(MAX_SECOND, 999_999_999);\n\n    /**\n     * Serialization version.\n     */\n    private static final long serialVersionUID \u003d -665713676816604388L;\n\n    /**\n     * The number of seconds from the epoch of 1970-01-01T00:00:00Z.\n     */\n    private final long seconds;\n    /**\n     * The number of nanoseconds, later along the time-line, from the seconds field.\n     * This is always positive, and never exceeds 999,999,999.\n     */\n    private final int nanos;\n\n    //-----------------------------------------------------------------------\n    /**\n     * Obtains the current instant from the system clock.\n     * \u003cp\u003e\n     * This will query the {@link Clock#systemUTC() system UTC clock} to\n     * obtain the current instant.\n     * \u003cp\u003e\n     * Using this method will prevent the ability to use an alternate time-source for\n     * testing because the clock is effectively hard-coded.\n     *\n     * @return the current instant using the system clock, not null\n     */\n    public static Instant now() {\n        return Clock.systemUTC().instant();\n    }\n\n    /**\n     * Obtains the current instant from the specified clock.\n     * \u003cp\u003e\n     * This will query the specified clock to obtain the current time.\n     * \u003cp\u003e\n     * Using this method allows the use of an alternate clock for testing.\n     * The alternate clock may be introduced using {@link Clock dependency injection}.\n     *\n     * @param clock  the clock to use, not null\n     * @return the current instant, not null\n     */\n    public static Instant now(Clock clock) {\n        Objects.requireNonNull(clock, \"clock\");\n        return clock.instant();\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Obtains an instance of {@code Instant} using seconds from the\n     * epoch of 1970-01-01T00:00:00Z.\n     * \u003cp\u003e\n     * The nanosecond field is set to zero.\n     *\n     * @param epochSecond  the number of seconds from 1970-01-01T00:00:00Z\n     * @return an instant, not null\n     * @throws DateTimeException if the instant exceeds the maximum or minimum instant\n     */\n    public static Instant ofEpochSecond(long epochSecond) {\n        return create(epochSecond, 0);\n    }\n\n    /**\n     * Obtains an instance of {@code Instant} using seconds from the\n     * epoch of 1970-01-01T00:00:00Z and nanosecond fraction of second.\n     * \u003cp\u003e\n     * This method allows an arbitrary number of nanoseconds to be passed in.\n     * The factory will alter the values of the second and nanosecond in order\n     * to ensure that the stored nanosecond is in the range 0 to 999,999,999.\n     * For example, the following will result in exactly the same instant:\n     * \u003cpre\u003e\n     *  Instant.ofEpochSecond(3, 1);\n     *  Instant.ofEpochSecond(4, -999_999_999);\n     *  Instant.ofEpochSecond(2, 1000_000_001);\n     * \u003c/pre\u003e\n     *\n     * @param epochSecond  the number of seconds from 1970-01-01T00:00:00Z\n     * @param nanoAdjustment  the nanosecond adjustment to the number of seconds, positive or negative\n     * @return an instant, not null\n     * @throws DateTimeException if the instant exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public static Instant ofEpochSecond(long epochSecond, long nanoAdjustment) {\n        long secs \u003d Math.addExact(epochSecond, Math.floorDiv(nanoAdjustment, NANOS_PER_SECOND));\n        int nos \u003d (int)Math.floorMod(nanoAdjustment, NANOS_PER_SECOND);\n        return create(secs, nos);\n    }\n\n    /**\n     * Obtains an instance of {@code Instant} using milliseconds from the\n     * epoch of 1970-01-01T00:00:00Z.\n     * \u003cp\u003e\n     * The seconds and nanoseconds are extracted from the specified milliseconds.\n     *\n     * @param epochMilli  the number of milliseconds from 1970-01-01T00:00:00Z\n     * @return an instant, not null\n     * @throws DateTimeException if the instant exceeds the maximum or minimum instant\n     */\n    public static Instant ofEpochMilli(long epochMilli) {\n        long secs \u003d Math.floorDiv(epochMilli, 1000);\n        int mos \u003d Math.floorMod(epochMilli, 1000);\n        return create(secs, mos * 1000_000);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Obtains an instance of {@code Instant} from a temporal object.\n     * \u003cp\u003e\n     * This obtains an instant based on the specified temporal.\n     * A {@code TemporalAccessor} represents an arbitrary set of date and time information,\n     * which this factory converts to an instance of {@code Instant}.\n     * \u003cp\u003e\n     * The conversion extracts the {@link ChronoField#INSTANT_SECONDS INSTANT_SECONDS}\n     * and {@link ChronoField#NANO_OF_SECOND NANO_OF_SECOND} fields.\n     * \u003cp\u003e\n     * This method matches the signature of the functional interface {@link TemporalQuery}\n     * allowing it to be used as a query via method reference, {@code Instant::from}.\n     *\n     * @param temporal  the temporal object to convert, not null\n     * @return the instant, not null\n     * @throws DateTimeException if unable to convert to an {@code Instant}\n     */\n    public static Instant from(TemporalAccessor temporal) {\n        if (temporal instanceof Instant) {\n            return (Instant) temporal;\n        }\n        Objects.requireNonNull(temporal, \"temporal\");\n        try {\n            long instantSecs \u003d temporal.getLong(INSTANT_SECONDS);\n            int nanoOfSecond \u003d temporal.get(NANO_OF_SECOND);\n            return Instant.ofEpochSecond(instantSecs, nanoOfSecond);\n        } catch (DateTimeException ex) {\n            throw new DateTimeException(\"Unable to obtain Instant from TemporalAccessor: \" +\n                    temporal + \" of type \" + temporal.getClass().getName(), ex);\n        }\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Obtains an instance of {@code Instant} from a text string such as\n     * {@code 2007-12-03T10:15:30.00Z}.\n     * \u003cp\u003e\n     * The string must represent a valid instant in UTC and is parsed using\n     * {@link DateTimeFormatter#ISO_INSTANT}.\n     *\n     * @param text  the text to parse, not null\n     * @return the parsed instant, not null\n     * @throws DateTimeParseException if the text cannot be parsed\n     */\n    public static Instant parse(final CharSequence text) {\n        return DateTimeFormatter.ISO_INSTANT.parse(text, Instant::from);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Obtains an instance of {@code Instant} using seconds and nanoseconds.\n     *\n     * @param seconds  the length of the duration in seconds\n     * @param nanoOfSecond  the nano-of-second, from 0 to 999,999,999\n     * @throws DateTimeException if the instant exceeds the maximum or minimum instant\n     */\n    private static Instant create(long seconds, int nanoOfSecond) {\n        if ((seconds | nanoOfSecond) \u003d\u003d 0) {\n            return EPOCH;\n        }\n        if (seconds \u003c MIN_SECOND || seconds \u003e MAX_SECOND) {\n            throw new DateTimeException(\"Instant exceeds minimum or maximum instant\");\n        }\n        return new Instant(seconds, nanoOfSecond);\n    }\n\n    /**\n     * Constructs an instance of {@code Instant} using seconds from the epoch of\n     * 1970-01-01T00:00:00Z and nanosecond fraction of second.\n     *\n     * @param epochSecond  the number of seconds from 1970-01-01T00:00:00Z\n     * @param nanos  the nanoseconds within the second, must be positive\n     */\n    private Instant(long epochSecond, int nanos) {\n        super();\n        this.seconds \u003d epochSecond;\n        this.nanos \u003d nanos;\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Checks if the specified field is supported.\n     * \u003cp\u003e\n     * This checks if this instant can be queried for the specified field.\n     * If false, then calling the {@link #range(TemporalField) range},\n     * {@link #get(TemporalField) get} and {@link #with(TemporalField, long)}\n     * methods will throw an exception.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoField} then the query is implemented here.\n     * The supported fields are:\n     * \u003cul\u003e\n     * \u003cli\u003e{@code NANO_OF_SECOND}\n     * \u003cli\u003e{@code MICRO_OF_SECOND}\n     * \u003cli\u003e{@code MILLI_OF_SECOND}\n     * \u003cli\u003e{@code INSTANT_SECONDS}\n     * \u003c/ul\u003e\n     * All other {@code ChronoField} instances will return false.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoField}, then the result of this method\n     * is obtained by invoking {@code TemporalField.isSupportedBy(TemporalAccessor)}\n     * passing {@code this} as the argument.\n     * Whether the field is supported is determined by the field.\n     *\n     * @param field  the field to check, null returns false\n     * @return true if the field is supported on this instant, false if not\n     */\n    @Override\n    public boolean isSupported(TemporalField field) {\n        if (field instanceof ChronoField) {\n            return field \u003d\u003d INSTANT_SECONDS || field \u003d\u003d NANO_OF_SECOND || field \u003d\u003d MICRO_OF_SECOND || field \u003d\u003d MILLI_OF_SECOND;\n        }\n        return field !\u003d null \u0026\u0026 field.isSupportedBy(this);\n    }\n\n    /**\n     * Checks if the specified unit is supported.\n     * \u003cp\u003e\n     * This checks if the specified unit can be added to, or subtracted from, this date-time.\n     * If false, then calling the {@link #plus(long, TemporalUnit)} and\n     * {@link #minus(long, TemporalUnit) minus} methods will throw an exception.\n     * \u003cp\u003e\n     * If the unit is a {@link ChronoUnit} then the query is implemented here.\n     * The supported units are:\n     * \u003cul\u003e\n     * \u003cli\u003e{@code NANOS}\n     * \u003cli\u003e{@code MICROS}\n     * \u003cli\u003e{@code MILLIS}\n     * \u003cli\u003e{@code SECONDS}\n     * \u003cli\u003e{@code MINUTES}\n     * \u003cli\u003e{@code HOURS}\n     * \u003cli\u003e{@code HALF_DAYS}\n     * \u003cli\u003e{@code DAYS}\n     * \u003c/ul\u003e\n     * All other {@code ChronoUnit} instances will return false.\n     * \u003cp\u003e\n     * If the unit is not a {@code ChronoUnit}, then the result of this method\n     * is obtained by invoking {@code TemporalUnit.isSupportedBy(Temporal)}\n     * passing {@code this} as the argument.\n     * Whether the unit is supported is determined by the unit.\n     *\n     * @param unit  the unit to check, null returns false\n     * @return true if the unit can be added/subtracted, false if not\n     */\n    @Override\n    public boolean isSupported(TemporalUnit unit) {\n        if (unit instanceof ChronoUnit) {\n            return unit.isTimeBased() || unit \u003d\u003d DAYS;\n        }\n        return unit !\u003d null \u0026\u0026 unit.isSupportedBy(this);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Gets the range of valid values for the specified field.\n     * \u003cp\u003e\n     * The range object expresses the minimum and maximum valid values for a field.\n     * This instant is used to enhance the accuracy of the returned range.\n     * If it is not possible to return the range, because the field is not supported\n     * or for some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoField} then the query is implemented here.\n     * The {@link #isSupported(TemporalField) supported fields} will return\n     * appropriate range instances.\n     * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoField}, then the result of this method\n     * is obtained by invoking {@code TemporalField.rangeRefinedBy(TemporalAccessor)}\n     * passing {@code this} as the argument.\n     * Whether the range can be obtained is determined by the field.\n     *\n     * @param field  the field to query the range for, not null\n     * @return the range of valid values for the field, not null\n     * @throws DateTimeException if the range for the field cannot be obtained\n     * @throws UnsupportedTemporalTypeException if the field is not supported\n     */\n    @Override  // override for Javadoc\n    public ValueRange range(TemporalField field) {\n        return Temporal.super.range(field);\n    }\n\n    /**\n     * Gets the value of the specified field from this instant as an {@code int}.\n     * \u003cp\u003e\n     * This queries this instant for the value of the specified field.\n     * The returned value will always be within the valid range of values for the field.\n     * If it is not possible to return the value, because the field is not supported\n     * or for some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoField} then the query is implemented here.\n     * The {@link #isSupported(TemporalField) supported fields} will return valid\n     * values based on this date-time, except {@code INSTANT_SECONDS} which is too\n     * large to fit in an {@code int} and throws a {@code DateTimeException}.\n     * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoField}, then the result of this method\n     * is obtained by invoking {@code TemporalField.getFrom(TemporalAccessor)}\n     * passing {@code this} as the argument. Whether the value can be obtained,\n     * and what the value represents, is determined by the field.\n     *\n     * @param field  the field to get, not null\n     * @return the value for the field\n     * @throws DateTimeException if a value for the field cannot be obtained or\n     *         the value is outside the range of valid values for the field\n     * @throws UnsupportedTemporalTypeException if the field is not supported or\n     *         the range of values exceeds an {@code int}\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override  // override for Javadoc and performance\n    public int get(TemporalField field) {\n        if (field instanceof ChronoField) {\n            switch ((ChronoField) field) {\n                case NANO_OF_SECOND: return nanos;\n                case MICRO_OF_SECOND: return nanos / 1000;\n                case MILLI_OF_SECOND: return nanos / 1000_000;\n            }\n            throw new UnsupportedTemporalTypeException(\"Unsupported field: \" + field);\n        }\n        return range(field).checkValidIntValue(field.getFrom(this), field);\n    }\n\n    /**\n     * Gets the value of the specified field from this instant as a {@code long}.\n     * \u003cp\u003e\n     * This queries this instant for the value of the specified field.\n     * If it is not possible to return the value, because the field is not supported\n     * or for some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoField} then the query is implemented here.\n     * The {@link #isSupported(TemporalField) supported fields} will return valid\n     * values based on this date-time.\n     * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoField}, then the result of this method\n     * is obtained by invoking {@code TemporalField.getFrom(TemporalAccessor)}\n     * passing {@code this} as the argument. Whether the value can be obtained,\n     * and what the value represents, is determined by the field.\n     *\n     * @param field  the field to get, not null\n     * @return the value for the field\n     * @throws DateTimeException if a value for the field cannot be obtained\n     * @throws UnsupportedTemporalTypeException if the field is not supported\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public long getLong(TemporalField field) {\n        if (field instanceof ChronoField) {\n            switch ((ChronoField) field) {\n                case NANO_OF_SECOND: return nanos;\n                case MICRO_OF_SECOND: return nanos / 1000;\n                case MILLI_OF_SECOND: return nanos / 1000_000;\n                case INSTANT_SECONDS: return seconds;\n            }\n            throw new UnsupportedTemporalTypeException(\"Unsupported field: \" + field);\n        }\n        return field.getFrom(this);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Gets the number of seconds from the Java epoch of 1970-01-01T00:00:00Z.\n     * \u003cp\u003e\n     * The epoch second count is a simple incrementing count of seconds where\n     * second 0 is 1970-01-01T00:00:00Z.\n     * The nanosecond part is returned by {@link #getNano}.\n     *\n     * @return the seconds from the epoch of 1970-01-01T00:00:00Z\n     */\n    public long getEpochSecond() {\n        return seconds;\n    }\n\n    /**\n     * Gets the number of nanoseconds, later along the time-line, from the start\n     * of the second.\n     * \u003cp\u003e\n     * The nanosecond-of-second value measures the total number of nanoseconds from\n     * the second returned by {@link #getEpochSecond}.\n     *\n     * @return the nanoseconds within the second, always positive, never exceeds 999,999,999\n     */\n    public int getNano() {\n        return nanos;\n    }\n\n    //-------------------------------------------------------------------------\n    /**\n     * Returns an adjusted copy of this instant.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the instant adjusted.\n     * The adjustment takes place using the specified adjuster strategy object.\n     * Read the documentation of the adjuster to understand what adjustment will be made.\n     * \u003cp\u003e\n     * The result of this method is obtained by invoking the\n     * {@link TemporalAdjuster#adjustInto(Temporal)} method on the\n     * specified adjuster passing {@code this} as the argument.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param adjuster the adjuster to use, not null\n     * @return an {@code Instant} based on {@code this} with the adjustment made, not null\n     * @throws DateTimeException if the adjustment cannot be made\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant with(TemporalAdjuster adjuster) {\n        return (Instant) adjuster.adjustInto(this);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified field set to a new value.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the value\n     * for the specified field changed.\n     * If it is not possible to set the value, because the field is not supported or for\n     * some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoField} then the adjustment is implemented here.\n     * The supported fields behave as follows:\n     * \u003cul\u003e\n     * \u003cli\u003e{@code NANO_OF_SECOND} -\n     *  Returns an {@code Instant} with the specified nano-of-second.\n     *  The epoch-second will be unchanged.\n     * \u003cli\u003e{@code MICRO_OF_SECOND} -\n     *  Returns an {@code Instant} with the nano-of-second replaced by the specified\n     *  micro-of-second multiplied by 1,000. The epoch-second will be unchanged.\n     * \u003cli\u003e{@code MILLI_OF_SECOND} -\n     *  Returns an {@code Instant} with the nano-of-second replaced by the specified\n     *  milli-of-second multiplied by 1,000,000. The epoch-second will be unchanged.\n     * \u003cli\u003e{@code INSTANT_SECONDS} -\n     *  Returns an {@code Instant} with the specified epoch-second.\n     *  The nano-of-second will be unchanged.\n     * \u003c/ul\u003e\n     * \u003cp\u003e\n     * In all cases, if the new value is outside the valid range of values for the field\n     * then a {@code DateTimeException} will be thrown.\n     * \u003cp\u003e\n     * All other {@code ChronoField} instances will throw an {@code UnsupportedTemporalTypeException}.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoField}, then the result of this method\n     * is obtained by invoking {@code TemporalField.adjustInto(Temporal, long)}\n     * passing {@code this} as the argument. In this case, the field determines\n     * whether and how to adjust the instant.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param field  the field to set in the result, not null\n     * @param newValue  the new value of the field in the result\n     * @return an {@code Instant} based on {@code this} with the specified field set, not null\n     * @throws DateTimeException if the field cannot be set\n     * @throws UnsupportedTemporalTypeException if the field is not supported\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant with(TemporalField field, long newValue) {\n        if (field instanceof ChronoField) {\n            ChronoField f \u003d (ChronoField) field;\n            f.checkValidValue(newValue);\n            switch (f) {\n                case MILLI_OF_SECOND: {\n                    int nval \u003d (int) newValue * 1000_000;\n                    return (nval !\u003d nanos ? create(seconds, nval) : this);\n                }\n                case MICRO_OF_SECOND: {\n                    int nval \u003d (int) newValue * 1000;\n                    return (nval !\u003d nanos ? create(seconds, nval) : this);\n                }\n                case NANO_OF_SECOND: return (newValue !\u003d nanos ? create(seconds, (int) newValue) : this);\n                case INSTANT_SECONDS: return (newValue !\u003d seconds ? create(newValue, nanos) : this);\n            }\n            throw new UnsupportedTemporalTypeException(\"Unsupported field: \" + field);\n        }\n        return field.adjustInto(this, newValue);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Returns a copy of this {@code Instant} truncated to the specified unit.\n     * \u003cp\u003e\n     * Truncating the instant returns a copy of the original with fields\n     * smaller than the specified unit set to zero.\n     * The fields are calculated on the basis of using a UTC offset as seen\n     * in {@code toString}.\n     * For example, truncating with the {@link ChronoUnit#MINUTES MINUTES} unit will\n     * round down to the nearest minute, setting the seconds and nanoseconds to zero.\n     * \u003cp\u003e\n     * The unit must have a {@linkplain TemporalUnit#getDuration() duration}\n     * that divides into the length of a standard day without remainder.\n     * This includes all supplied time units on {@link ChronoUnit} and\n     * {@link ChronoUnit#DAYS DAYS}. Other units throw an exception.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param unit  the unit to truncate to, not null\n     * @return an {@code Instant} based on this instant with the time truncated, not null\n     * @throws DateTimeException if the unit is invalid for truncation\n     * @throws UnsupportedTemporalTypeException if the unit is not supported\n     */\n    public Instant truncatedTo(TemporalUnit unit) {\n        if (unit \u003d\u003d ChronoUnit.NANOS) {\n            return this;\n        }\n        Duration unitDur \u003d unit.getDuration();\n        if (unitDur.getSeconds() \u003e LocalTime.SECONDS_PER_DAY) {\n            throw new UnsupportedTemporalTypeException(\"Unit is too large to be used for truncation\");\n        }\n        long dur \u003d unitDur.toNanos();\n        if ((LocalTime.NANOS_PER_DAY % dur) !\u003d 0) {\n            throw new UnsupportedTemporalTypeException(\"Unit must divide into a standard day without remainder\");\n        }\n        long nod \u003d (seconds % LocalTime.SECONDS_PER_DAY) * LocalTime.NANOS_PER_SECOND + nanos;\n        long result \u003d Math.floorDiv(nod, dur) * dur;\n        return plusNanos(result - nod);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Returns a copy of this instant with the specified amount added.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the specified amount added.\n     * The amount is typically {@link Duration} but may be any other type implementing\n     * the {@link TemporalAmount} interface.\n     * \u003cp\u003e\n     * The calculation is delegated to the amount object by calling\n     * {@link TemporalAmount#addTo(Temporal)}. The amount implementation is free\n     * to implement the addition in any way it wishes, however it typically\n     * calls back to {@link #plus(long, TemporalUnit)}. Consult the documentation\n     * of the amount implementation to determine if it can be successfully added.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param amountToAdd  the amount to add, not null\n     * @return an {@code Instant} based on this instant with the addition made, not null\n     * @throws DateTimeException if the addition cannot be made\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant plus(TemporalAmount amountToAdd) {\n        return (Instant) amountToAdd.addTo(this);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified amount added.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the amount\n     * in terms of the unit added. If it is not possible to add the amount, because the\n     * unit is not supported or for some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * If the field is a {@link ChronoUnit} then the addition is implemented here.\n     * The supported fields behave as follows:\n     * \u003cul\u003e\n     * \u003cli\u003e{@code NANOS} -\n     *  Returns an {@code Instant} with the specified number of nanoseconds added.\n     *  This is equivalent to {@link #plusNanos(long)}.\n     * \u003cli\u003e{@code MICROS} -\n     *  Returns an {@code Instant} with the specified number of microseconds added.\n     *  This is equivalent to {@link #plusNanos(long)} with the amount\n     *  multiplied by 1,000.\n     * \u003cli\u003e{@code MILLIS} -\n     *  Returns an {@code Instant} with the specified number of milliseconds added.\n     *  This is equivalent to {@link #plusNanos(long)} with the amount\n     *  multiplied by 1,000,000.\n     * \u003cli\u003e{@code SECONDS} -\n     *  Returns an {@code Instant} with the specified number of seconds added.\n     *  This is equivalent to {@link #plusSeconds(long)}.\n     * \u003cli\u003e{@code MINUTES} -\n     *  Returns an {@code Instant} with the specified number of minutes added.\n     *  This is equivalent to {@link #plusSeconds(long)} with the amount\n     *  multiplied by 60.\n     * \u003cli\u003e{@code HOURS} -\n     *  Returns an {@code Instant} with the specified number of hours added.\n     *  This is equivalent to {@link #plusSeconds(long)} with the amount\n     *  multiplied by 3,600.\n     * \u003cli\u003e{@code HALF_DAYS} -\n     *  Returns an {@code Instant} with the specified number of half-days added.\n     *  This is equivalent to {@link #plusSeconds(long)} with the amount\n     *  multiplied by 43,200 (12 hours).\n     * \u003cli\u003e{@code DAYS} -\n     *  Returns an {@code Instant} with the specified number of days added.\n     *  This is equivalent to {@link #plusSeconds(long)} with the amount\n     *  multiplied by 86,400 (24 hours).\n     * \u003c/ul\u003e\n     * \u003cp\u003e\n     * All other {@code ChronoUnit} instances will throw an {@code UnsupportedTemporalTypeException}.\n     * \u003cp\u003e\n     * If the field is not a {@code ChronoUnit}, then the result of this method\n     * is obtained by invoking {@code TemporalUnit.addTo(Temporal, long)}\n     * passing {@code this} as the argument. In this case, the unit determines\n     * whether and how to perform the addition.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param amountToAdd  the amount of the unit to add to the result, may be negative\n     * @param unit  the unit of the amount to add, not null\n     * @return an {@code Instant} based on this instant with the specified amount added, not null\n     * @throws DateTimeException if the addition cannot be made\n     * @throws UnsupportedTemporalTypeException if the unit is not supported\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant plus(long amountToAdd, TemporalUnit unit) {\n        if (unit instanceof ChronoUnit) {\n            switch ((ChronoUnit) unit) {\n                case NANOS: return plusNanos(amountToAdd);\n                case MICROS: return plus(amountToAdd / 1000_000, (amountToAdd % 1000_000) * 1000);\n                case MILLIS: return plusMillis(amountToAdd);\n                case SECONDS: return plusSeconds(amountToAdd);\n                case MINUTES: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_MINUTE));\n                case HOURS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_HOUR));\n                case HALF_DAYS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_DAY / 2));\n                case DAYS: return plusSeconds(Math.multiplyExact(amountToAdd, SECONDS_PER_DAY));\n            }\n            throw new UnsupportedTemporalTypeException(\"Unsupported unit: \" + unit);\n        }\n        return unit.addTo(this, amountToAdd);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Returns a copy of this instant with the specified duration in seconds added.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param secondsToAdd  the seconds to add, positive or negative\n     * @return an {@code Instant} based on this instant with the specified seconds added, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant plusSeconds(long secondsToAdd) {\n        return plus(secondsToAdd, 0);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified duration in milliseconds added.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param millisToAdd  the milliseconds to add, positive or negative\n     * @return an {@code Instant} based on this instant with the specified milliseconds added, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant plusMillis(long millisToAdd) {\n        return plus(millisToAdd / 1000, (millisToAdd % 1000) * 1000_000);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified duration in nanoseconds added.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param nanosToAdd  the nanoseconds to add, positive or negative\n     * @return an {@code Instant} based on this instant with the specified nanoseconds added, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant plusNanos(long nanosToAdd) {\n        return plus(0, nanosToAdd);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified duration added.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param secondsToAdd  the seconds to add, positive or negative\n     * @param nanosToAdd  the nanos to add, positive or negative\n     * @return an {@code Instant} based on this instant with the specified seconds added, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    private Instant plus(long secondsToAdd, long nanosToAdd) {\n        if ((secondsToAdd | nanosToAdd) \u003d\u003d 0) {\n            return this;\n        }\n        long epochSec \u003d Math.addExact(seconds, secondsToAdd);\n        epochSec \u003d Math.addExact(epochSec, nanosToAdd / NANOS_PER_SECOND);\n        nanosToAdd \u003d nanosToAdd % NANOS_PER_SECOND;\n        long nanoAdjustment \u003d nanos + nanosToAdd;  // safe int+NANOS_PER_SECOND\n        return ofEpochSecond(epochSec, nanoAdjustment);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Returns a copy of this instant with the specified amount subtracted.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the specified amount subtracted.\n     * The amount is typically {@link Duration} but may be any other type implementing\n     * the {@link TemporalAmount} interface.\n     * \u003cp\u003e\n     * The calculation is delegated to the amount object by calling\n     * {@link TemporalAmount#subtractFrom(Temporal)}. The amount implementation is free\n     * to implement the subtraction in any way it wishes, however it typically\n     * calls back to {@link #minus(long, TemporalUnit)}. Consult the documentation\n     * of the amount implementation to determine if it can be successfully subtracted.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param amountToSubtract  the amount to subtract, not null\n     * @return an {@code Instant} based on this instant with the subtraction made, not null\n     * @throws DateTimeException if the subtraction cannot be made\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant minus(TemporalAmount amountToSubtract) {\n        return (Instant) amountToSubtract.subtractFrom(this);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified amount subtracted.\n     * \u003cp\u003e\n     * This returns an {@code Instant}, based on this one, with the amount\n     * in terms of the unit subtracted. If it is not possible to subtract the amount,\n     * because the unit is not supported or for some other reason, an exception is thrown.\n     * \u003cp\u003e\n     * This method is equivalent to {@link #plus(long, TemporalUnit)} with the amount negated.\n     * See that method for a full description of how addition, and thus subtraction, works.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param amountToSubtract  the amount of the unit to subtract from the result, may be negative\n     * @param unit  the unit of the amount to subtract, not null\n     * @return an {@code Instant} based on this instant with the specified amount subtracted, not null\n     * @throws DateTimeException if the subtraction cannot be made\n     * @throws UnsupportedTemporalTypeException if the unit is not supported\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Instant minus(long amountToSubtract, TemporalUnit unit) {\n        return (amountToSubtract \u003d\u003d Long.MIN_VALUE ? plus(Long.MAX_VALUE, unit).plus(1, unit) : plus(-amountToSubtract, unit));\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Returns a copy of this instant with the specified duration in seconds subtracted.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param secondsToSubtract  the seconds to subtract, positive or negative\n     * @return an {@code Instant} based on this instant with the specified seconds subtracted, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant minusSeconds(long secondsToSubtract) {\n        if (secondsToSubtract \u003d\u003d Long.MIN_VALUE) {\n            return plusSeconds(Long.MAX_VALUE).plusSeconds(1);\n        }\n        return plusSeconds(-secondsToSubtract);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified duration in milliseconds subtracted.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param millisToSubtract  the milliseconds to subtract, positive or negative\n     * @return an {@code Instant} based on this instant with the specified milliseconds subtracted, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant minusMillis(long millisToSubtract) {\n        if (millisToSubtract \u003d\u003d Long.MIN_VALUE) {\n            return plusMillis(Long.MAX_VALUE).plusMillis(1);\n        }\n        return plusMillis(-millisToSubtract);\n    }\n\n    /**\n     * Returns a copy of this instant with the specified duration in nanoseconds subtracted.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param nanosToSubtract  the nanoseconds to subtract, positive or negative\n     * @return an {@code Instant} based on this instant with the specified nanoseconds subtracted, not null\n     * @throws DateTimeException if the result exceeds the maximum or minimum instant\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public Instant minusNanos(long nanosToSubtract) {\n        if (nanosToSubtract \u003d\u003d Long.MIN_VALUE) {\n            return plusNanos(Long.MAX_VALUE).plusNanos(1);\n        }\n        return plusNanos(-nanosToSubtract);\n    }\n\n    //-------------------------------------------------------------------------\n    /**\n     * Queries this instant using the specified query.\n     * \u003cp\u003e\n     * This queries this instant using the specified query strategy object.\n     * The {@code TemporalQuery} object defines the logic to be used to\n     * obtain the result. Read the documentation of the query to understand\n     * what the result of this method will be.\n     * \u003cp\u003e\n     * The result of this method is obtained by invoking the\n     * {@link TemporalQuery#queryFrom(TemporalAccessor)} method on the\n     * specified query passing {@code this} as the argument.\n     *\n     * @param \u003cR\u003e the type of the result\n     * @param query  the query to invoke, not null\n     * @return the query result, null may be returned (defined by the query)\n     * @throws DateTimeException if unable to query (defined by the query)\n     * @throws ArithmeticException if numeric overflow occurs (defined by the query)\n     */\n    @SuppressWarnings(\"unchecked\")\n    @Override\n    public \u003cR\u003e R query(TemporalQuery\u003cR\u003e query) {\n        if (query \u003d\u003d TemporalQueries.precision()) {\n            return (R) NANOS;\n        }\n        // inline TemporalAccessor.super.query(query) as an optimization\n        if (query \u003d\u003d TemporalQueries.chronology() || query \u003d\u003d TemporalQueries.zoneId() ||\n                query \u003d\u003d TemporalQueries.zone() || query \u003d\u003d TemporalQueries.offset() ||\n                query \u003d\u003d TemporalQueries.localDate() || query \u003d\u003d TemporalQueries.localTime()) {\n            return null;\n        }\n        return query.queryFrom(this);\n    }\n\n    /**\n     * Adjusts the specified temporal object to have this instant.\n     * \u003cp\u003e\n     * This returns a temporal object of the same observable type as the input\n     * with the instant changed to be the same as this.\n     * \u003cp\u003e\n     * The adjustment is equivalent to using {@link Temporal#with(TemporalField, long)}\n     * twice, passing {@link ChronoField#INSTANT_SECONDS} and\n     * {@link ChronoField#NANO_OF_SECOND} as the fields.\n     * \u003cp\u003e\n     * In most cases, it is clearer to reverse the calling pattern by using\n     * {@link Temporal#with(TemporalAdjuster)}:\n     * \u003cpre\u003e\n     *   // these two lines are equivalent, but the second approach is recommended\n     *   temporal \u003d thisInstant.adjustInto(temporal);\n     *   temporal \u003d temporal.with(thisInstant);\n     * \u003c/pre\u003e\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param temporal  the target object to be adjusted, not null\n     * @return the adjusted object, not null\n     * @throws DateTimeException if unable to make the adjustment\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public Temporal adjustInto(Temporal temporal) {\n        return temporal.with(INSTANT_SECONDS, seconds).with(NANO_OF_SECOND, nanos);\n    }\n\n    /**\n     * Calculates the amount of time until another instant in terms of the specified unit.\n     * \u003cp\u003e\n     * This calculates the amount of time between two {@code Instant}\n     * objects in terms of a single {@code TemporalUnit}.\n     * The start and end points are {@code this} and the specified instant.\n     * The result will be negative if the end is before the start.\n     * The calculation returns a whole number, representing the number of\n     * complete units between the two instants.\n     * The {@code Temporal} passed to this method is converted to a\n     * {@code Instant} using {@link #from(TemporalAccessor)}.\n     * For example, the amount in seconds between two dates can be calculated\n     * using {@code startInstant.until(endInstant, SECONDS)}.\n     * \u003cp\u003e\n     * There are two equivalent ways of using this method.\n     * The first is to invoke this method.\n     * The second is to use {@link TemporalUnit#between(Temporal, Temporal)}:\n     * \u003cpre\u003e\n     *   // these two lines are equivalent\n     *   amount \u003d start.until(end, SECONDS);\n     *   amount \u003d SECONDS.between(start, end);\n     * \u003c/pre\u003e\n     * The choice should be made based on which makes the code more readable.\n     * \u003cp\u003e\n     * The calculation is implemented in this method for {@link ChronoUnit}.\n     * The units {@code NANOS}, {@code MICROS}, {@code MILLIS}, {@code SECONDS},\n     * {@code MINUTES}, {@code HOURS}, {@code HALF_DAYS} and {@code DAYS}\n     * are supported. Other {@code ChronoUnit} values will throw an exception.\n     * \u003cp\u003e\n     * If the unit is not a {@code ChronoUnit}, then the result of this method\n     * is obtained by invoking {@code TemporalUnit.between(Temporal, Temporal)}\n     * passing {@code this} as the first argument and the converted input temporal\n     * as the second argument.\n     * \u003cp\u003e\n     * This instance is immutable and unaffected by this method call.\n     *\n     * @param endExclusive  the end date, exclusive, which is converted to an {@code Instant}, not null\n     * @param unit  the unit to measure the amount in, not null\n     * @return the amount of time between this instant and the end instant\n     * @throws DateTimeException if the amount cannot be calculated, or the end\n     *  temporal cannot be converted to an {@code Instant}\n     * @throws UnsupportedTemporalTypeException if the unit is not supported\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    @Override\n    public long until(Temporal endExclusive, TemporalUnit unit) {\n        Instant end \u003d Instant.from(endExclusive);\n        if (unit instanceof ChronoUnit) {\n            ChronoUnit f \u003d (ChronoUnit) unit;\n            switch (f) {\n                case NANOS: return nanosUntil(end);\n                case MICROS: return nanosUntil(end) / 1000;\n                case MILLIS: return Math.subtractExact(end.toEpochMilli(), toEpochMilli());\n                case SECONDS: return secondsUntil(end);\n                case MINUTES: return secondsUntil(end) / SECONDS_PER_MINUTE;\n                case HOURS: return secondsUntil(end) / SECONDS_PER_HOUR;\n                case HALF_DAYS: return secondsUntil(end) / (12 * SECONDS_PER_HOUR);\n                case DAYS: return secondsUntil(end) / (SECONDS_PER_DAY);\n            }\n            throw new UnsupportedTemporalTypeException(\"Unsupported unit: \" + unit);\n        }\n        return unit.between(this, end);\n    }\n\n    private long nanosUntil(Instant end) {\n        long secsDiff \u003d Math.subtractExact(end.seconds, seconds);\n        long totalNanos \u003d Math.multiplyExact(secsDiff, NANOS_PER_SECOND);\n        return Math.addExact(totalNanos, end.nanos - nanos);\n    }\n\n    private long secondsUntil(Instant end) {\n        long secsDiff \u003d Math.subtractExact(end.seconds, seconds);\n        long nanosDiff \u003d end.nanos - nanos;\n        if (secsDiff \u003e 0 \u0026\u0026 nanosDiff \u003c 0) {\n            secsDiff--;\n        } else if (secsDiff \u003c 0 \u0026\u0026 nanosDiff \u003e 0) {\n            secsDiff++;\n        }\n        return secsDiff;\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Combines this instant with an offset to create an {@code OffsetDateTime}.\n     * \u003cp\u003e\n     * This returns an {@code OffsetDateTime} formed from this instant at the\n     * specified offset from UTC/Greenwich. An exception will be thrown if the\n     * instant is too large to fit into an offset date-time.\n     * \u003cp\u003e\n     * This method is equivalent to\n     * {@link OffsetDateTime#ofInstant(Instant, ZoneId) OffsetDateTime.ofInstant(this, offset)}.\n     *\n     * @param offset  the offset to combine with, not null\n     * @return the offset date-time formed from this instant and the specified offset, not null\n     * @throws DateTimeException if the result exceeds the supported range\n     */\n    public OffsetDateTime atOffset(ZoneOffset offset) {\n        return OffsetDateTime.ofInstant(this, offset);\n    }\n\n    /**\n     * Combines this instant with a time-zone to create a {@code ZonedDateTime}.\n     * \u003cp\u003e\n     * This returns an {@code ZonedDateTime} formed from this instant at the\n     * specified time-zone. An exception will be thrown if the instant is too\n     * large to fit into a zoned date-time.\n     * \u003cp\u003e\n     * This method is equivalent to\n     * {@link ZonedDateTime#ofInstant(Instant, ZoneId) ZonedDateTime.ofInstant(this, zone)}.\n     *\n     * @param zone  the zone to combine with, not null\n     * @return the zoned date-time formed from this instant and the specified zone, not null\n     * @throws DateTimeException if the result exceeds the supported range\n     */\n    public ZonedDateTime atZone(ZoneId zone) {\n        return ZonedDateTime.ofInstant(this, zone);\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Converts this instant to the number of milliseconds from the epoch\n     * of 1970-01-01T00:00:00Z.\n     * \u003cp\u003e\n     * If this instant represents a point on the time-line too far in the future\n     * or past to fit in a {@code long} milliseconds, then an exception is thrown.\n     * \u003cp\u003e\n     * If this instant has greater than millisecond precision, then the conversion\n     * will drop any excess precision information as though the amount in nanoseconds\n     * was subject to integer division by one million.\n     *\n     * @return the number of milliseconds since the epoch of 1970-01-01T00:00:00Z\n     * @throws ArithmeticException if numeric overflow occurs\n     */\n    public long toEpochMilli() {\n        if (seconds \u003c 0 \u0026\u0026 nanos \u003e 0) {\n            long millis \u003d Math.multiplyExact(seconds+1, 1000);\n            long adjustment \u003d nanos / 1000_000 - 1000;\n            return Math.addExact(millis, adjustment);\n        } else {\n            long millis \u003d Math.multiplyExact(seconds, 1000);\n            return Math.addExact(millis, nanos / 1000_000);\n        }\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Compares this instant to the specified instant.\n     * \u003cp\u003e\n     * The comparison is based on the time-line position of the instants.\n     * It is \"consistent with equals\", as defined by {@link Comparable}.\n     *\n     * @param otherInstant  the other instant to compare to, not null\n     * @return the comparator value, negative if less, positive if greater\n     * @throws NullPointerException if otherInstant is null\n     */\n    @Override\n    public int compareTo(Instant otherInstant) {\n        int cmp \u003d Long.compare(seconds, otherInstant.seconds);\n        if (cmp !\u003d 0) {\n            return cmp;\n        }\n        return nanos - otherInstant.nanos;\n    }\n\n    /**\n     * Checks if this instant is after the specified instant.\n     * \u003cp\u003e\n     * The comparison is based on the time-line position of the instants.\n     *\n     * @param otherInstant  the other instant to compare to, not null\n     * @return true if this instant is after the specified instant\n     * @throws NullPointerException if otherInstant is null\n     */\n    public boolean isAfter(Instant otherInstant) {\n        return compareTo(otherInstant) \u003e 0;\n    }\n\n    /**\n     * Checks if this instant is before the specified instant.\n     * \u003cp\u003e\n     * The comparison is based on the time-line position of the instants.\n     *\n     * @param otherInstant  the other instant to compare to, not null\n     * @return true if this instant is before the specified instant\n     * @throws NullPointerException if otherInstant is null\n     */\n    public boolean isBefore(Instant otherInstant) {\n        return compareTo(otherInstant) \u003c 0;\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * Checks if this instant is equal to the specified instant.\n     * \u003cp\u003e\n     * The comparison is based on the time-line position of the instants.\n     *\n     * @param otherInstant  the other instant, null returns false\n     * @return true if the other instant is equal to this one\n     */\n    @Override\n    public boolean equals(Object otherInstant) {\n        if (this \u003d\u003d otherInstant) {\n            return true;\n        }\n        if (otherInstant instanceof Instant) {\n            Instant other \u003d (Instant) otherInstant;\n            return this.seconds \u003d\u003d other.seconds \u0026\u0026\n                   this.nanos \u003d\u003d other.nanos;\n        }\n        return false;\n    }\n\n    /**\n     * Returns a hash code for this instant.\n     *\n     * @return a suitable hash code\n     */\n    @Override\n    public int hashCode() {\n        return ((int) (seconds ^ (seconds \u003e\u003e\u003e 32))) + 51 * nanos;\n    }\n\n    //-----------------------------------------------------------------------\n    /**\n     * A string representation of this instant using ISO-8601 representation.\n     * \u003cp\u003e\n     * The format used is the same as {@link DateTimeFormatter#ISO_INSTANT}.\n     *\n     * @return an ISO-8601 representation of this instant, not null\n     */\n    @Override\n    public String toString() {\n        return DateTimeFormatter.ISO_INSTANT.format(this);\n    }\n\n    // -----------------------------------------------------------------------\n    /**\n     * Writes the object using a\n     * \u003ca href\u003d\"../../serialized-form.html#java.time.Ser\"\u003ededicated serialized form\u003c/a\u003e.\n     * @serialData\n     * \u003cpre\u003e\n     *  out.writeByte(2);  // identifies an Instant\n     *  out.writeLong(seconds);\n     *  out.writeInt(nanos);\n     * \u003c/pre\u003e\n     *\n     * @return the instance of {@code Ser}, not null\n     */\n    private Object writeReplace() {\n        return new Ser(Ser.INSTANT_TYPE, this);\n    }\n\n    /**\n     * Defend against malicious streams.\n     *\n     * @param s the stream to read\n     * @throws InvalidObjectException always\n     */\n    private void readObject(ObjectInputStream s) throws InvalidObjectException {\n        throw new InvalidObjectException(\"Deserialization via serialization delegate\");\n    }\n\n    void writeExternal(DataOutput out) throws IOException {\n        out.writeLong(seconds);\n        out.writeInt(nanos);\n    }\n\n    static Instant readExternal(DataInput in) throws IOException {\n        long seconds \u003d in.readLong();\n        int nanos \u003d in.readInt();\n        return Instant.ofEpochSecond(seconds, nanos);\n    }\n\n}\n"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Illegal character in opaque part at index 22: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+	at java.base/java.net.URI.create(URI.java:883)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:177)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.$anonfun$toAbsolutePath$3(MtagsEnrichments.scala:174)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.withTryDecode$1(MtagsEnrichments.scala:153)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:174)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:706)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:703)
+	at scala.meta.internal.metals.WorkspaceLspService.didOpen(WorkspaceLspService.scala:339)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:39)
+	... 16 more
+Caused by: java.net.URISyntaxException: Illegal character in opaque part at index 22: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+	at java.base/java.net.URI$Parser.fail(URI.java:2915)
+	at java.base/java.net.URI$Parser.checkChars(URI.java:3086)
+	at java.base/java.net.URI$Parser.parse(URI.java:3122)
+	at java.base/java.net.URI.<init>(URI.java:600)
+	at java.base/java.net.URI.create(URI.java:881)
+	... 24 more
+
+avr. 04, 2024 5:37:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didClose",
+  "params": {
+    "textDocument": {
+      "uri": "jar:file%3A///C%3A/Program%20Files/Java/jdk-11.0.0.1/lib/src.zip%21/java.base/java/time/Instant.java"
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Illegal character in opaque part at index 22: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+	at java.base/java.net.URI.create(URI.java:883)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:177)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.$anonfun$toAbsolutePath$3(MtagsEnrichments.scala:174)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.withTryDecode$1(MtagsEnrichments.scala:153)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:174)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:706)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:703)
+	at scala.meta.internal.metals.WorkspaceLspService.didClose(WorkspaceLspService.scala:358)
+	at scala.meta.metals.lsp.DelegatingScalaService.didClose(DelegatingScalaService.scala:53)
+	... 16 more
+Caused by: java.net.URISyntaxException: Illegal character in opaque part at index 22: jar:file:///C:/Program Files/Java/jdk-11.0.0.1/lib/src.zip!/java.base/java/time/Instant.java
+	at java.base/java.net.URI$Parser.fail(URI.java:2915)
+	at java.base/java.net.URI$Parser.checkChars(URI.java:3086)
+	at java.base/java.net.URI$Parser.parse(URI.java:3122)
+	at java.base/java.net.URI.<init>(URI.java:600)
+	at java.base/java.net.URI.create(URI.java:881)
+	... 24 more
+
+2024.04.04 17:37:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:37:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+avr. 04, 2024 5:38:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 121
+2024.04.04 17:38:47 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:38:47 INFO  compiling root (1 scala source)
+2024.04.04 17:38:49 INFO  time: compiled root in 2.48s
+2024.04.04 17:38:57 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:38:57 INFO  compiling root (1 scala source)
+2024.04.04 17:38:57 INFO  time: compiled root in 0.85s
+2024.04.04 17:39:38 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:39:38 INFO  compiling root (1 scala source)
+2024.04.04 17:39:40 INFO  time: compiled root in 1.78s
+2024.04.04 17:40:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:40:00 INFO  compiling root (1 scala source)
+2024.04.04 17:40:02 INFO  time: compiled root in 2.34s
+2024.04.04 17:40:14 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:41:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:41:06 INFO  compiling root (1 scala source)
+2024.04.04 17:41:06 INFO  time: compiled root in 0.49s
+2024.04.04 17:41:08 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:41:08 INFO  compiling root (1 scala source)
+2024.04.04 17:41:08 INFO  time: compiled root in 0.27s
+2024.04.04 17:41:12 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:41:12 INFO  compiling root (1 scala source)
+2024.04.04 17:41:12 INFO  time: compiled root in 0.12s
+2024.04.04 17:42:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:00 INFO  compiling root (1 scala source)
+2024.04.04 17:42:02 INFO  time: compiled root in 1.67s
+2024.04.04 17:42:14 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:14 INFO  compiling root (1 scala source)
+2024.04.04 17:42:15 INFO  time: compiled root in 1.29s
+2024.04.04 17:42:16 ERROR Failed to tokenize input for semantic tokens for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+scala.meta.tokenizers.TokenizeException: <input>:10: error: Invalid literal number
+            val id = csv(0val timestamp = Instant.parse(csv(1))
+                         ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchZero$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:332)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.04.04 17:42:18 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:18 INFO  compiling root (1 scala source)
+avr. 04, 2024 5:42:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 337
+2024.04.04 17:42:20 INFO  time: compiled root in 2.38s
+2024.04.04 17:42:20 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:21 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:42:20 INFO  compiling root (1 scala source)
+2024.04.04 17:42:22 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+2024.04.04 17:42:23 WARN  Could not load snapshot text for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala
+avr. 04, 2024 5:42:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 363
+2024.04.04 17:42:24 INFO  time: compiled root in 3.9s
+2024.04.04 17:42:24 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+avr. 04, 2024 5:42:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 372
+avr. 04, 2024 5:42:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 374
+2024.04.04 17:42:32 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:35 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:35 INFO  compiling root (1 scala source)
+2024.04.04 17:42:35 INFO  time: compiled root in 0.9s
+2024.04.04 17:42:38 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:42:38 INFO  compiling root (1 scala source)
+2024.04.04 17:42:40 INFO  time: compiled root in 1.82s
+2024.04.04 17:43:09 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:43:09 INFO  compiling root (1 scala source)
+2024.04.04 17:43:09 INFO  time: compiled root in 0.35s
+2024.04.04 17:43:13 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:43:13 INFO  compiling root (1 scala source)
+2024.04.04 17:43:13 INFO  time: compiled root in 0.58s
+2024.04.04 17:43:16 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:43:16 INFO  compiling root (1 scala source)
+2024.04.04 17:43:16 INFO  time: compiled root in 0.3s
+2024.04.04 17:43:17 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:43:17 INFO  compiling root (1 scala source)
+2024.04.04 17:43:17 INFO  time: compiled root in 0.86s
+2024.04.04 17:43:21 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:43:21 INFO  compiling root (1 scala source)
+2024.04.04 17:43:21 INFO  time: compiled root in 0.52s
+2024.04.04 17:47:47 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:47:47 INFO  compiling root (1 scala source)
+2024.04.04 17:47:47 INFO  time: compiled root in 0.21s
+2024.04.04 17:48:11 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:48:11 INFO  compiling root (1 scala source)
+2024.04.04 17:48:11 INFO  time: compiled root in 0.14s
+2024.04.04 17:48:15 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:48:15 INFO  compiling root (1 scala source)
+2024.04.04 17:48:15 INFO  time: compiled root in 0.22s
+2024.04.04 17:48:35 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:48:35 INFO  compiling root (1 scala source)
+2024.04.04 17:48:35 INFO  time: compiled root in 0.5s
+2024.04.04 17:49:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:49:06 INFO  compiling root (1 scala source)
+2024.04.04 17:49:06 INFO  time: compiled root in 0.14s
+2024.04.04 17:49:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:49:06 INFO  compiling root (1 scala source)
+2024.04.04 17:49:06 INFO  time: compiled root in 0.23s
+2024.04.04 17:50:38 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:50:38 INFO  compiling root (1 scala source)
+2024.04.04 17:50:39 INFO  time: compiled root in 1.13s
+2024.04.04 17:51:28 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:51:28 INFO  compiling root (1 scala source)
+2024.04.04 17:51:28 INFO  time: compiled root in 0.39s
+2024.04.04 17:51:31 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:51:31 INFO  compiling root (1 scala source)
+2024.04.04 17:51:31 INFO  time: compiled root in 0.92s
+2024.04.04 17:51:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:51:37 INFO  compiling root (1 scala source)
+2024.04.04 17:51:37 INFO  time: compiled root in 0.83s
+2024.04.04 17:52:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:52:00 INFO  compiling root (1 scala source)
+2024.04.04 17:52:00 INFO  time: compiled root in 0.31s
+2024.04.04 17:52:09 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:52:09 INFO  compiling root (1 scala source)
+2024.04.04 17:52:09 INFO  time: compiled root in 0.17s
+2024.04.04 17:52:10 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:52:10 INFO  compiling root (1 scala source)
+2024.04.04 17:52:10 INFO  time: compiled root in 0.5s
+2024.04.04 17:52:13 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:52:13 INFO  compiling root (1 scala source)
+2024.04.04 17:52:13 INFO  time: compiled root in 0.31s
+2024.04.04 17:52:14 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:52:14 INFO  compiling root (1 scala source)
+2024.04.04 17:52:14 INFO  time: compiled root in 0.51s
+2024.04.04 17:53:13 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:53:13 INFO  compiling root (1 scala source)
+2024.04.04 17:53:13 INFO  time: compiled root in 0.1s
+2024.04.04 17:53:16 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:53:16 INFO  compiling root (1 scala source)
+2024.04.04 17:53:16 INFO  time: compiled root in 96ms
+2024.04.04 17:53:24 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:53:24 INFO  compiling root (1 scala source)
+2024.04.04 17:53:24 INFO  time: compiled root in 0.41s
+2024.04.04 17:53:47 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:53:47 INFO  compiling root (1 scala source)
+2024.04.04 17:53:47 INFO  time: compiled root in 0.39s
+2024.04.04 17:54:03 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:54:03 INFO  compiling root (1 scala source)
+2024.04.04 17:54:03 INFO  time: compiled root in 0.79s
+2024.04.04 17:54:28 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:54:28 INFO  compiling root (1 scala source)
+2024.04.04 17:54:28 INFO  time: compiled root in 0.63s
+2024.04.04 17:54:36 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:54:36 INFO  compiling root (1 scala source)
+2024.04.04 17:54:36 INFO  time: compiled root in 0.65s
+2024.04.04 17:54:39 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:54:39 INFO  compiling root (1 scala source)
+2024.04.04 17:54:41 INFO  time: compiled root in 1.57s
+2024.04.04 17:55:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:00 INFO  compiling root (1 scala source)
+2024.04.04 17:55:00 INFO  time: compiled root in 0.88s
+2024.04.04 17:55:02 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:02 INFO  compiling root (1 scala source)
+2024.04.04 17:55:03 INFO  time: compiled root in 1.22s
+2024.04.04 17:55:05 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:05 INFO  compiling root (1 scala source)
+2024.04.04 17:55:05 INFO  time: compiled root in 0.85s
+2024.04.04 17:55:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:06 INFO  compiling root (1 scala source)
+2024.04.04 17:55:06 INFO  time: compiled root in 0.61s
+2024.04.04 17:55:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:07 INFO  compiling root (1 scala source)
+2024.04.04 17:55:07 INFO  time: compiled root in 0.45s
+2024.04.04 17:55:12 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:12 INFO  compiling root (1 scala source)
+2024.04.04 17:55:12 INFO  time: compiled root in 0.29s
+2024.04.04 17:55:21 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:21 INFO  compiling root (1 scala source)
+2024.04.04 17:55:21 INFO  time: compiled root in 0.5s
+2024.04.04 17:55:23 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:55:23 INFO  compiling root (1 scala source)
+2024.04.04 17:55:23 INFO  time: compiled root in 0.67s
+avr. 04, 2024 5:55:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.04.04 17:55:59 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:56:01 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:56:01 INFO  running 'C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals16009442096836181313\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.04 17:56:04 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:56:05 INFO  [info] welcome to sbt 1.9.9 (Oracle Corporation Java 11.0.0.1)
+2024.04.04 17:56:09 INFO  [info] loading global plugins from C:\Users\fchan\.sbt\1.0\plugins
+2024.04.04 17:56:13 INFO  [info] loading settings for project scala3-build-build from metals.sbt ...
+2024.04.04 17:56:14 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:56:14 INFO  compiling root (1 scala source)
+2024.04.04 17:56:14 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project\project
+avr. 04, 2024 5:56:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1107
+2024.04.04 17:56:16 INFO  [info] loading settings for project scala3-build from metals.sbt ...
+2024.04.04 17:56:17 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project
+2024.04.04 17:56:18 INFO  time: compiled root in 3.38s
+2024.04.04 17:56:18 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:56:18 INFO  compiling root (1 scala source)
+2024.04.04 17:56:20 INFO  time: compiled root in 2.06s
+2024.04.04 17:56:25 INFO  [success] Generated .bloop\scala3-build.json
+2024.04.04 17:56:25 INFO  [success] Total time: 8 s, completed 4 avr. 2024 à 17:56:25
+2024.04.04 17:56:29 ERROR C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt:12: error: value libraryDependencies is not a member of sbt.librarymanagement.ModuleID
+2024.04.04 17:56:29 ERROR possible cause: maybe a semicolon is missing before `value libraryDependencies'?
+2024.04.04 17:56:29 ERROR     libraryDependencies ++= Seq(
+2024.04.04 17:56:29 ERROR     ^
+2024.04.04 17:56:29 ERROR C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt:12: error: not found: value ++=
+2024.04.04 17:56:29 ERROR     libraryDependencies ++= Seq(
+2024.04.04 17:56:29 ERROR                         ^
+2024.04.04 17:56:29 ERROR sbt.compiler.EvalException: Type error in expression
+2024.04.04 17:56:29 INFO  [error] sbt.compiler.EvalException: Type error in expression
+2024.04.04 17:56:29 INFO  [error] Use 'last' for the full log.
+2024.04.04 17:56:29 INFO  [warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
+2024.04.04 17:56:29 INFO  time: ran 'sbt bloopInstall' in 28s
+2024.04.04 17:56:29 ERROR sbt command failed: C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals16009442096836181313\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.04.04 17:56:29 INFO  Disconnecting from Bloop session...
+2024.04.04 17:56:29 INFO  Shut down connection with build server.
+2024.04.04 17:56:29 INFO  Attempting to connect to the build server...
+2024.04.04 17:56:29 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.04 17:56:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.04 17:56:29 INFO  time: Connected to build server in 0.21s
+2024.04.04 17:56:29 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.04 17:56:30 INFO  time: Imported build in 0.2s
+2024.04.04 17:56:33 INFO  time: indexed workspace in 3.48s
+2024.04.04 17:56:33 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:56:39 INFO  skipping build import with status 'Installed'
+2024.04.04 17:56:39 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:56:39 INFO  compiling root (1 scala source)
+2024.04.04 17:56:48 INFO  time: compiled root in 8.68s
+2024.04.04 17:57:51 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\IOTReportTest.scala
+2024.04.04 17:57:54 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\IOTReportTest.scala
+2024.04.04 17:57:56 INFO  time: code lens generation in 2.96s
+2024.04.04 17:57:57 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\IOTReportTest.scala
+2024.04.04 17:58:18 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\IOTReportTest.scala
+2024.04.04 17:58:24 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:58:24 INFO  compiling root (3 scala sources)
+2024.04.04 17:58:26 INFO  time: compiled root in 1.44s
+2024.04.04 17:58:57 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:59:00 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:59:01 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:59:03 INFO  running 'C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals2297978302198252088\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.04 17:59:07 INFO  [info] welcome to sbt 1.9.9 (Oracle Corporation Java 11.0.0.1)
+2024.04.04 17:59:08 INFO  skipping build import with status 'Started'
+2024.04.04 17:59:10 INFO  [info] loading global plugins from C:\Users\fchan\.sbt\1.0\plugins
+2024.04.04 17:59:13 INFO  [info] loading settings for project scala3-build-build from metals.sbt ...
+2024.04.04 17:59:13 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project\project
+2024.04.04 17:59:15 INFO  [info] loading settings for project scala3-build from metals.sbt ...
+2024.04.04 17:59:15 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project
+2024.04.04 17:59:25 INFO  [success] Generated .bloop\scala3-build.json
+2024.04.04 17:59:25 INFO  [success] Total time: 10 s, completed 4 avr. 2024 à 17:59:25
+2024.04.04 17:59:25 INFO  [error] [C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt]:13: ')' expected but string literal found.
+2024.04.04 17:59:25 INFO  [error] [C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt]:17: ')' expected but eof found.
+2024.04.04 17:59:25 INFO  [warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)
+2024.04.04 17:59:26 INFO  time: ran 'sbt bloopInstall' in 23s
+2024.04.04 17:59:26 ERROR sbt command failed: C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals2297978302198252088\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.04.04 17:59:26 INFO  Disconnecting from Bloop session...
+2024.04.04 17:59:26 INFO  Shut down connection with build server.
+2024.04.04 17:59:26 INFO  Attempting to connect to the build server...
+2024.04.04 17:59:26 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.04 17:59:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.04 17:59:26 INFO  time: Connected to build server in 0.18s
+2024.04.04 17:59:26 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.04 17:59:26 INFO  time: Imported build in 0.24s
+2024.04.04 17:59:30 INFO  time: indexed workspace in 3.12s
+2024.04.04 17:59:30 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.04 17:59:36 INFO  time: code lens generation in 6.03s
+2024.04.04 17:59:55 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 17:59:55 INFO  compiling root (3 scala sources)
+2024.04.04 17:59:55 INFO  time: compiled root in 0.67s
+2024.04.04 18:00:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:00:07 INFO  compiling root (3 scala sources)
+2024.04.04 18:00:07 INFO  time: compiled root in 0.59s
+avr. 04, 2024 6:00:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1279
+2024.04.04 18:00:36 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:00:36 INFO  compiling root (3 scala sources)
+2024.04.04 18:00:38 INFO  time: compiled root in 2.24s
+2024.04.04 18:00:46 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:00:46 INFO  compiling root (3 scala sources)
+2024.04.04 18:00:50 INFO  time: compiled root in 3.25s
+avr. 04, 2024 6:00:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1321
+2024.04.04 18:00:55 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:00:55 INFO  compiling root (3 scala sources)
+2024.04.04 18:00:55 INFO  time: compiled root in 0.71s
+2024.04.04 18:00:55 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:00:55 INFO  compiling root (3 scala sources)
+2024.04.04 18:00:58 INFO  time: compiled root in 1.84s
+avr. 04, 2024 6:00:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1340
+avr. 04, 2024 6:01:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1348
+2024.04.04 18:01:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:01:07 INFO  compiling root (3 scala sources)
+2024.04.04 18:01:08 INFO  time: compiled root in 1.09s
+2024.04.04 18:01:08 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:01:08 INFO  compiling root (3 scala sources)
+2024.04.04 18:01:10 INFO  time: compiled root in 0.72s
+2024.04.04 18:01:12 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.04 18:01:12 INFO  compiling root (3 scala sources)
+2024.04.04 18:01:12 INFO  time: compiled root in 0.39s
+2024.04.07 16:07:22 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:07:22 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:07:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:07:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:07:23 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:07:22 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:07:23 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:07:23 INFO  compiling root (3 scala sources)
+2024.04.07 16:07:24 INFO  time: compiled root in 1.75s
+2024.04.07 16:07:25 INFO  time: Imported build in 2.12s
+2024.04.07 16:07:25 INFO  time: Imported build in 2.12s
+2024.04.07 16:07:29 INFO  time: indexed workspace in 4.51s
+2024.04.07 16:07:29 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:07:29 INFO  time: indexed workspace in 4.63s
+2024.04.07 16:07:29 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:07:42 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:07:42 INFO  compiling root (3 scala sources)
+2024.04.07 16:07:42 INFO  time: compiled root in 0.64s
+2024.04.07 16:07:43 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:07:43 INFO  compiling root (3 scala sources)
+2024.04.07 16:07:46 INFO  time: compiled root in 2.52s
+2024.04.07 16:07:57 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:07:57 INFO  compiling root (3 scala sources)
+2024.04.07 16:07:58 INFO  time: compiled root in 1.21s
+2024.04.07 16:08:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:00 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:00 WARN  Invalid text document uri received from build server: file:///C:/Users/fchan/OneDrive%20-%20Efrei/M1/Semetre%208/Data%20Engineering/Project/Projet_DE/scala3/src/main/scala/IOTReportTest.scala
+2024.04.07 16:08:00 INFO  time: compiled root in 0.88s
+2024.04.07 16:08:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:01 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:02 INFO  time: compiled root in 1.25s
+2024.04.07 16:08:12 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:08:13 INFO  running 'C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals18019613964031039276\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.07 16:08:16 INFO  [info] welcome to sbt 1.9.9 (Oracle Corporation Java 11.0.0.1)
+2024.04.07 16:08:19 INFO  [info] loading global plugins from C:\Users\fchan\.sbt\1.0\plugins
+2024.04.07 16:08:22 INFO  [info] loading settings for project scala3-build-build from metals.sbt ...
+2024.04.07 16:08:22 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project\project
+2024.04.07 16:08:23 INFO  [info] loading settings for project scala3-build from metals.sbt ...
+2024.04.07 16:08:23 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project
+2024.04.07 16:08:29 INFO  [success] Generated .bloop\scala3-build.json
+2024.04.07 16:08:29 INFO  [success] Total time: 6 s, completed 7 avr. 2024 à 16:08:29
+2024.04.07 16:08:31 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:31 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:33 INFO  time: compiled root in 1.45s
+2024.04.07 16:08:33 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:33 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:35 INFO  time: compiled root in 1.66s
+2024.04.07 16:08:36 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.07 16:08:36 INFO  [info] set current project to scala3 (in build file:/C:/Users/fchan/OneDrive%20-%20Efrei/M1/Semetre%208/Data%20Engineering/Project/Projet_DE/scala3/)
+2024.04.07 16:08:40 INFO  [success] Generated .bloop\root.json
+2024.04.07 16:08:40 INFO  [success] Generated .bloop\root-test.json
+2024.04.07 16:08:40 INFO  [success] Total time: 4 s, completed 7 avr. 2024 à 16:08:40
+2024.04.07 16:08:40 INFO  time: ran 'sbt bloopInstall' in 26s
+2024.04.07 16:08:40 INFO  Disconnecting from Bloop session...
+2024.04.07 16:08:40 INFO  Shut down connection with build server.
+2024.04.07 16:08:40 INFO  Attempting to connect to the build server...
+2024.04.07 16:08:40 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:08:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:08:40 INFO  time: Connected to build server in 88ms
+2024.04.07 16:08:40 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:08:40 INFO  time: Imported build in 0.11s
+2024.04.07 16:08:42 INFO  time: indexed workspace in 2.03s
+2024.04.07 16:08:42 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:08:42 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:42 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:54 INFO  time: compiled root in 11s
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1543
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1547
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1548
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1549
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1551
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1552
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1553
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1554
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1557
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1558
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1555
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1561
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1562
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1563
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1565
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1566
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1567
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1569
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1570
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1571
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1556
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1573
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1574
+avr. 07, 2024 4:08:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1575
+2024.04.07 16:08:56 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:08:56 INFO  compiling root (2 scala sources)
+2024.04.07 16:08:56 INFO  time: compiled root in 0.75s
+2024.04.07 16:09:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:09:07 INFO  compiling root (2 scala sources)
+2024.04.07 16:09:07 INFO  time: compiled root in 0.53s
+2024.04.07 16:10:34 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:10:34 INFO  compiling root (2 scala sources)
+2024.04.07 16:10:34 INFO  time: compiled root in 0.54s
+2024.04.07 16:10:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:10:37 INFO  compiling root (2 scala sources)
+2024.04.07 16:10:37 INFO  time: compiled root in 0.56s
+2024.04.07 16:10:39 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:10:39 INFO  compiling root (2 scala sources)
+2024.04.07 16:10:39 INFO  time: compiled root in 0.5s
+2024.04.07 16:11:03 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:11:05 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:11:07 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:11:50 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:11:50 INFO  skipping build import with status 'Dismissed'
+2024.04.07 16:11:54 INFO  running 'C:\Program Files\Java\jdk-11.0.0.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\fchan\AppData\Local\Temp\metals7033298796869430062\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.07 16:11:56 INFO  [info] welcome to sbt 1.9.9 (Oracle Corporation Java 11.0.0.1)
+2024.04.07 16:12:00 INFO  [info] loading global plugins from C:\Users\fchan\.sbt\1.0\plugins
+2024.04.07 16:12:03 INFO  [info] loading settings for project scala3-build-build from metals.sbt ...
+2024.04.07 16:12:03 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project\project
+2024.04.07 16:12:04 INFO  [info] loading settings for project scala3-build from metals.sbt ...
+2024.04.07 16:12:04 INFO  [info] loading project definition from C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\project
+2024.04.07 16:12:10 INFO  [success] Generated .bloop\scala3-build.json
+2024.04.07 16:12:10 INFO  [success] Total time: 6 s, completed 7 avr. 2024 à 16:12:10
+2024.04.07 16:12:17 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.07 16:12:17 INFO  [info] set current project to scala3 (in build file:/C:/Users/fchan/OneDrive%20-%20Efrei/M1/Semetre%208/Data%20Engineering/Project/Projet_DE/scala3/)
+2024.04.07 16:12:19 INFO  [success] Generated .bloop\root-test.json
+2024.04.07 16:12:19 INFO  [success] Generated .bloop\root.json
+2024.04.07 16:12:19 INFO  [success] Total time: 1 s, completed 7 avr. 2024 à 16:12:19
+2024.04.07 16:12:19 INFO  time: ran 'sbt bloopInstall' in 24s
+2024.04.07 16:12:19 INFO  Disconnecting from Bloop session...
+2024.04.07 16:12:19 INFO  Shut down connection with build server.
+2024.04.07 16:12:19 INFO  Attempting to connect to the build server...
+2024.04.07 16:12:19 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:12:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:12:19 INFO  time: Connected to build server in 0.22s
+2024.04.07 16:12:19 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:12:19 INFO  time: Imported build in 0.12s
+2024.04.07 16:12:22 INFO  time: indexed workspace in 2.53s
+2024.04.07 16:12:22 WARN  no build target for: C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\build.sbt
+2024.04.07 16:12:22 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:12:22 INFO  compiling root (2 scala sources)
+2024.04.07 16:12:31 INFO  time: compiled root in 9.03s
+avr. 07, 2024 4:12:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1825
+avr. 07, 2024 4:21:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.04.07 16:22:40 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:22:40 INFO  compiling root (2 scala sources)
+2024.04.07 16:22:40 INFO  Deduplicating compilation of root from bsp client 'Metals 1.2.2' (since 10m 20.853s)
+2024.04.07 16:22:40 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:22:40 INFO  compiling root (2 scala sources)
+2024.04.07 16:22:42 INFO  Shutting down server
+2024.04.07 16:22:42 INFO  shutting down Metals
+2024.04.07 16:22:42 INFO  Shut down connection with build server.
+avr. 07, 2024 4:22:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.utils.RequestRegistry.cancel(RequestRegistry.scala:94)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:396)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:171)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:163)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:447)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:114)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:94)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:172)
+	at java.base/java.io.OutputStream.write(OutputStream.java:122)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:152)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 20 more
+
+2024.04.07 16:22:42 INFO  Cancelling compilation on Bloop server
+2024.04.07 16:22:42 INFO  Cancelling compilation on Bloop server
+2024.04.07 16:22:42 INFO  Exiting server
+2024.04.07 16:25:31 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE' for client Visual Studio Code 1.87.2.
+16:25:36.049 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+16:25:36.065 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+16:25:36.066 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+16:25:36.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+16:25:36.078 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+16:25:36.078 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+16:25:36.079 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+16:25:36.079 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+16:25:36.081 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/fchan/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+16:25:36.094 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+16:25:36.095 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+16:25:36.096 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+16:25:36.096 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+16:25:36.096 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+16:25:36.096 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+16:25:36.104 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:25:36.105 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+16:25:36.108 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+16:25:36.109 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+16:25:36.109 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+16:25:36.372 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\metals (H2 2.2)
+16:25:36.373 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+16:25:36.373 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+16:25:36.375 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+16:25:36.376 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+16:25:36.383 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+16:25:36.385 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+16:25:36.385 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:25:36.402 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+16:25:36.412 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:25:36.431 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:25:36.431 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+16:25:36.431 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+16:25:36.431 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+16:25:36.431 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+16:25:36.433 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:25:36.433 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+16:25:36.433 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+16:25:36.433 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+16:25:36.433 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+16:25:36.467 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.062s)
+16:25:36.474 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+16:25:36.493 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+16:25:36.505 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+16:25:36.552 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 36 of 100M
+2024.04.07 16:25:38 INFO  skipping build import with status 'Installed'
+2024.04.07 16:25:38 INFO  Attempting to connect to the build server...
+2024.04.07 16:25:38 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:25:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:25:40 INFO  time: Connected to build server in 2.32s
+2024.04.07 16:25:40 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:25:40 INFO  time: Imported build in 0.34s
+2024.04.07 16:26:12 INFO  no build target found for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\Test.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.04.07 16:26:14 INFO  Failed to resolve mtags for 3.4.1
+2024.04.07 16:26:24 INFO  time: indexed workspace in 10s
+2024.04.07 16:26:24 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:26:24 INFO  compiling root (2 scala sources)
+2024.04.07 16:26:33 INFO  no build target found for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\Test.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.04.07 16:26:33 INFO  time: compiled root in 9.34s
+Exception in thread "pool-4-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:243)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+avr. 07, 2024 4:26:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+avr. 07, 2024 4:26:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+avr. 07, 2024 4:26:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+avr. 07, 2024 4:26:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+avr. 07, 2024 4:26:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+avr. 07, 2024 4:26:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+avr. 07, 2024 4:26:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 33
+2024.04.07 16:26:38 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:26:38 INFO  compiling root (2 scala sources)
+avr. 07, 2024 4:26:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 49
+avr. 07, 2024 4:26:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 35
+2024.04.07 16:26:45 INFO  time: compiled root in 6.84s
+avr. 07, 2024 4:26:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 73
+avr. 07, 2024 4:26:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 74
+avr. 07, 2024 4:26:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 75
+2024.04.07 16:26:46 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:26:46 INFO  compiling root (2 scala sources)
+avr. 07, 2024 4:26:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 86
+avr. 07, 2024 4:26:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 91
+avr. 07, 2024 4:26:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 101
+avr. 07, 2024 4:26:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 108
+avr. 07, 2024 4:26:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 115
+avr. 07, 2024 4:26:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 118
+avr. 07, 2024 4:26:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 119
+avr. 07, 2024 4:26:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 124
+avr. 07, 2024 4:26:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 125
+avr. 07, 2024 4:27:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 129
+avr. 07, 2024 4:27:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 130
+avr. 07, 2024 4:27:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 131
+avr. 07, 2024 4:27:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 132
+avr. 07, 2024 4:27:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 133
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 143
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 145
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 149
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 150
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 151
+avr. 07, 2024 4:27:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 152
+2024.04.07 16:27:36 INFO  time: compiled root in 49s
+avr. 07, 2024 4:27:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\.reports\metals-full\2024-04-07\r_compiler-error_(root)_16-27-36-107.md
+avr. 07, 2024 4:27:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 153
+2024.04.07 16:27:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:27:37 INFO  compiling root (2 scala sources)
+avr. 07, 2024 4:27:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 154
+avr. 07, 2024 4:27:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 155
+avr. 07, 2024 4:27:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 156
+avr. 07, 2024 4:27:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 158
+2024.04.07 16:27:41 INFO  time: code lens generation in 1.07s
+avr. 07, 2024 4:27:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 161
+avr. 07, 2024 4:27:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 163
+avr. 07, 2024 4:27:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 165
+2024.04.07 16:27:43 INFO  Shutting down server
+2024.04.07 16:27:43 INFO  shutting down Metals
+2024.04.07 16:27:44 INFO  time: code lens generation in 1.32s
+avr. 07, 2024 4:27:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.utils.RequestRegistry.cancel(RequestRegistry.scala:94)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:396)
+	at scala.meta.internal.bsp.BspSession.$anonfun$cancel$1(BspSession.scala:34)
+	at scala.meta.internal.bsp.BspSession.$anonfun$cancel$1$adapted(BspSession.scala:34)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.bsp.BspSession.cancel(BspSession.scala:34)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.MetalsLspService.cancel(MetalsLspService.scala:162)
+	at scala.meta.internal.metals.MetalsLspService.onShutdown(MetalsLspService.scala:947)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$shutdown$2(WorkspaceLspService.scala:1199)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$shutdown$2$adapted(WorkspaceLspService.scala:1199)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.shutdown(WorkspaceLspService.scala:1199)
+	at scala.meta.metals.MetalsLanguageServer.shutdown(MetalsLanguageServer.scala:260)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:447)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:114)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:94)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:172)
+	at java.base/java.io.OutputStream.write(OutputStream.java:122)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:152)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 45 more
+
+2024.04.07 16:27:44 INFO  Cancelling compilation on Bloop server
+2024.04.07 16:28:16 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE' for client Visual Studio Code 1.87.2.
+16:28:18.912 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+16:28:18.922 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+16:28:18.923 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+16:28:18.932 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+16:28:18.933 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+16:28:18.933 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+16:28:18.933 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+16:28:18.933 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+16:28:18.935 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/fchan/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+16:28:18.946 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+16:28:18.946 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+16:28:18.947 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+16:28:18.947 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+16:28:18.947 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+16:28:18.948 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+16:28:18.961 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:28:18.962 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+16:28:18.965 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+16:28:18.966 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+16:28:18.967 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+16:28:19.254 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\metals (H2 2.2)
+16:28:19.255 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+16:28:19.255 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+16:28:19.261 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+16:28:19.262 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+16:28:19.295 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+16:28:19.301 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+16:28:19.302 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:28:19.338 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+16:28:19.358 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:28:19.401 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:28:19.408 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+16:28:19.409 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+16:28:19.410 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+16:28:19.411 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+16:28:19.413 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+16:28:19.414 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+16:28:19.415 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+16:28:19.415 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+16:28:19.415 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+16:28:19.456 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.115s)
+16:28:19.464 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+16:28:19.482 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+16:28:19.497 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+16:28:19.565 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 36 of 100M
+2024.04.07 16:28:21 INFO  Attempting to connect to the build server...
+2024.04.07 16:28:21 INFO  skipping build import with status 'Installed'
+2024.04.07 16:28:21 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.07 16:28:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.07 16:28:22 INFO  time: Connected to build server in 2.23s
+2024.04.07 16:28:22 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.07 16:28:23 INFO  time: Imported build in 0.44s
+2024.04.07 16:28:26 INFO  Failed to resolve mtags for 3.4.1
+2024.04.07 16:28:37 INFO  time: indexed workspace in 13s
+2024.04.07 16:28:50 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:28:50 INFO  compiling root (2 scala sources)
+2024.04.07 16:29:05 INFO  time: compiled root in 14s
+2024.04.07 16:29:07 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.07 16:29:07 INFO  compiling root (2 scala sources)
+2024.04.07 16:29:12 INFO  time: compiled root in 5.39s
+avr. 07, 2024 4:30:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2024.04.07 16:30:54 INFO  time: code lens generation in 1.16s
+avr. 07, 2024 4:33:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+avr. 07, 2024 4:33:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+avr. 07, 2024 4:33:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+avr. 07, 2024 4:34:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+avr. 07, 2024 4:34:17 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.04.07 16:34:44 INFO  Shutting down server
+2024.04.07 16:34:44 INFO  shutting down Metals
+2024.04.07 16:34:44 INFO  Shut down connection with build server.
+2024.04.07 16:34:44 INFO  Exiting server
