@@ -3,7 +3,7 @@ import org.json4s.DefaultFormats
 import java.nio.file.{Files, Paths}
 import scala.io.Source
 
-object Test {
+object Main {
   implicit val formats: DefaultFormats.type = DefaultFormats
 
   def main(args: Array[String]): Unit = {
@@ -14,7 +14,7 @@ object Test {
     )
     
     println("Testing readFileCSV:")
-    val csvFilePath = "src/ressources/testreadcsv.csv"
+    val csvFilePath = "src/ressources/testRead.csv"
     val csvLines = Files.readAllLines(Paths.get(csvFilePath)).toArray.map(_.asInstanceOf[String])
     val csvParsedReports = csvLines.tail.map(_.split(",").toList).map(IOTReport.readFileCSV)
     csvParsedReports.foreach {
@@ -24,13 +24,13 @@ object Test {
 
 
     println("\nTesting writeFileCSV:")
-    val csvOutputFilePath = "scala3/src/ressources/output.csv"
+    val csvOutputFilePath = "src/ressources/testWrite.csv"
     IOTReport.writeFileCSV(reportsToWrite, csvOutputFilePath)
     println(s"CSV data written to $csvOutputFilePath")
 
   
     println("\nTesting readFileJSON:")
-    val jsonFilePath = "src/ressources/testreadjson.json"
+    val jsonFilePath = "src/ressources/testRead.json"
     val jsonParsedReports = IOTReport.readFileJSON(jsonFilePath)
     jsonParsedReports match {
       case Right(reports) => reports.foreach(println)
@@ -39,7 +39,7 @@ object Test {
 
   
     println("\nTesting writeFileJSON:")
-    val jsonOutputFilePath = "scala3/src/ressources/output.json"
+    val jsonOutputFilePath = "src/ressources/testWrite.json"
     IOTReport.writeFileJSON(reportsToWrite, jsonOutputFilePath)
     println(s"JSON data written to $jsonOutputFilePath")
   }

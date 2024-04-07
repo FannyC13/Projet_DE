@@ -5,7 +5,7 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import java.time.Instant
 
-case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String)
+case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String) //Ajouter Lat, Long
 
 object IOTReport {
   def readFileCSV(csv: List[String]): Either[String, IOTReport] = {
