@@ -18,8 +18,11 @@ Those extracts will be made every few weeks, depending on the needs of the schoo
 *Note : the architecture diagram is also available in addition to the readme.*
 
 The producers will be the school cards, serving a purpose of IOT devices. They'll record the student's voices and format them using speech-to-text. 
+
 The data will be transfered to a Kafka Topic : it will be redistributed twice, in Flink for the urgent scenario (banword detection) and in spark for the long term analysis.
-On Flink's side : Flink will redistribute the data in machines able to calculate wether or not the whole sentence represented a violation of the school policy or not. A notification will be sent to the student and the staff, and the problematic data will go through a Cassandra database, flagged as problematic.
+
+On Flink's side : Flink will redistribute the data in machines able to calculate wether the whole sentence represented a violation of the school policy or not. A notification will be sent to the student and the staff, and the problematic data will go through a Cassandra database, flagged as problematic.
+
 On Spark's side : Spark will directly pass the data through a Cassandra database. The data will be stored using hdfs on several machines. Through Cassandra's data, we'll be able to use Spark NLP or any other NLP service to analyse the conversations. Those data as well as the non-string data will then go onto analytics dashboards.
 
 ### Content of this repository 
