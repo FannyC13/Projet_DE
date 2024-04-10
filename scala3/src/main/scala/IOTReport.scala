@@ -5,18 +5,20 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import java.time.Instant
 
-case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String) //Ajouter Lat, Long
+case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Lat : Double, Long : Double) 
 
 object IOTReport {
   def readFileCSV(csv: List[String]): Either[String, IOTReport] = {
-    if (csv.length != 3) {
+    if (csv.length != 5) {
       Left("Invalid CSV format.")
     } else {
       val result = Try {
         val id = csv(0)
         val timestamp = Instant.parse(csv(1))
         val sentence = csv(2)
-        IOTReport(id, timestamp, sentence)
+        val lat = csv(3).toDouble
+        val long = csv(4).toDouble
+        IOTReport(id, timestamp, sentence, lat, long)
       }
 
       result match {
@@ -27,10 +29,10 @@ object IOTReport {
   }
 
   def writeFileCSV(reports: List[IOTReport], filePath: String): Unit = {
-    val header = "ID_Student,Timestamp,Sentence"
+    val header = "ID_Student,Timestamp,Sentence,Latitude,Longitude"
     val content = reports
       .map(report =>
-        s"${report.ID_Student},${report.Timestamp},${report.Sentence}"
+        s"${report.ID_Student},${report.Timestamp},${report.Sentence},${report.Lat},${report.Long}"
       )
       .mkString("\n")
     val writer = new BufferedWriter(new FileWriter(filePath))
@@ -51,7 +53,9 @@ object IOTReport {
         val id = report("ID_Student")
         val timestamp = Instant.parse(report("Timestamp"))
         val sentence = report("Sentence")
-        IOTReport(id, timestamp, sentence)
+        val lat = report("Longitude").toDouble
+        val long = report("Latitude").toDouble
+        IOTReport(id, timestamp, sentence, lat, long)
       }
     }
     result match {
@@ -67,7 +71,9 @@ object IOTReport {
       JObject(
         "ID_Student" -> JString(report.ID_Student),
         "Timestamp" -> JString(report.Timestamp.toString),
-        "Sentence" -> JString(report.Sentence)
+        "Sentence" -> JString(report.Sentence),
+        "Latitude" -> JString(report.Lat.toString),
+        "Longitude" -> JString(report.Long.toString)
       )
     }
 

@@ -1,9 +1,13 @@
 [{
   "ID_Student":"ID001",
   "Timestamp":"2024-04-07T12:10:00Z",
-  "Sentence":"Epita est meilleur que l'Efrei"
+  "Sentence":"Epita est meilleur que l'Efrei",
+  "Latitude":"48.85837",
+  "Longitude":"2.294481"
 },{
   "ID_Student":"ID002",
   "Timestamp":"2024-04-02T12:10:15Z",
-  "Sentence":"Je n'en peux plus des partiels"
+  "Sentence":"Je n'en peux plus des partiels",
+  "Latitude":"48.85837",
+  "Longitude":"2.294481"
 }]

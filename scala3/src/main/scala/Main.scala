@@ -9,8 +9,8 @@ object Main {
   def main(args: Array[String]): Unit = {
 
     val reportsToWrite = List(
-      IOTReport("ID001", Instant.parse("2024-04-07T12:10:00Z"), "Epita est meilleur que l'Efrei"),
-      IOTReport("ID002", Instant.parse("2024-04-02T12:10:15Z"), "Je n'en peux plus des partiels")
+      IOTReport("ID001", Instant.parse("2024-04-07T12:10:00Z"), "Epita est meilleur que l'Efrei", 48.858370,2.294481 ),
+      IOTReport("ID002", Instant.parse("2024-04-02T12:10:15Z"), "Je n'en peux plus des partiels",48.858370, 2.294481)
     )
     
     println("Testing readFileCSV:")

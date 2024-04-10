@@ -1,3 +1,3 @@
-ID_Student,Timestamp,Sentence
-ID001,2024-04-07T12:10:00Z,Epita est meilleur que l'Efrei
-ID002,2024-04-02T12:10:15Z,Je n'en peux plus des partiels
+ID_Student,Timestamp,Sentence,Latitude,Longitude
+ID001,2024-04-07T12:10:00Z,Epita est meilleur que l'Efrei,48.85837,2.294481
+ID002,2024-04-02T12:10:15Z,Je n'en peux plus des partiels,48.85837,2.294481
