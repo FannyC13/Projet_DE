@@ -1,6 +1,6 @@
 ### Context
 This project was made for the course Data Engineering, taught by Adrien Broussolle for Efrei's Big Data and Machine Learning M1 class.
-The aim of the project is to develop a service based on an IOT and an information system. The IOT devices must emit data in short lapses of time to emulate a the data flow of a successful startup.
+The aim of the project is to develop a service based on an IOT and an information system. The IOT devices must emit data in short lapses of time to emulate the data flow of a successful startup.
 The information system linked has to provide an alert service in addition to a long term analytics service.
 
 ### Storytelling
