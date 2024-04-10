@@ -7,6 +7,7 @@ The information system linked has to provide an alert service in addition to a l
 Paul Porte, an infamous alumni of the school suggested an innovative idea to the director : integrating tiny devices in every student's school card. Those devices will record the student's conversations as well as their geolocation, the exact time they enter the school, etc.
 According to Paul Porte, the students aren't grateful enough for the school, hence the new module "Good Conduct". It's simple : every student start with 20 points, if but if they talk about a forbidden subject, they'll lose points. 
 The IOT devices have to enter an alert state whenever a banword is pronounced, notify the student and decrease their grade.
+
 ![image](https://github.com/FannyC13/Projet_DE/assets/75856103/b33dfd95-648c-40ce-ac19-35a4bf0819fd)
 
 In addition, the long-term analytics service will explore the trends going around the school to do some better marketing. Also, if a student talks often about basketball for example, then the staff will inform the basketball association that they might be able to hire a new member. 
