@@ -5,7 +5,7 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import java.time.Instant
 
-case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Lat : Double, Long : Double) 
+case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Lat: Double, Long: Double)
 
 object IOTReport {
   def readFileCSV(csv: List[String]): Either[String, IOTReport] = {
@@ -23,7 +23,7 @@ object IOTReport {
 
       result match {
         case Success(report) => Right(report)
-        case Failure(e)      => Left(s"Error parsing CSV: ${e.getMessage}")
+        case Failure(e) => Left(s"Error parsing CSV: ${e.getMessage}")
       }
     }
   }
@@ -35,16 +35,19 @@ object IOTReport {
         s"${report.ID_Student},${report.Timestamp},${report.Sentence},${report.Lat},${report.Long}"
       )
       .mkString("\n")
-    val writer = new BufferedWriter(new FileWriter(filePath))
-    try { writer.write(s"$header\n$content") }
-    finally {
+    val result = Try {
+      val writer = new BufferedWriter(new FileWriter(filePath))
+      writer.write(s"$header\n$content")
       writer.close()
+    }
+
+    result match {
+      case Failure(e) => println(s"Error writing CSV: ${e.getMessage}")
+      case _ =>
     }
   }
 
-  def readFileJSON(
-      filePath: String
-  )(implicit formats: Formats): Either[String, List[IOTReport]] = {
+  def readFileJSON(filePath: String)(implicit formats: Formats): Either[String, List[IOTReport]] = {
     val result = Try {
       val jsonString = new String(Files.readAllBytes(Paths.get(filePath)))
       val json = parse(jsonString)
@@ -60,13 +63,11 @@ object IOTReport {
     }
     result match {
       case Success(reports) => Right(reports)
-      case Failure(e)       => Left(s"Error reading JSON file: ${e.getMessage}")
+      case Failure(e) => Left(s"Error reading JSON file: ${e.getMessage}")
     }
   }
 
-  def writeFileJSON(reports: List[IOTReport], filePath: String)(implicit
-      formats: Formats
-  ): Unit = {
+  def writeFileJSON(reports: List[IOTReport], filePath: String)(implicit formats: Formats): Unit = {
     val jsonReports = reports.map { report =>
       JObject(
         "ID_Student" -> JString(report.ID_Student),
@@ -79,11 +80,15 @@ object IOTReport {
 
     val json = JArray(jsonReports)
 
-    val writer = new BufferedWriter(new FileWriter(filePath))
-    try {
+    val result = Try {
+      val writer = new BufferedWriter(new FileWriter(filePath))
       writer.write(pretty(render(json)))
-    } finally {
       writer.close()
+    }
+
+    result match {
+      case Failure(e) => println(s"Error writing JSON: ${e.getMessage}")
+      case _ =>
     }
   }
 }
