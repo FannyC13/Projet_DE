@@ -1,0 +1,301 @@
+[{
+  "ID_Student":"ID465",
+  "Timestamp":"2024-04-08T16:49:18.479Z",
+  "Sentence":"\"Tu as une calculette en extra ? La mienne est morte.\",",
+  "Latitude":"-8.678760768553033",
+  "Longitude":"93.03060726774214"
+},{
+  "ID_Student":"ID608",
+  "Timestamp":"2024-04-15T05:22:58.371Z",
+  "Sentence":"\"Il paraît que Julie et Marc sortent ensemble, tu savais ?\",",
+  "Latitude":"71.3494659069643",
+  "Longitude":"-148.0462372568153"
+},{
+  "ID_Student":"ID979",
+  "Timestamp":"2024-03-27T13:39:24.742Z",
+  "Sentence":"\"Tu utilises quel matos pour tes vidéos YouTube ?\",",
+  "Latitude":"-16.21605656002309",
+  "Longitude":"-154.66449229438697"
+},{
+  "ID_Student":"ID852",
+  "Timestamp":"2024-04-19T04:54:43.203Z",
+  "Sentence":"\"Tu as une calculette en extra ? La mienne est morte.\",",
+  "Latitude":"7.263450947810867",
+  "Longitude":"80.65695147947105"
+},{
+  "ID_Student":"ID807",
+  "Timestamp":"2024-04-06T11:41:20.414Z",
+  "Sentence":"\"Le service de restauration va introduire plus d'options végétariennes après les vacances.\",",
+  "Latitude":"70.53202075523768",
+  "Longitude":"23.488191690091554"
+},{
+  "ID_Student":"ID626",
+  "Timestamp":"2024-04-17T19:45:05.019Z",
+  "Sentence":"\"Qui veut rejoindre notre club de lecture ? On commence un nouveau livre.\",",
+  "Latitude":"49.310597952470744",
+  "Longitude":"50.950645237172296"
+},{
+  "ID_Student":"ID275",
+  "Timestamp":"2024-04-12T08:11:33.502Z",
+  "Sentence":"\"On dit que le chef de département prendra sa retraite à la fin de l'année académique.\",",
+  "Latitude":"24.917218579036103",
+  "Longitude":"-95.18914185859605"
+},{
+  "ID_Student":"ID533",
+  "Timestamp":"2024-04-14T05:23:18.627Z",
+  "Sentence":"\"Je pense que j'ai raté un truc important en séchant le cours.\",",
+  "Latitude":"68.74767499759201",
+  "Longitude":"60.83771057521"
+},{
+  "ID_Student":"ID834",
+  "Timestamp":"2024-04-15T12:53:16.791Z",
+  "Sentence":"\"Le dernier épisode de cette série populaire a vraiment divisé les opinions.\",",
+  "Latitude":"-39.34567146435792",
+  "Longitude":"-24.53072186656496"
+},{
+  "ID_Student":"ID113",
+  "Timestamp":"2024-03-28T23:13:57.618Z",
+  "Sentence":"\"Il faut absolument que je trouve un groupe pour le projet.\",",
+  "Latitude":"53.8116386649784",
+  "Longitude":"66.49948525519721"
+},{
+  "ID_Student":"ID721",
+  "Timestamp":"2024-04-05T10:39:48.643Z",
+  "Sentence":"\"Des étudiants en art ont peint une murale magnifique dans le nouveau bâtiment.\",",
+  "Latitude":"43.83263547203467",
+  "Longitude":"-168.59117340071805"
+},{
+  "ID_Student":"ID236",
+  "Timestamp":"2024-04-24T23:03:45.831Z",
+  "Sentence":"\"Thomas a gagné le tournoi d'échecs du campus, il est vraiment fort.\",",
+  "Latitude":"-34.29858412397712",
+  "Longitude":"-54.87245794060104"
+},{
+  "ID_Student":"ID469",
+  "Timestamp":"2024-03-15T03:16:27.525Z",
+  "Sentence":"\"J'aimerais apprendre à coder, tu peux m'aider à démarrer ?\",",
+  "Latitude":"-31.48745278745325",
+  "Longitude":"-51.56646067901795"
+},{
+  "ID_Student":"ID513",
+  "Timestamp":"2024-04-04T13:01:01.307Z",
+  "Sentence":"\"Le service de restauration va introduire plus d'options végétariennes après les vacances.\",",
+  "Latitude":"25.05892858763832",
+  "Longitude":"38.85164912954093"
+},{
+  "ID_Student":"ID545",
+  "Timestamp":"2024-03-15T13:58:58.964Z",
+  "Sentence":"\"Qui est intéressé par un atelier de cuisine ce mois-ci ?\",",
+  "Latitude":"80.9855770589532",
+  "Longitude":"-12.165444553602356"
+},{
+  "ID_Student":"ID942",
+  "Timestamp":"2024-03-22T03:34:58.480Z",
+  "Sentence":"\"Qui est disponible pour réviser ce soir ?\",",
+  "Latitude":"-83.47247571172593",
+  "Longitude":"91.17017776943038"
+},{
+  "ID_Student":"ID851",
+  "Timestamp":"2024-04-05T05:56:23.705Z",
+  "Sentence":"\"Est-ce que quelqu'un est intéressé par un échange linguistique ?\",",
+  "Latitude":"-37.224252908552536",
+  "Longitude":"73.97400134551415"
+},{
+  "ID_Student":"ID551",
+  "Timestamp":"2024-03-07T17:38:04.386Z",
+  "Sentence":"\"Je n'ai pas compris le dernier problème du TD.\",",
+  "Latitude":"-56.03406432997495",
+  "Longitude":"177.2891456224413"
+},{
+  "ID_Student":"ID168",
+  "Timestamp":"2024-03-12T11:34:08.460Z",
+  "Sentence":"\"Tu sais si la bibliothèque est ouverte ce weekend ?\",",
+  "Latitude":"47.46060437811897",
+  "Longitude":"50.23085575713924"
+},{
+  "ID_Student":"ID359",
+  "Timestamp":"2024-03-16T19:04:48.112Z",
+  "Sentence":"\"Le labo était surbooké, je n'ai pas pu finir mes expériences.\",",
+  "Latitude":"13.895855972465583",
+  "Longitude":"119.77632051041422"
+},{
+  "ID_Student":"ID234",
+  "Timestamp":"2024-03-28T07:26:10.465Z",
+  "Sentence":"\"Il faut que je révise tout le weekend, pas de sortie pour moi.\",",
+  "Latitude":"11.389919489481386",
+  "Longitude":"89.71472061001737"
+},{
+  "ID_Student":"ID613",
+  "Timestamp":"2024-04-09T00:32:21.320Z",
+  "Sentence":"\"J'ai entendu dire que la compétition de programmation de ce mois-ci est annulée.\",",
+  "Latitude":"-70.23869700491919",
+  "Longitude":"90.9363663149283"
+},{
+  "ID_Student":"ID16",
+  "Timestamp":"2024-04-17T06:25:12.057Z",
+  "Sentence":"\"J'aimerais apprendre à coder, tu peux m'aider à démarrer ?\",",
+  "Latitude":"-36.61975800869488",
+  "Longitude":"7.154034787137903"
+},{
+  "ID_Student":"ID132",
+  "Timestamp":"2024-03-24T04:30:11.660Z",
+  "Sentence":"\"Il y a une erreur dans les horaires, qui peut confirmer ?\",",
+  "Latitude":"24.577873026077825",
+  "Longitude":"153.31354470039383"
+},{
+  "ID_Student":"ID245",
+  "Timestamp":"2024-03-28T13:34:53.279Z",
+  "Sentence":"\"Le chauffage était en panne, on a gelé en cours.\",",
+  "Latitude":"63.46336756015447",
+  "Longitude":"108.3647544589856"
+},{
+  "ID_Student":"ID424",
+  "Timestamp":"2024-03-21T19:14:10.531Z",
+  "Sentence":"\"Je vais arriver en retard, je suis coincé dans le trafic.\",",
+  "Latitude":"-55.450002665253436",
+  "Longitude":"179.72808548816465"
+},{
+  "ID_Student":"ID862",
+  "Timestamp":"2024-03-19T05:37:02.064Z",
+  "Sentence":"\"La soirée de networking organisée par le département de commerce a été un succès.\",",
+  "Latitude":"5.766938333540807",
+  "Longitude":"23.705954106031413"
+},{
+  "ID_Student":"ID431",
+  "Timestamp":"2024-04-11T15:30:04.193Z",
+  "Sentence":"\"J'ai besoin de café pour tenir toute la nuit.\",",
+  "Latitude":"-78.76563717514465",
+  "Longitude":"-115.74757433733677"
+},{
+  "ID_Student":"ID32",
+  "Timestamp":"2024-03-31T01:25:13.084Z",
+  "Sentence":"\"Le club de cinéma va diffuser une série de films classiques.\",",
+  "Latitude":"25.605197611479454",
+  "Longitude":"-18.071620097159865"
+},{
+  "ID_Student":"ID645",
+  "Timestamp":"2024-03-22T10:50:53.044Z",
+  "Sentence":"\"On pourrait faire un barbecue ce weekend, qu'en penses-tu ?\",",
+  "Latitude":"-85.17240793810763",
+  "Longitude":"-134.4662402695727"
+},{
+  "ID_Student":"ID470",
+  "Timestamp":"2024-04-23T16:47:30.262Z",
+  "Sentence":"\"La série de conférences sur l'entrepreneuriat a été très inspirante, selon plusieurs participants.\",",
+  "Latitude":"-84.14188618416108",
+  "Longitude":"70.82240690188337"
+},{
+  "ID_Student":"ID22",
+  "Timestamp":"2024-03-24T09:56:42.807Z",
+  "Sentence":"\"Le groupe de théâtre a donné une performance époustouflante vendredi dernier.\",",
+  "Latitude":"-23.843710713646473",
+  "Longitude":"-26.131062201678844"
+},{
+  "ID_Student":"ID647",
+  "Timestamp":"2024-03-30T22:19:25.799Z",
+  "Sentence":"\"Tu sais où je pourrais vendre mon ancien appareil photo ?\",",
+  "Latitude":"-37.28305555486279",
+  "Longitude":"-38.928479797668274"
+},{
+  "ID_Student":"ID462",
+  "Timestamp":"2024-04-18T03:26:12.612Z",
+  "Sentence":"\"Il faut absolument que je trouve un groupe pour le projet.\",",
+  "Latitude":"-0.052330333602270684",
+  "Longitude":"43.43806021450385"
+},{
+  "ID_Student":"ID117",
+  "Timestamp":"2024-03-10T00:02:26.586Z",
+  "Sentence":"\"Le service de restauration va introduire plus d'options végétariennes après les vacances.\",",
+  "Latitude":"15.874365077171632",
+  "Longitude":"-140.2823598863268"
+},{
+  "ID_Student":"ID891",
+  "Timestamp":"2024-03-26T18:24:49.539Z",
+  "Sentence":"\"Tu utilises quel matos pour tes vidéos YouTube ?\",",
+  "Latitude":"-33.04125436727591",
+  "Longitude":"-158.89691322965473"
+},{
+  "ID_Student":"ID325",
+  "Timestamp":"2024-04-21T08:30:02.749Z",
+  "Sentence":"\"Il y a une nouvelle salle de sport qui ouvre près du campus.\",",
+  "Latitude":"-26.76266794223409",
+  "Longitude":"-50.35552144534236"
+},{
+  "ID_Student":"ID705",
+  "Timestamp":"2024-04-15T19:41:28.973Z",
+  "Sentence":"\"Le jardin botanique du campus est en train d'être agrandi.\",",
+  "Latitude":"17.54236399194916",
+  "Longitude":"-146.82242940972088"
+},{
+  "ID_Student":"ID605",
+  "Timestamp":"2024-04-13T13:35:08.128Z",
+  "Sentence":"\"Tu sais où je pourrais vendre mon ancien appareil photo ?\",",
+  "Latitude":"-34.75924032842743",
+  "Longitude":"-18.51476671363244"
+},{
+  "ID_Student":"ID836",
+  "Timestamp":"2024-04-05T01:09:33.727Z",
+  "Sentence":"\"On prévoit un tournoi d'échecs, ça te tente ?\",",
+  "Latitude":"-75.7719336797665",
+  "Longitude":"-58.42616261000697"
+},{
+  "ID_Student":"ID584",
+  "Timestamp":"2024-03-19T11:38:11.876Z",
+  "Sentence":"\"Qui a des idées pour une soirée à thème original ?\",",
+  "Latitude":"8.8401388589742",
+  "Longitude":"54.360863546306405"
+},{
+  "ID_Student":"ID0",
+  "Timestamp":"2024-04-02T09:03:48.751Z",
+  "Sentence":"\"Qui a des bons plans pour des vacances pas chères ?\",",
+  "Latitude":"-84.10398865184823",
+  "Longitude":"-169.2661161553046"
+},{
+  "ID_Student":"ID27",
+  "Timestamp":"2024-03-11T05:04:51.749Z",
+  "Sentence":"\"Est-ce que quelqu'un est intéressé par un échange linguistique ?\",",
+  "Latitude":"26.261278857859836",
+  "Longitude":"111.85514371173383"
+},{
+  "ID_Student":"ID763",
+  "Timestamp":"2024-04-19T00:47:54.397Z",
+  "Sentence":"\"Qui est intéressé par un atelier de cuisine ce mois-ci ?\",",
+  "Latitude":"-8.877964896397799",
+  "Longitude":"76.75020041286996"
+},{
+  "ID_Student":"ID507",
+  "Timestamp":"2024-03-10T00:41:13.073Z",
+  "Sentence":"\"La compétition d'athlétisme de ce weekend a attiré beaucoup de spectateurs.\",",
+  "Latitude":"88.58520361590033",
+  "Longitude":"89.63282170761823"
+},{
+  "ID_Student":"ID401",
+  "Timestamp":"2024-04-15T13:43:40.094Z",
+  "Sentence":"\"Le distributeur ne marche plus, adieu mon goûter.\",",
+  "Latitude":"-56.728061338850836",
+  "Longitude":"100.0828057683047"
+},{
+  "ID_Student":"ID148",
+  "Timestamp":"2024-04-16T02:10:50.651Z",
+  "Sentence":"\"Hier, j'ai entendu que le prof de maths va peut-être partir à la retraite l'année prochaine.\",",
+  "Latitude":"69.24640715087494",
+  "Longitude":"-138.89293462360786"
+},{
+  "ID_Student":"ID502",
+  "Timestamp":"2024-03-18T18:23:46.830Z",
+  "Sentence":"\"Est-ce que tu as déjà fait du bénévolat ici ? Je cherche où m'impliquer.\",",
+  "Latitude":"24.9232361738227",
+  "Longitude":"33.278684774759455"
+},{
+  "ID_Student":"ID330",
+  "Timestamp":"2024-04-11T11:54:23.970Z",
+  "Sentence":"\"Beaucoup d'étudiants se plaignent de la lenteur du réseau Wi-Fi de l'école.\",",
+  "Latitude":"-82.47744531004156",
+  "Longitude":"17.562488656162827"
+},{
+  "ID_Student":"ID814",
+  "Timestamp":"2024-03-08T19:38:48.348Z",
+  "Sentence":"\"Qui est disponible pour réviser ce soir ?\",",
+  "Latitude":"64.19235513513905",
+  "Longitude":"-94.9000640684774"
+}]

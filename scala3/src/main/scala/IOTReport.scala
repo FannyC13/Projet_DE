@@ -4,6 +4,7 @@ import scala.util.{Try, Success, Failure}
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import java.time.Instant
+import org.json4s.DefaultFormats
 
 case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Lat: Double, Long: Double)
 
@@ -67,28 +68,30 @@ object IOTReport {
     }
   }
 
-  def writeFileJSON(reports: List[IOTReport], filePath: String)(implicit formats: Formats): Unit = {
-    val jsonReports = reports.map { report =>
-      JObject(
-        "ID_Student" -> JString(report.ID_Student),
-        "Timestamp" -> JString(report.Timestamp.toString),
-        "Sentence" -> JString(report.Sentence),
-        "Latitude" -> JString(report.Lat.toString),
-        "Longitude" -> JString(report.Long.toString)
-      )
-    }
+  def writeFileJSON(reports: List[IOTReport], filePath: String): Unit = {
+  implicit val formats: Formats = DefaultFormats // Providing DefaultFormats implicitly
 
-    val json = JArray(jsonReports)
-
-    val result = Try {
-      val writer = new BufferedWriter(new FileWriter(filePath))
-      writer.write(pretty(render(json)))
-      writer.close()
-    }
-
-    result match {
-      case Failure(e) => println(s"Error writing JSON: ${e.getMessage}")
-      case _ =>
-    }
+  val jsonReports = reports.map { report =>
+    JObject(
+      "ID_Student" -> JString(report.ID_Student),
+      "Timestamp" -> JString(report.Timestamp.toString),
+      "Sentence" -> JString(report.Sentence),
+      "Latitude" -> JString(report.Lat.toString),
+      "Longitude" -> JString(report.Long.toString)
+    )
   }
+
+  val json = JArray(jsonReports)
+
+  val result = Try {
+    val writer = new BufferedWriter(new FileWriter(filePath))
+    writer.write(pretty(render(json)))
+    writer.close()
+  }
+
+  result match {
+    case Failure(e) => println(s"Error writing JSON: ${e.getMessage}")
+    case _ =>
+  }
+}
 }

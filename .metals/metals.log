@@ -10812,3 +10812,338 @@ WARNING: Unmatched cancel notification for request id 7041
 2024.04.11 15:32:48 WARN  there was 1 deprecation warning; re-run with -deprecation for details
 2024.04.11 15:32:50 INFO  time: compiled root in 1.07s
 2024.04.11 15:32:50 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:43:10 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:43:10 INFO  compiling root (1 scala source)
+2024.04.11 15:43:12 WARN  there was 1 deprecation warning; re-run with -deprecation for details
+2024.04.11 15:43:12 INFO  time: compiled root in 2.46s
+2024.04.11 15:43:12 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:43:12 INFO  compiling root (1 scala source)
+2024.04.11 15:43:15 WARN  there was 1 deprecation warning; re-run with -deprecation for details
+2024.04.11 15:43:15 INFO  time: compiled root in 2.19s
+2024.04.11 15:44:43 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:08 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:08 INFO  compiling root (1 scala source)
+2024.04.11 15:47:08 INFO  time: compiled root in 0.25s
+2024.04.11 15:47:08 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:11 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:11 INFO  compiling root (1 scala source)
+2024.04.11 15:47:12 INFO  time: compiled root in 1.1s
+avr. 11, 2024 3:47:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7226
+avr. 11, 2024 3:47:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7230
+2024.04.11 15:47:25 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:25 INFO  compiling root (1 scala source)
+2024.04.11 15:47:25 INFO  time: compiled root in 0.45s
+2024.04.11 15:47:32 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:32 INFO  compiling root (1 scala source)
+2024.04.11 15:47:32 INFO  time: compiled root in 0.56s
+2024.04.11 15:47:35 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:35 INFO  compiling root (1 scala source)
+2024.04.11 15:47:35 INFO  time: compiled root in 0.67s
+2024.04.11 15:47:38 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:38 INFO  compiling root (1 scala source)
+2024.04.11 15:47:38 INFO  time: compiled root in 0.81s
+2024.04.11 15:47:44 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:44 INFO  compiling root (1 scala source)
+2024.04.11 15:47:44 INFO  time: compiled root in 0.34s
+2024.04.11 15:47:48 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:48 INFO  compiling root (1 scala source)
+2024.04.11 15:47:48 INFO  time: compiled root in 0.55s
+2024.04.11 15:47:51 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:47:51 INFO  compiling root (1 scala source)
+2024.04.11 15:47:51 INFO  time: compiled root in 0.51s
+2024.04.11 15:48:01 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:01 INFO  compiling root (1 scala source)
+2024.04.11 15:48:01 INFO  time: compiled root in 0.34s
+2024.04.11 15:48:04 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:04 INFO  compiling root (1 scala source)
+2024.04.11 15:48:04 INFO  time: compiled root in 0.58s
+2024.04.11 15:48:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:06 INFO  compiling root (1 scala source)
+2024.04.11 15:48:06 INFO  time: compiled root in 0.65s
+2024.04.11 15:48:09 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:09 INFO  compiling root (1 scala source)
+2024.04.11 15:48:09 INFO  time: compiled root in 0.6s
+2024.04.11 15:48:12 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:12 INFO  compiling root (1 scala source)
+2024.04.11 15:48:13 INFO  time: compiled root in 0.97s
+2024.04.11 15:48:15 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:15 INFO  compiling root (1 scala source)
+2024.04.11 15:48:15 INFO  time: compiled root in 0.63s
+2024.04.11 15:48:18 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:18 INFO  compiling root (1 scala source)
+2024.04.11 15:48:18 INFO  time: compiled root in 0.73s
+avr. 11, 2024 3:48:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7411
+2024.04.11 15:48:21 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:21 INFO  compiling root (1 scala source)
+2024.04.11 15:48:22 INFO  time: compiled root in 1.54s
+avr. 11, 2024 3:48:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7437
+2024.04.11 15:48:29 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:29 INFO  compiling root (1 scala source)
+2024.04.11 15:48:30 INFO  time: compiled root in 1.1s
+2024.04.11 15:48:31 ERROR Failed to tokenize input for semantic tokens for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTSimulator.scala
+scala.meta.tokenizers.TokenizeException: <input>:23: error: unclosed string literal
+      "J".",
+          ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.04.11 15:48:36 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:36 INFO  compiling root (1 scala source)
+2024.04.11 15:48:36 INFO  time: compiled root in 0.78s
+2024.04.11 15:48:43 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:43 INFO  compiling root (1 scala source)
+avr. 11, 2024 3:48:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7495
+2024.04.11 15:48:45 INFO  time: compiled root in 1.81s
+2024.04.11 15:48:49 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:48:49 INFO  compiling root (1 scala source)
+2024.04.11 15:48:51 INFO  time: compiled root in 1.68s
+avr. 11, 2024 3:48:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7521
+avr. 11, 2024 3:48:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7523
+avr. 11, 2024 3:48:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7527
+2024.04.11 15:49:05 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:49:05 INFO  compiling root (1 scala source)
+2024.04.11 15:49:06 INFO  time: compiled root in 1.27s
+2024.04.11 15:49:06 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:49:53 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:49:53 INFO  compiling root (1 scala source)
+2024.04.11 15:49:53 INFO  time: compiled root in 0.19s
+2024.04.11 15:49:56 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:49:56 INFO  compiling root (1 scala source)
+2024.04.11 15:49:56 INFO  time: compiled root in 0.18s
+2024.04.11 15:50:48 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:50:48 INFO  compiling root (1 scala source)
+2024.04.11 15:50:48 INFO  time: compiled root in 0.52s
+avr. 11, 2024 3:53:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7698
+2024.04.11 15:53:55 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:54:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:54:00 INFO  compiling root (1 scala source)
+2024.04.11 15:54:00 INFO  time: compiled root in 0.15s
+2024.04.11 15:54:09 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:54:09 INFO  compiling root (1 scala source)
+2024.04.11 15:54:09 INFO  time: compiled root in 0.14s
+2024.04.11 15:55:35 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:55:35 INFO  compiling root (1 scala source)
+2024.04.11 15:55:35 INFO  time: compiled root in 0.62s
+2024.04.11 15:56:02 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 15:56:02 INFO  compiling root (1 scala source)
+2024.04.11 15:56:02 INFO  time: compiled root in 0.15s
+2024.04.11 16:03:36 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:03:36 INFO  compiling root (1 scala source)
+2024.04.11 16:03:36 INFO  time: compiled root in 0.64s
+avr. 11, 2024 4:03:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7807
+avr. 11, 2024 4:03:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7809
+2024.04.11 16:04:27 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:27 INFO  compiling root (1 scala source)
+2024.04.11 16:04:27 INFO  time: compiled root in 0.72s
+2024.04.11 16:04:29 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:29 INFO  compiling root (1 scala source)
+2024.04.11 16:04:30 INFO  time: compiled root in 1.51s
+2024.04.11 16:04:34 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:34 INFO  compiling root (1 scala source)
+2024.04.11 16:04:34 INFO  time: compiled root in 0.38s
+2024.04.11 16:04:37 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:37 INFO  compiling root (1 scala source)
+2024.04.11 16:04:39 INFO  time: compiled root in 2.54s
+2024.04.11 16:04:39 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:39 INFO  compiling root (1 scala source)
+2024.04.11 16:04:41 INFO  time: compiled root in 1.77s
+2024.04.11 16:04:41 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:42 INFO  compiling root (1 scala source)
+2024.04.11 16:04:43 INFO  time: compiled root in 1.14s
+2024.04.11 16:04:43 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:04:43 INFO  compiling root (1 scala source)
+2024.04.11 16:04:46 INFO  time: compiled root in 1.87s
+avr. 11, 2024 4:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7958
+avr. 11, 2024 4:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7959
+avr. 11, 2024 4:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7960
+avr. 11, 2024 4:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7961
+avr. 11, 2024 4:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7966
+2024.04.11 16:05:02 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:05:02 INFO  compiling root (1 scala source)
+2024.04.11 16:05:02 INFO  time: compiled root in 0.87s
+2024.04.11 16:05:56 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:05:56 INFO  compiling root (1 scala source)
+2024.04.11 16:05:56 INFO  time: compiled root in 0.27s
+2024.04.11 16:06:10 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:06:10 INFO  compiling root (1 scala source)
+2024.04.11 16:06:10 INFO  time: compiled root in 0.62s
+2024.04.11 16:07:17 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:17 INFO  compiling root (1 scala source)
+2024.04.11 16:07:17 INFO  time: compiled root in 0.35s
+2024.04.11 16:07:19 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:19 INFO  compiling root (1 scala source)
+2024.04.11 16:07:21 INFO  time: compiled root in 2.31s
+2024.04.11 16:07:26 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:26 INFO  compiling root (1 scala source)
+2024.04.11 16:07:27 INFO  time: compiled root in 1.51s
+avr. 11, 2024 4:07:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8067
+2024.04.11 16:07:33 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:33 INFO  compiling root (1 scala source)
+2024.04.11 16:07:33 INFO  time: compiled root in 0.78s
+2024.04.11 16:07:35 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:59 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:07:59 INFO  compiling root (1 scala source)
+2024.04.11 16:07:59 INFO  time: code lens generation in 1.31s
+2024.04.11 16:08:00 INFO  time: compiled root in 1.35s
+2024.04.11 16:08:18 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:08:18 INFO  compiling root (1 scala source)
+2024.04.11 16:08:18 INFO  time: compiled root in 0.35s
+2024.04.11 16:12:17 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:12:17 INFO  compiling root (1 scala source)
+2024.04.11 16:12:17 INFO  time: compiled root in 0.55s
+avr. 11, 2024 4:13:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8243
+avr. 11, 2024 4:13:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8244
+2024.04.11 16:13:23 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.11 16:13:23 INFO  compiling root (1 scala source)
+2024.04.11 16:13:24 INFO  time: compiled root in 1.1s
+2024.04.11 16:13:24 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+avr. 11, 2024 4:16:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8296
+avr. 11, 2024 4:52:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8298
+avr. 11, 2024 4:52:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8305
+avr. 11, 2024 4:54:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8321
+2024.04.12 07:52:16 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE' for client Visual Studio Code 1.87.2.
+07:52:23.576 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+07:52:23.588 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+07:52:23.588 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+07:52:23.598 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+07:52:23.599 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+07:52:23.599 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+07:52:23.599 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+07:52:23.599 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 ...
+07:52:23.600 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/fchan/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+07:52:23.612 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+07:52:23.613 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+07:52:23.613 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+07:52:23.613 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+07:52:23.614 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+07:52:23.614 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+07:52:23.634 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+07:52:23.635 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+07:52:23.640 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+07:52:23.642 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+07:52:23.643 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+07:52:24.046 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\metals (H2 2.2)
+07:52:24.046 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+07:52:24.046 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+07:52:24.050 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+07:52:24.051 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+07:52:24.067 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+07:52:24.070 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+07:52:24.070 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+07:52:24.122 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+07:52:24.136 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+07:52:24.168 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+07:52:24.169 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+07:52:24.169 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+07:52:24.169 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+07:52:24.169 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+07:52:24.171 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+07:52:24.172 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+07:52:24.172 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+07:52:24.172 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+07:52:24.172 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+07:52:24.228 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.103s)
+07:52:24.236 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+07:52:24.295 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+07:52:24.317 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+07:52:24.360 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 26 of 100M
+2024.04.12 07:52:29 INFO  skipping build import with status 'Installed'
+2024.04.12 07:52:29 INFO  Attempting to connect to the build server...
+2024.04.12 07:52:30 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.12 07:53:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.12 07:53:06 INFO  time: Connected to build server in 37s
+2024.04.12 07:53:06 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.12 07:53:06 INFO  time: Imported build in 0.66s
+2024.04.12 07:53:20 INFO  no build target found for C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\scala3\src\main\scala\IOTReport.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.04.12 07:53:23 INFO  Failed to resolve mtags for 3.4.1
+2024.04.12 07:53:32 INFO  time: indexed workspace in 10s
+2024.04.12 13:33:58 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.12 13:33:58 INFO  Bloop uses C:\Program Files\Java\jdk1.8.0_172 defined at C:\Users\fchan\.bloop\bloop.json
+2024.04.12 13:33:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.12 13:33:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\fchan\OneDrive - Efrei\M1\Semetre 8\Data Engineering\Project\Projet_DE\.metals\bsp.trace.json or C:\Users\fchan\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.12 13:33:59 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.12 13:33:58 INFO  Connected to Build server: Bloop v1.5.15
+2024.04.12 13:34:00 WARN  Bloop is running with 1.8.0_172 but your code requires 11.0.0.1 to compile, this might cause some compilation issues when using JDK API unsupported by the Bloop's current JVM version
+2024.04.12 13:34:01 INFO  time: Imported build in 2.04s
+2024.04.12 13:34:01 INFO  time: Imported build in 2.53s
+2024.04.12 13:34:08 INFO  time: indexed workspace in 7.7s
+2024.04.12 13:34:13 INFO  time: indexed workspace in 11s
+2024.04.12 18:54:39 INFO  Shutting down server
+2024.04.12 18:54:39 INFO  shutting down Metals
+2024.04.12 18:54:39 INFO  Exiting server
+avr. 12, 2024 6:54:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:88)
+	at com.sun.proxy.$Proxy11.onBuildExit(Unknown Source)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:167)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:163)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:447)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:469)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:114)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:94)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:172)
+	at java.base/java.io.OutputStream.write(OutputStream.java:122)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:152)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 10 more
+
