@@ -11,39 +11,58 @@ object IoTSimulator {
 
   
   def randomTimestamp(): Instant = {
-    val start = Instant.parse("2024-04-01T00:00:00Z")
+    val start = Instant.parse("2024-05-02T00:00:00Z")
     val end = Instant.now()
     Instant.ofEpochMilli(start.toEpochMilli + random.nextLong() % (end.toEpochMilli - start.toEpochMilli))
   }
 
-  
+  //Selection de phrases de manière random venant d'un fichier txt
   def randomSentence(): String = {
     val filename = "src/ressources/sentences.txt"
     val sentences = Source.fromFile(filename).getLines.toList
     sentences(random.nextInt(sentences.length))
   }
 
-  
-  def randomLatitude(): Double = {
-    -90 + random.nextDouble() * 180 
+  // Tracer un cercle correspondant à la zone de chaque campus
+  def randomCoordinatesInCircle(centerLat: Double, centerLong: Double, radius: Double): (Double, Double) = {
+    val randomRadius = radius * math.sqrt(random.nextDouble())
+    val randomAngle = random.nextDouble() * 2 * math.Pi
+
+    // Décalage des coordonnées par rapport au centre du cercle
+    val latOffset = randomRadius * math.cos(randomAngle) / 111000.0 
+    val longOffset = randomRadius * math.sin(randomAngle) / (111000.0 * math.cos(math.toRadians(centerLat))) 
+
+    // Nouvelles coordonnées à l'intérieur du cercle
+    val newLat = centerLat + latOffset
+    val newLong = centerLong + longOffset
+
+    (newLat, newLong)
   }
 
   
-  def randomLongitude(): Double = {
-    -180 + random.nextDouble() * 360 
-  }
-
   
   def generateRandomIoTReport(): IOTReport = {
+    val zones = List(
+      // Campus 1 : Repu
+      (48.78878589425504,2.363706878543752, 0.001), 
+      // Campus 2 : Gorki
+      (48.79005112012818,2.36837788800889, 0.001),
+      // Campus 3 :  Home
+      (48.789622247614574,2.3692563844627523, 0.001)
+    )
+
+    val (centerLat, centerLong, radius) = zones(random.nextInt(zones.length))
+
+    val (latitude, longitude) = randomCoordinatesInCircle(centerLat, centerLong, radius)
+
     val studentID = randomStudentID()
     val timestamp = randomTimestamp()
     val sentence = randomSentence()
-    val latitude = randomLatitude()
-    val longitude = randomLongitude()
+    
     IOTReport(studentID, timestamp, sentence, latitude, longitude)
   }
 
-  
+
   def generateRandomIoTReports(count: Int): List[IOTReport] = {
     (1 to count).map(_ => generateRandomIoTReport()).toList
   }
@@ -60,10 +79,13 @@ object IoTSimulator {
 
   def main(args: Array[String]): Unit = {
     
-    val reports = IoTSimulator.generateRandomIoTReports(50)
+  
+    val reports = IoTSimulator.generateRandomIoTReports(100)
     
     
-    val csvFilePath = "src/ressources/Simulator.json"
-    IOTReport.writeFileJSON(reports, csvFilePath) 
+    val jsonFilePath = "src/ressources/SimulatorFile.json"
+    IOTReport.writeFileJSON(reports, jsonFilePath) 
   }
 }
+
+

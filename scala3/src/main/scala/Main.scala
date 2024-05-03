@@ -4,7 +4,7 @@ import java.nio.file.{Files, Paths}
 import scala.io.Source
 
 object Main {
-  implicit val formats: DefaultFormats.type = DefaultFormats
+  
 
   def main(args: Array[String]): Unit = {
 

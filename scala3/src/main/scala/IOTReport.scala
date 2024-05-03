@@ -5,8 +5,16 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import java.time.Instant
 import org.json4s.DefaultFormats
+import upickle.default.*
 
-case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Lat: Double, Long: Double)
+// Définition implicite d'un ReadWriter pour les objets Instant
+implicit val instantRw: ReadWriter[java.time.Instant] = readwriter[String].bimap(_.toString, java.time.Instant.parse)
+
+// Définition de la classe IOTReport représentant un rapport IoT avec des champs ID_Student, Timestamp, Sentence, Latitude et Longitude
+case class IOTReport(ID_Student: String, Timestamp: Instant, Sentence: String, Latitude: Double, Longitude: Double) derives ReadWriter
+
+// Définition implicite d'un ReadWriter pour la classe IOTReport pour sérialiser et désérialiser les objets IOTReport
+implicit val ownerRw: ReadWriter[IOTReport] = macroRW[IOTReport]
 
 object IOTReport {
   def readFileCSV(csv: List[String]): Either[String, IOTReport] = {
@@ -33,7 +41,7 @@ object IOTReport {
     val header = "ID_Student,Timestamp,Sentence,Latitude,Longitude"
     val content = reports
       .map(report =>
-        s"${report.ID_Student},${report.Timestamp},${report.Sentence},${report.Lat},${report.Long}"
+        s"${report.ID_Student},${report.Timestamp},${report.Sentence},${report.Latitude},${report.Longitude}"
       )
       .mkString("\n")
     val result = Try {
@@ -48,19 +56,11 @@ object IOTReport {
     }
   }
 
-  def readFileJSON(filePath: String)(implicit formats: Formats): Either[String, List[IOTReport]] = {
+  def readFileJSON(filePath: String): Either[String, List[IOTReport]] = {
     val result = Try {
       val jsonString = new String(Files.readAllBytes(Paths.get(filePath)))
-      val json = parse(jsonString)
-      val reports = json.extract[List[Map[String, String]]]
-      reports.map { report =>
-        val id = report("ID_Student")
-        val timestamp = Instant.parse(report("Timestamp"))
-        val sentence = report("Sentence")
-        val lat = report("Longitude").toDouble
-        val long = report("Latitude").toDouble
-        IOTReport(id, timestamp, sentence, lat, long)
-      }
+      val reports = read[List[IOTReport]](jsonString)
+      reports
     }
     result match {
       case Success(reports) => Right(reports)
@@ -69,29 +69,16 @@ object IOTReport {
   }
 
   def writeFileJSON(reports: List[IOTReport], filePath: String): Unit = {
-  implicit val formats: Formats = DefaultFormats // Providing DefaultFormats implicitly
+    val json : String = write(reports)
+    val result = Try {
+      val writer = new BufferedWriter(new FileWriter(filePath))
+      writer.write(json)
+      writer.close()
+    }
 
-  val jsonReports = reports.map { report =>
-    JObject(
-      "ID_Student" -> JString(report.ID_Student),
-      "Timestamp" -> JString(report.Timestamp.toString),
-      "Sentence" -> JString(report.Sentence),
-      "Latitude" -> JString(report.Lat.toString),
-      "Longitude" -> JString(report.Long.toString)
-    )
+    result match {
+      case Failure(e) => println(s"Error writing JSON: ${e.getMessage}")
+      case _ =>
+    }
   }
-
-  val json = JArray(jsonReports)
-
-  val result = Try {
-    val writer = new BufferedWriter(new FileWriter(filePath))
-    writer.write(pretty(render(json)))
-    writer.close()
-  }
-
-  result match {
-    case Failure(e) => println(s"Error writing JSON: ${e.getMessage}")
-    case _ =>
-  }
-}
 }

@@ -1,4 +1,4 @@
-val scala3Version = "3.4.1"
+val scala3Version = "3.3.3"
 
 lazy val root = project
   .in(file("."))
@@ -10,5 +10,6 @@ lazy val root = project
 
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.10" % Test,
-    libraryDependencies += "org.json4s" %% "json4s-native" % "4.0.3"
+    libraryDependencies += "org.json4s" %% "json4s-native" % "4.0.3",
+    libraryDependencies += "com.lihaoyi" %% "upickle" % "3.3.0"
   )
