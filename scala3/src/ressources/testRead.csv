@@ -1,3 +1,3 @@
-ID_Student,Timestamp,Sentence,Latitude, Longitude
-ID001,2024-04-07T12:10:00Z,Les partiels me fatiguent,48.858370,2.294481
-ID002,2024-04-07T15:10:00Z,J'ai passe un super stage,48.858370,2.294481
+IOT_ID,Student_ID,Promo,Année,Campus,Latitude,Longitude,Timestamp,Text
+26834301,20241221,SWI,M2,Republique,48.788979812541605,2.3639031038173437,2024-04-07T12:10:00Z,"On a besoin de volontaires pour nettoyer la plage ce weekend, tu viens ?"
+26834302,20239798,CC,M2,Gorki,48.78895408349186,2.36378300175804,2024-04-08T12:10:00Z,"Apparemment, le café de la fac va être rénové pendant l'été."
