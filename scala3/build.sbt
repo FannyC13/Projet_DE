@@ -14,6 +14,7 @@ lazy val root = project
     libraryDependencies += "com.lihaoyi" %% "upickle" % "3.3.0",
     libraryDependencies += "org.apache.kafka" % "kafka-clients" % "3.2.0",
     libraryDependencies += "com.lihaoyi" %% "upickle" % "3.3.0",
-    libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.30"
+    libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.30",
+    libraryDependencies += "com.twilio.sdk" % "twilio" % "7.15.5",
 
   )
