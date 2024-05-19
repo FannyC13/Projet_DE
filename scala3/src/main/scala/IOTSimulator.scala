@@ -1,33 +1,63 @@
-import java.time.{Instant, ZoneId}
+import java.time.{Instant, ZoneId, LocalDateTime, LocalDate, LocalTime}
 import scala.util.Random
 import scala.io.Source
 import java.util.Properties
 import upickle.default._
-import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
+import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord, ProducerConfig}
+import org.slf4j.LoggerFactory
 
-object IoTSimulator {
+object IOTSimulator {
+  val logger = LoggerFactory.getLogger(this.getClass)
   val random = new Random()
 
-  
-  def randomStudentID(): String = {
-    s"ID${random.nextInt(1000)}" 
+  // Génère un ID étudiant aléatoire
+  def randomStudentID(): Int = {
+    Random.between(20200000, 20280000)
   }
 
-  
+  // Génère un ID IoT aléatoire
+  def randomIotID(): Int = {
+    Random.between(20000000, 30000000)
+  }
+
+  // Sélectionne une année aléatoire parmi une liste prédéfinie
+  def randomAnnee() : String = {
+    val annees = Array("M1", "M2", "M2PRO")
+    annees(Random.nextInt(annees.length))
+  }
+
+  // Sélectionne une promotion aléatoire parmi une liste prédéfinie
+  def randomPromo() : String = {
+    val promos = Array("BDML", "LSI", "RS", "DAI", "DE", "BIA", "SWI", "TI", "ITF", "CIL", "CSIG", "CC", "SRD")
+    promos(Random.nextInt(promos.length))
+  }
+
+  // Génère un timestamp aléatoire avec 95% de chances pendant la journée et 5% pendant la nuit
   def randomTimestamp(): Instant = {
-    val start = Instant.parse("2024-05-02T00:00:00Z")
-    val end = Instant.now()
-    Instant.ofEpochMilli(start.toEpochMilli + random.nextLong() % (end.toEpochMilli - start.toEpochMilli))
+    val startOf2024 = LocalDateTime.of(2024, 1, 1, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond
+    val endOf2024 = LocalDateTime.of(2024, 12, 31, 23, 59, 59).atZone(ZoneId.systemDefault()).toEpochSecond
+
+    val randomTime = if (Random.nextDouble() < 0.95) {
+      val hour = Random.between(7, 22) // 7 to 21 inclusive
+      LocalTime.of(hour, Random.nextInt(60), Random.nextInt(60))
+    } else {
+      val hour = if (Random.nextBoolean()) Random.nextInt(7) else Random.between(21, 24)
+      LocalTime.of(hour, Random.nextInt(60), Random.nextInt(60))
+    }
+
+    val randomDay = Random.between(startOf2024, endOf2024)
+    val randomDateTime = LocalDate.ofEpochDay(randomDay / 86400).atTime(randomTime)
+    randomDateTime.atZone(ZoneId.systemDefault()).toInstant
   }
 
-  //Selection de phrases de manière random venant d'un fichier txt
+  // Sélectionne une phrase aléatoire provenant d'un fichier txt
   def randomSentence(): String = {
     val filename = "src/ressources/sentences.txt"
     val sentences = Source.fromFile(filename).getLines.toList
     sentences(random.nextInt(sentences.length))
   }
 
-  // Tracer un cercle correspondant à la zone de chaque campus
+  // Génère des coordonnées aléatoires dans un cercle autour d'un centre donné
   def randomCoordinatesInCircle(centerLat: Double, centerLong: Double, radius: Double): (Double, Double) = {
     val randomRadius = radius * math.sqrt(random.nextDouble())
     val randomAngle = random.nextDouble() * 2 * math.Pi
@@ -43,70 +73,89 @@ object IoTSimulator {
     (newLat, newLong)
   }
 
-  
-  
+  // Génère un rapport IoT aléatoire
   def generateRandomIoTReport(): IOTReport = {
     val zones = List(
       // Campus 1 : Repu
-      (48.78878589425504,2.363706878543752, 0.001), 
+      (48.78878589425504,2.363706878543752, 0.001, "Republique"), 
       // Campus 2 : Gorki
-      (48.79005112012818,2.36837788800889, 0.001),
+      (48.79005112012818,2.36837788800889, 0.001, "Gorki"),
       // Campus 3 :  Home
-      (48.789622247614574,2.3692563844627523, 0.001)
+      (48.789622247614574,2.3692563844627523, 0.001, "Home")
     )
 
-    val (centerLat, centerLong, radius) = zones(random.nextInt(zones.length))
+    val (centerLat, centerLong, radius, campus) = zones(random.nextInt(zones.length))
 
     val (latitude, longitude) = randomCoordinatesInCircle(centerLat, centerLong, radius)
 
     val studentID = randomStudentID()
+    val iotID = randomIotID()
+    val annee = randomAnnee()
+    val promo = randomPromo()
     val timestamp = randomTimestamp()
     val sentence = randomSentence()
     
-    IOTReport(studentID, timestamp, sentence, latitude, longitude)
+    IOTReport(iotID, studentID, promo, annee, campus, latitude, longitude, timestamp, sentence)
   }
 
-
+  // Génère une liste de rapports IoT aléatoires
   def generateRandomIoTReports(count: Int): List[IOTReport] = {
     (1 to count).map(_ => generateRandomIoTReport()).toList
   }
 
+  // Analyse une ligne CSV pour créer un rapport IoT
   def parseReport(reportString: String): IOTReport = {
     val fields = reportString.split(",")
-    val idStudent = fields(0)
-    val timestamp = Instant.parse(fields(1))
-    val sentence = fields(2)
-    val lat = fields(3).toDouble
-    val long = fields(4).toDouble
-    IOTReport(idStudent, timestamp, sentence, lat, long)
+    val iotId = fields(0).toInt
+    val idStudent = fields(1).toInt
+    val promo = fields(2)
+    val annee = fields(3)
+    val campus = fields(4)
+    val lat = fields(5).toDouble
+    val long = fields(6).toDouble
+    val timestamp = Instant.parse(fields(7))
+    val sentence = fields(8).replace("\"", "")
+
+    IOTReport(iotId, idStudent, promo, annee, campus, lat, long, timestamp, sentence)
   }
-  def createKafkaProducer(brokers: String): KafkaProducer[String, String] = {
+
+  // Crée un producteur Kafka avec des configurations par défaut
+  def createKafkaProducer(): KafkaProducer[String, String] = {
     val props = new Properties()
-    props.put("bootstrap.servers", brokers)
+    props.put("bootstrap.servers", "172.17.0.2:9092")  // Explicitly set here for clarity
+    props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+    new KafkaProducer[String, String](props)
+  }
+
+  // Crée un producteur Kafka avec un hôte spécifié
+  def createKafkaProducer(kafkaHost: String): KafkaProducer[String, String] = {
+    val props = new Properties()
+    props.put("bootstrap.servers", kafkaHost)  // Explicitly set here for clarity
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     new KafkaProducer[String, String](props)
   }
 
   def main(args: Array[String]): Unit = {
-    
-  
-    val reports = IoTSimulator.generateRandomIoTReports(100)
-    // Kafka broker configuration - replace "localhost:9092" with your actual Kafka broker address
-    val producer = createKafkaProducer("localhost:9092")
-    val topic = "iot_reports_topic"  // Specify the Kafka topic
+    if (args.length != 1) {
+      logger.error("Please provide the Kafka host as an argument")
+      sys.exit(1)
+    }
+
+    val host = args(0) // Retrieve the Kafka host from the command-line arguments
+    val reports = generateRandomIoTReports(100)
+    val producer = createKafkaProducer(host)
+    val topic = "iot_reports_topic"  // Ensure this topic is created in Kafka
 
     reports.foreach { report =>
-      val json = write(report)  // Serialize the report to JSON using uPickle
-      val record = new ProducerRecord[String, String](topic, json)
+      val json = write(report)
+      val record = new ProducerRecord[String, String](topic, report.ID_Student.toString, json)
       producer.send(record)
+      logger.info(s"Successfully sent report: $json")
     }
 
     producer.close()
-    
-    // val jsonFilePath = "src/ressources/SimulatorFile.json"
-    // IOTReport.writeFileJSON(reports, jsonFilePath) 
+    logger.info("Producer closed successfully.")
   }
 }
-
-
