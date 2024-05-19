@@ -8,13 +8,14 @@ lazy val root = project
 
     scalaVersion := scala3Version,
 
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.10" % Test,
-    libraryDependencies += "org.json4s" %% "json4s-native" % "4.0.3",
-    libraryDependencies += "com.lihaoyi" %% "upickle" % "3.3.0",
-    libraryDependencies += "org.apache.kafka" % "kafka-clients" % "3.2.0",
-    libraryDependencies += "com.lihaoyi" %% "upickle" % "3.3.0",
-    libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.30",
-    libraryDependencies += "com.twilio.sdk" % "twilio" % "7.15.5",
+    libraryDependencies ++= Seq(
+      "org.scalameta" %% "munit" % "0.7.29" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.10" % Test,
+      "org.json4s" %% "json4s-native" % "4.0.3",
+      "com.lihaoyi" %% "upickle" % "3.3.0",
+      "org.apache.kafka" % "kafka-clients" % "3.2.0",
+      "org.slf4j" % "slf4j-simple" % "1.7.30",
+      "com.twilio.sdk" % "twilio" % "8.25.0"
+    )
 
   )
