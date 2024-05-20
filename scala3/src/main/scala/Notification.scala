@@ -11,7 +11,7 @@ import com.google.firebase.messaging.{FirebaseMessaging, Message}
 import java.io.FileInputStream
 import java.time.Instant
 import java.util.HashMap
-import BadWordDetector._
+import Badword_Detector._
 
 object Notification {
   val logger = LoggerFactory.getLogger(this.getClass)
