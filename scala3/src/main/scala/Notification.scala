@@ -11,7 +11,7 @@ import com.google.auth.oauth2.GoogleCredentials
 import java.io.FileInputStream
 import java.time.Instant
 import java.util.HashMap
-import Badword_Detector._
+import BadWordDetector._
 
 object Notification {
   val logger = LoggerFactory.getLogger(this.getClass)
