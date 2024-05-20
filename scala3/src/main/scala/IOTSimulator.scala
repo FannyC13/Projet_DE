@@ -32,6 +32,12 @@ object IOTSimulator {
     promos(Random.nextInt(promos.length))
   }
 
+  def randomEmail(): String = {
+    val domains = Array("gmail.com", "yahoo.com", "hotmail.com", "example.com")
+    val prefix = Random.alphanumeric.take(10).mkString
+    s"$prefix@${domains(Random.nextInt(domains.length))}"
+  }
+
   // Génère un timestamp aléatoire avec 95% de chances pendant la journée et 5% pendant la nuit
   def randomTimestamp(): Instant = {
     val startOf2024 = LocalDateTime.of(2024, 1, 1, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond
@@ -94,8 +100,13 @@ object IOTSimulator {
     val promo = randomPromo()
     val timestamp = randomTimestamp()
     val sentence = randomSentence()
+    val email = if (sentence.contains("Epita") || sentence.contains("morte") || sentence.contains("mourir")) {
+      "fchang1311@gmail.com"
+    } else {
+      randomEmail()
+    }
     
-    IOTReport(iotID, studentID, promo, annee, campus, latitude, longitude, timestamp, sentence)
+    IOTReport(iotID, studentID, promo, annee, campus, latitude, longitude, timestamp, sentence,email)
   }
 
   // Génère une liste de rapports IoT aléatoires
@@ -115,8 +126,9 @@ object IOTSimulator {
     val long = fields(6).toDouble
     val timestamp = Instant.parse(fields(7))
     val sentence = fields(8).replace("\"", "")
+    val email = fields(9)
 
-    IOTReport(iotId, idStudent, promo, annee, campus, lat, long, timestamp, sentence)
+    IOTReport(iotId, idStudent, promo, annee, campus, lat, long, timestamp, sentence, email)
   }
 
   // Crée un producteur Kafka avec des configurations par défaut

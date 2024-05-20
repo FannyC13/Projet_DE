@@ -7,7 +7,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.cloud.FirestoreClient
 import com.google.auth.oauth2.GoogleCredentials
-
+import com.google.firebase.messaging.{FirebaseMessaging, Message}
 import java.io.FileInputStream
 import java.time.Instant
 import java.util.HashMap
@@ -44,6 +44,21 @@ object Notification {
     }
     docRef.set(convertedData).get()
     logger.info(s"Saved document to Firestore: $data")
+
+    val message = Message.builder()
+    .putData("title", "Alerte Mauvaise conduite détectée!")
+    .putData("body", "Des nouveaux messages ont été détectés.")
+    .setTopic("all_devices")
+    .build()
+
+    FirebaseMessaging.getInstance().send(message)
+    logger.info("Notification envoyée à FCM.")
+  }
+
+  def sendWarningEmail(email: String, sentence: String): Unit = {
+    val subject = "Attention Mauvaise conduite détectée !"
+    val content = s"Une mauvaise conduite a été détectée dans le message suivant : $sentence"
+    EmailUtil.sendEmail(email, subject, content)
   }
 
   def main(args: Array[String]): Unit = {
@@ -64,7 +79,7 @@ object Notification {
 
     // Define the schema for ProcessedIOTReport
     val schema = new StructType().add("ID_Student", IntegerType).add("Latitude", DoubleType).add("Longitude", DoubleType)
-      .add("Timestamp", StringType).add("Sentence", StringType).add("Troublesome", BooleanType)
+      .add("Timestamp", StringType).add("Sentence", StringType).add("Email", StringType).add("Troublesome", BooleanType)
 
     val kafkaDF = spark.readStream.format("kafka").option("kafka.bootstrap.servers", kafkaHost).option("subscribe", inputTopic)
       .option("startingOffsets", "latest")
@@ -81,19 +96,21 @@ object Notification {
         val Longitude = row.getDouble(2)
         val Timestamp = row.getString(3)
         val Sentence = row.getString(4)
-        val troublesomeWord = detectTroublesomeWord(Sentence, wordsToDetect).getOrElse("unknown word")
+        val Email = row.getString(5)
+        val troublesomeWord = detectTroublesomeWord(Sentence, wordsToDetect).getOrElse("")
         val localisation = s"($Latitude, $Longitude)"
         
+        
 
-        logger.info(s"Row details: ID_Student=$ID_Student, Latitude=$Latitude, Longitude=$Longitude, Timestamp=$Timestamp, Sentence=$Sentence, troublesomeWord=$troublesomeWord")
+        logger.info(s"Row details: ID_Student=$ID_Student, Latitude=$Latitude, Longitude=$Longitude, Timestamp=$Timestamp, Sentence=$Sentence, Email=$Email, troublesomeWord=$troublesomeWord")
 
-        (troublesomeWord, localisation, Sentence, ID_Student, Timestamp)
-      }.toDF("BadWord", "Localisation", "Message", "Student_ID", "Timestamp")
+        (troublesomeWord, localisation, Sentence, ID_Student, Timestamp,Email)
+      }.toDF("BadWord", "Localisation", "Message", "Student_ID", "Timestamp", "Email")
 
     val query = troublesomeReportsDF.writeStream
       .outputMode("append")
       .foreachBatch { (batchDF: DataFrame, batchId: Long) =>
-        batchDF.as[(String, String, String, Int, String)].collect().foreach { case (badWord, localisation, message, studentId, timestamp) =>
+        batchDF.as[(String, String, String, Int, String,String)].collect().foreach { case (badWord, localisation, message, studentId, timestamp,email) =>
           val data = Map(
             "BadWord" -> badWord,
             "Localisation" -> localisation,
@@ -103,6 +120,7 @@ object Notification {
           )
           logger.info(s"Saving data to Firestore: $data")
           saveToFirestore("badwords", data)
+          sendWarningEmail(email, message)
         }
       }
       .trigger(Trigger.ProcessingTime("10 seconds"))

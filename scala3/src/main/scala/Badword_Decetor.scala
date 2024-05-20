@@ -12,7 +12,7 @@ import scala.util.{Failure, Success, Try}
 import IOTReport._
 
 // Define the ProcessedIOTReport case class with the troublesome field
-case class ProcessedIOTReport(ID_Student: Int, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String, Troublesome: Boolean)
+case class ProcessedIOTReport(ID_Student: Int, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String, Email : String, Troublesome: Boolean)
 
 // Define the implicit ReadWriter for ProcessedIOTReport
 object ProcessedIOTReport {
@@ -21,7 +21,7 @@ object ProcessedIOTReport {
 
 object Badword_Detector {
   val logger = LoggerFactory.getLogger(this.getClass)
-  val wordsToDetect = List("morte", "examen", "école", "thermodynamique") // List of words to detect in the Sentence
+  val wordsToDetect = List("morte", "mourir", "Epita") // List of words to detect in the Sentence
 
   def createKafkaConsumer(kafkaHost: String, groupId: String): KafkaConsumer[String, String] = {
     val props = new Properties()
@@ -110,6 +110,7 @@ object Badword_Detector {
         report.Longitude,
         report.Timestamp,
         report.Sentence,
+        report.Email,
         troublesome
       )
       val json = write[ProcessedIOTReport](updatedReport)

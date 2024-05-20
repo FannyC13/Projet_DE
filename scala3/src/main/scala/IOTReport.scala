@@ -13,7 +13,8 @@ case class IOTReport(
   Latitude: Double,
   Longitude: Double,
   Timestamp: Instant,
-  Sentence: String
+  Sentence: String,
+  Email : String
 )
 
 object IOTReport {
@@ -35,7 +36,8 @@ object IOTReport {
         val long = csv(6).toDouble
         val timest = Instant.parse(csv(7))
         val message = csv(8)
-        IOTReport(iot_id, student_id, promo, annee, campus, lat, long, timest, message)
+        val mail = csv(9)
+        IOTReport(iot_id, student_id, promo, annee, campus, lat, long, timest, message,mail)
       }
 
       result match {
@@ -47,10 +49,10 @@ object IOTReport {
 
   // Method to write a list of IoT reports to a CSV file
   def writeFileCSV(reports: List[IOTReport], filePath: String): Unit = {
-    val header = "IOT_ID,Student_ID,Promo,Année,Campus,Latitude,Longitude,Timestamp,Text\n"
+    val header = "IOT_ID,Student_ID,Promo,Année,Campus,Latitude,Longitude,Timestamp,Text,Mail\n"
     val content = reports
       .map(report =>
-        s"${report.iot_id},${report.ID_Student},${report.promo},${report.annee},${report.campus},${report.Latitude},${report.Longitude},${report.Timestamp},\"${report.Sentence}\""
+        s"${report.iot_id},${report.ID_Student},${report.promo},${report.annee},${report.campus},${report.Latitude},${report.Longitude},${report.Timestamp},\"${report.Sentence}\", ${report.Email}"
       )
       .mkString("\n")
     val result = Try {

@@ -21,7 +21,9 @@ lazy val root = project
       "org.apache.spark" %% "spark-sql-kafka-0-10" % sparkVersion,
       "org.apache.spark" %% "spark-streaming" % sparkVersion,
       "org.apache.logging.log4j" % "log4j-core" % "2.17.2",
-      "com.google.firebase" % "firebase-admin" % "8.0.1"
+      "com.google.firebase" % "firebase-admin" % "8.0.1",
+      "javax.mail" % "javax.mail-api" % "1.6.2",
+      "com.sun.mail" % "javax.mail" % "1.6.2"
 
     ),
 

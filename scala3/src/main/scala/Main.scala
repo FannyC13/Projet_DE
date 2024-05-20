@@ -10,8 +10,8 @@ object Main {
 
     val reportsToWrite = List(
 
-      IOTReport(22395192,20236189,"CSIG","M2","Republique",48.789184466072136,2.363869590077075, Instant.parse("2024-04-07T12:10:00Z"),"Je vais arriver en retard, je suis coincé dans le trafic."),
-      IOTReport(27758898,20230752,"DAI","M2","Republique",48.78883968025621,2.3637500342382443,Instant.parse("2024-04-02T12:10:15Z"),"Tu as déjà essayé le restaurant japonais qui vient d'ouvrir ?")
+      IOTReport(22395192,20236189,"CSIG","M2","Republique",48.789184466072136,2.363869590077075, Instant.parse("2024-04-07T12:10:00Z"),"Je vais arriver en retard, je suis coincé dans le trafic.", "pierre.dupont@efrei.net"),
+      IOTReport(27758898,20230752,"DAI","M2","Republique",48.78883968025621,2.3637500342382443,Instant.parse("2024-04-02T12:10:15Z"),"Tu as déjà essayé le restaurant japonais qui vient d'ouvrir ?", "marie.alonso@efrei.net")
   
     )
     
