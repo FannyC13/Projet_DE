@@ -1,14 +1,11 @@
 val scala2_13Version = "2.13.10"
 val sparkVersion = "3.3.2"
 
-lazy val root = project
-  .in(file("."))
+lazy val root = (project in file("."))
   .settings(
     name := "scala2.13",
     version := "0.1.0-SNAPSHOT",
-
     scalaVersion := scala2_13Version,
-
     libraryDependencies ++= Seq(
       "org.scalameta" %% "munit" % "0.7.29" % Test,
       "org.scalatest" %% "scalatest" % "3.2.10" % Test,
