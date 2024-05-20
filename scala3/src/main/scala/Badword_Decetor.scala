@@ -6,6 +6,7 @@ import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializ
 import org.slf4j.LoggerFactory
 import upickle.default._
 import scala.collection.JavaConverters._
+import scala.util.{Failure, Success, Try}
 
 // Import the existing IOTReport case class
 import IOTReport._
@@ -14,7 +15,9 @@ import IOTReport._
 case class ProcessedIOTReport(ID_Student: Int, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String, Troublesome: Boolean)
 
 // Define the implicit ReadWriter for ProcessedIOTReport
-implicit val processedIOTReportRW: ReadWriter[ProcessedIOTReport] = macroRW
+object ProcessedIOTReport {
+  implicit val processedIOTReportRW: ReadWriter[ProcessedIOTReport] = macroRW
+}
 
 object Badword_Detector {
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -52,19 +55,36 @@ object Badword_Detector {
 
     consumer.subscribe(java.util.Collections.singletonList(inputTopic))
 
-    
-    while (true) {
-      val records = consumer.poll(java.time.Duration.ofMillis(1000)).asScala
+    val runtime = Runtime.getRuntime
+    runtime.addShutdownHook(new Thread() {
+      override def run(): Unit = {
+        logger.info("Shutting down consumer and producer...")
+        consumer.close()
+        producer.close()
+        logger.info("Consumer and producer closed successfully.")
+      }
+    })
 
-      records.toList
-        .flatMap(record => parseRecord(record, wordsToDetect, outputTopic))
-        .map { outputRecord =>
-          producer.send(outputRecord)
-          logger.info(s"Successfully processed and sent report: ${outputRecord.value()}")
-        }
-    }
-    
-    sys.addShutdownHook {
+    try {
+      while (true) {
+        val records = consumer.poll(java.time.Duration.ofMillis(1000)).asScala
+
+        records.toList
+          .flatMap(record => parseRecord(record, wordsToDetect, outputTopic))
+          .foreach { outputRecord =>
+            producer.send(outputRecord, (metadata, exception) => {
+              if (exception != null) {
+                logger.error(s"Failed to send record to $outputTopic", exception)
+              } else {
+                logger.info(s"Successfully processed and sent report: ${outputRecord.value()} to partition ${metadata.partition()} with offset ${metadata.offset()}")
+              }
+            })
+          }
+      }
+    } catch {
+      case e: Exception =>
+        logger.error("Error while processing records", e)
+    } finally {
       consumer.close()
       producer.close()
       logger.info("Consumer and producer closed successfully.")
@@ -72,7 +92,13 @@ object Badword_Detector {
   }
 
   def parseRecord(record: ConsumerRecord[String, String], wordsToDetect: List[String], outputTopic: String): Option[ProducerRecord[String, String]] = {
-    val reportOption = scala.util.Try(read[IOTReport](record.value())).toOption
+    val reportOption = Try(read[IOTReport](record.value())) match {
+      case Success(report) => Some(report)
+      case Failure(exception) =>
+        logger.error(s"Failed to parse record: ${record.value()}", exception)
+        None
+    }
+
     reportOption.flatMap { report =>
       val troublesome = wordsToDetect.exists(word => report.Sentence.contains(word))
       if (troublesome) {

@@ -1,22 +1,26 @@
+import java.time.Instant
 import java.nio.file.{Files, Paths}
 import java.io.{BufferedWriter, FileWriter}
 import scala.util.{Try, Success, Failure}
-import java.time.Instant
-import scala.util.Random
-
 import upickle.default._
 
-// Définition implicite d'un ReadWriter pour les objets Instant
-implicit val instantRw: ReadWriter[Instant] = readwriter[String].bimap(_.toString, Instant.parse)
-
-// Définition de la classe IOTReport représentant un rapport IoT avec des champs iot_id, ID_Student, promo, annee, campus, Latitude, Longitude, Timestamp et Sentence
-case class IOTReport(iot_id: Int, ID_Student: Int, promo: String, annee: String, campus: String, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String) derives ReadWriter
-
-// Définition implicite d'un ReadWriter pour la classe IOTReport pour sérialiser et désérialiser les objets IOTReport
-implicit val ownerRw: ReadWriter[IOTReport] = macroRW[IOTReport]
+case class IOTReport(
+  iot_id: Int,
+  ID_Student: Int,
+  promo: String,
+  annee: String,
+  campus: String,
+  Latitude: Double,
+  Longitude: Double,
+  Timestamp: Instant,
+  Sentence: String
+)
 
 object IOTReport {
-  // Méthode pour lire un rapport IoT à partir d'une ligne CSV
+  implicit val instantRw: ReadWriter[Instant] = readwriter[String].bimap(_.toString, Instant.parse)
+  implicit val iotReportRW: ReadWriter[IOTReport] = macroRW[IOTReport]
+
+  // Method to read an IoT report from a CSV line
   def readFileCSV(csv: List[String]): Either[String, IOTReport] = {
     if (csv.length != 9) {
       Left("Invalid CSV format.")
@@ -41,7 +45,7 @@ object IOTReport {
     }
   }
 
-  // Méthode pour écrire une liste de rapports IoT dans un fichier CSV
+  // Method to write a list of IoT reports to a CSV file
   def writeFileCSV(reports: List[IOTReport], filePath: String): Unit = {
     val header = "IOT_ID,Student_ID,Promo,Année,Campus,Latitude,Longitude,Timestamp,Text\n"
     val content = reports
@@ -60,7 +64,7 @@ object IOTReport {
     }
   }
 
-  // Méthode pour lire une liste de rapports IoT à partir d'un fichier JSON
+  // Method to read a list of IoT reports from a JSON file
   def readFileJSON(filePath: String): Either[String, List[IOTReport]] = {
     val result = Try {
       val jsonString = new String(Files.readAllBytes(Paths.get(filePath)))
@@ -73,7 +77,7 @@ object IOTReport {
     }
   }
 
-  // Méthode pour écrire une liste de rapports IoT dans un fichier JSON
+  // Method to write a list of IoT reports to a JSON file
   def writeFileJSON(reports: List[IOTReport], filePath: String): Unit = {
     val json: String = write(reports)
     val result = Try {
