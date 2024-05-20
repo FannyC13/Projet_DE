@@ -1,94 +1,113 @@
-import java.time.Instant
-import java.util.Properties
-import org.apache.kafka.clients.consumer.{ConsumerConfig, KafkaConsumer, ConsumerRecord}
-import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
-import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializer}
+import org.apache.spark.sql.{SparkSession, DataFrame}
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.streaming.Trigger
 import org.slf4j.LoggerFactory
-import upickle.default._
-import scala.collection.JavaConverters._
-import com.twilio.Twilio
-import com.twilio.`type`.PhoneNumber
-import com.twilio.rest.api.v2010.account.Message
+import com.google.firebase.FirebaseApp
+import com.google.firebase.FirebaseOptions
+import com.google.firebase.cloud.FirestoreClient
+import com.google.auth.oauth2.GoogleCredentials
 
-// Import the existing IOTReport case class
+import java.io.FileInputStream
+import java.time.Instant
+import java.util.HashMap
 import Badword_Detector._
 
 object Notification {
   val logger = LoggerFactory.getLogger(this.getClass)
 
+  // Remplacez par le chemin vers votre fichier de clé privée Firebase
+  val serviceAccount = new FileInputStream("src/ressources/my-efrei-detector-y4u29v-firebase-adminsdk-q75hj-373e24ccae.json")
 
-  val ACCOUNT_SID = sys.env("TWILIO_ACCOUNT_SID")
-  val AUTH_TOKEN = sys.env("TWILIO_AUTH_TOKEN")
-  val FROM_PHONE_NUMBER = sys.env("TWILIO_FROM_PHONE_NUMBER")
+  val options = FirebaseOptions.builder()
+    .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+    .build()
 
-  if (ACCOUNT_SID == null || AUTH_TOKEN == null || FROM_PHONE_NUMBER == null) {
-    logger.error("Twilio credentials and phonels  number must be set in environment variables")
-    sys.exit(1)
-  }
+  FirebaseApp.initializeApp(options)
 
-  Twilio.init(ACCOUNT_SID, AUTH_TOKEN)
-
-  def createKafkaConsumer(kafkaHost: String, groupId: String): KafkaConsumer[String, String] = {
-    val props = new Properties()
-    props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaHost)
-    props.put(ConsumerConfig.GROUP_ID_CONFIG, groupId)
-    props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, classOf[StringDeserializer].getName)
-    props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, classOf[StringDeserializer].getName)
-    props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest")
-    new KafkaConsumer[String, String](props)
-  }
+  val db = FirestoreClient.getFirestore()
 
   def detectTroublesomeWord(sentence: String, wordsToDetect: List[String]): Option[String] = {
     wordsToDetect.find(word => sentence.contains(word))
   }
 
-  def sendSMS(to: String, message: String): Unit = {
-    Message.creator(
-      new PhoneNumber(to),
-      new PhoneNumber(FROM_PHONE_NUMBER),
-      message
-    ).create()
+  def saveToFirestore(collection: String, data: Map[String, Any]): Unit = {
+    val docRef = db.collection(collection).document()
+    val convertedData = new HashMap[String, Any]()
+    data.foreach { case (key, value) => 
+      convertedData.put(key, value match {
+        case v: String => v
+        case v: Int => v: java.lang.Integer
+        case v: Double => v: java.lang.Double
+        case _ => value.toString
+      })
+    }
+    docRef.set(convertedData).get()
+    logger.info(s"Saved document to Firestore: $data")
   }
 
   def main(args: Array[String]): Unit = {
-    if (args.length != 2) {
-      logger.error("Veuillez mettre le host et le numéro de téléphone")
+    if (args.length != 1) {
+      logger.error("Please provide the Kafka host as an argument")
       sys.exit(1)
     }
 
     val kafkaHost = args(0)
-    val recipientPhoneNumber = args(1)
     val inputTopic = "processed_iot_reports_topic"
-    val consumer = createKafkaConsumer(kafkaHost, "troublesome-message-printer")
 
-    consumer.subscribe(java.util.Collections.singletonList(inputTopic))
+    val spark = SparkSession.builder
+      .appName("Notification")
+      .master("local[*]") // Change this for production
+      .getOrCreate()
 
-    while (true) {
-      val records = consumer.poll(java.time.Duration.ofMillis(1000)).asScala
+    import spark.implicits._
 
-      records.toList
-        .flatMap(record => parseRecord(record))
-        .map { message =>
-          sendSMS(recipientPhoneNumber, message)
-          logger.info(s"Sent SMS: $message")
+    // Define the schema for ProcessedIOTReport
+    val schema = new StructType().add("ID_Student", IntegerType).add("Latitude", DoubleType).add("Longitude", DoubleType)
+      .add("Timestamp", StringType).add("Sentence", StringType).add("Troublesome", BooleanType)
+
+    val kafkaDF = spark.readStream.format("kafka").option("kafka.bootstrap.servers", kafkaHost).option("subscribe", inputTopic)
+      .option("startingOffsets", "latest")
+      .load()
+
+    val processedIOTReportsDF = kafkaDF.selectExpr("CAST(value AS STRING) AS json")
+      .select(from_json($"json", schema).as("data"))
+      .select("data.*")
+
+    val troublesomeReportsDF = processedIOTReportsDF.filter($"Troublesome")
+      .map { row =>
+        val ID_Student = row.getInt(0)
+        val Latitude = row.getDouble(1)
+        val Longitude = row.getDouble(2)
+        val Timestamp = row.getString(3)
+        val Sentence = row.getString(4)
+        val troublesomeWord = detectTroublesomeWord(Sentence, wordsToDetect).getOrElse("unknown word")
+        val localisation = s"($Latitude, $Longitude)"
+        
+
+        logger.info(s"Row details: ID_Student=$ID_Student, Latitude=$Latitude, Longitude=$Longitude, Timestamp=$Timestamp, Sentence=$Sentence, troublesomeWord=$troublesomeWord")
+
+        (troublesomeWord, localisation, Sentence, ID_Student, Timestamp)
+      }.toDF("BadWord", "Localisation", "Message", "Student_ID", "Timestamp")
+
+    val query = troublesomeReportsDF.writeStream
+      .outputMode("append")
+      .foreachBatch { (batchDF: DataFrame, batchId: Long) =>
+        batchDF.as[(String, String, String, Int, String)].collect().foreach { case (badWord, localisation, message, studentId, timestamp) =>
+          val data = Map(
+            "BadWord" -> badWord,
+            "Localisation" -> localisation,
+            "Message" -> message,
+            "Student_ID" -> studentId,
+            "Timestamp" -> timestamp
+          )
+          logger.info(s"Saving data to Firestore: $data")
+          saveToFirestore("badwords", data)
         }
-    }
-
-    sys.addShutdownHook {
-      consumer.close()
-      logger.info("Consumer closed successfully.")
-    }
-  }
-
-  def parseRecord(record: ConsumerRecord[String, String]): Option[String] = {
-    val processedReportOption = scala.util.Try(read[ProcessedIOTReport](record.value())).toOption
-    processedReportOption.flatMap { processedReport =>
-      if (processedReport.Troublesome) {
-        val troublesomeWord = detectTroublesomeWord(processedReport.Sentence, wordsToDetect).getOrElse("unknown word")
-        Some(s"ID_Etudiant: ${processedReport.ID_Student} \n Detected Word: $troublesomeWord \n Message : '${processedReport.Sentence}' \n Localisation : (${processedReport.Latitude}, ${processedReport.Longitude}) \n Heure : ${processedReport.Timestamp} ")
-      } else {
-        None
       }
-    }
+      .trigger(Trigger.ProcessingTime("10 seconds"))
+      .start()
+
+    query.awaitTermination()
   }
 }
