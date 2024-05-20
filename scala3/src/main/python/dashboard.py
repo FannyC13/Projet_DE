@@ -1,86 +1,113 @@
 import pandas as pd
-import numpy as np
 from datetime import datetime
 import plotly.express as px
 import plotly.graph_objs as go
 from textblob import TextBlob
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
-from wordcloud import WordCloud
-import base64
-from io import BytesIO
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
 import nltk
 
-# Télécharger les corpus nécessaires
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
+# Initialize Spark session
+spark = SparkSession.builder \
+    .appName("IOT Dashboard") \
+    .getOrCreate()
 
-# Charger les données du CSV
-df = pd.read_csv('student_data.csv')  # Remplacez par le chemin correct de votre fichier CSV
+# Function to load data from HDFS
+def load_data_from_hdfs():
+    try:
+        print("Reading data from HDFS...")
+        df_spark = spark.read.parquet("hdfs://localhost:8020/user/hdfs/processed_reports")
+        df_spark.show()
+        print("Data read from HDFS successfully.")
+        
+        # Ensure the Timestamp column is of the correct type
+        df_spark = df_spark.withColumn("Timestamp", col("Timestamp").cast("timestamp"))
+        print("Timestamp column type ensured.")
+        
+        # Collect Spark DataFrame as list of rows and convert to Pandas DataFrame
+        pandas_df = pd.DataFrame(df_spark.collect(), columns=df_spark.columns)
+        print("Spark DataFrame converted to Pandas DataFrame.")
+        
+        return pandas_df
+    except Exception as e:
+        print(f"Error loading data from HDFS: {e}")
+        return pd.DataFrame()  # Return an empty DataFrame in case of error
 
-# Convertir les timestamps en datetime
-df['Timestamp'] = pd.to_datetime(df['Timestamp'], unit='s')
+# Load initial data
+df = load_data_from_hdfs()
+print(df)
 
-# Extraire les informations nécessaires
-df['Hour'] = df['Timestamp'].dt.hour
-df['Month'] = df['Timestamp'].dt.month
-df['Weekday'] = df['Timestamp'].dt.day_name()
+# Function to preprocess data
+def preprocess_data(df):
+    if df.empty:
+        return df
 
-# Analyse des sentiments
-def analyze_sentiment(text):
-    analysis = TextBlob(text)
-    if analysis.sentiment.polarity > 0:
-        return 'Positive'
-    elif analysis.sentiment.polarity == 0:
-        return 'Neutral'
-    else:
-        return 'Negative'
+    df['Hour'] = df['Timestamp'].dt.hour
+    df['Month'] = df['Timestamp'].dt.month
+    df['Weekday'] = df['Timestamp'].dt.day_name()
 
-df['Sentiment'] = df['Text'].apply(analyze_sentiment)
+    def analyze_sentiment(text):
+        analysis = TextBlob(text)
+        if analysis.sentiment.polarity > 0:
+            return 'Positive'
+        elif analysis.sentiment.polarity == 0:
+            return 'Neutral'
+        else:
+            return 'Negative'
 
-# Créer les histogrammes initiaux
-fig_hour = px.histogram(df, x='Hour', nbins=24, title='Nombre de lignes par heure de la journée')
-fig_month = px.histogram(df, x='Month', nbins=12, title='Nombre de lignes par mois')
-fig_sentiment = px.histogram(df, x='Sentiment', title='Distribution des sentiments')
+    df['Sentiment'] = df['Sentence'].apply(analyze_sentiment)
 
-# Série temporelle de l'analyse des sentiments par mois
-sentiment_by_month = df.groupby(['Month', 'Sentiment']).size().reset_index(name='Count')
-fig_sentiment_time_series = px.line(sentiment_by_month, x='Month', y='Count', color='Sentiment', title='Analyse de sentiments par mois')
+    return df
 
-# Nombre de fois où certains mots sont prononcés par jour de la semaine
-keywords = ['Efrei', 'Pelouse', 'Profs']
-df['Efrei'] = df['Text'].str.contains('Efrei', case=False)
-df['Pelouse'] = df['Text'].str.contains('Pelouse', case=False)
-df['Profs'] = df['Text'].str.contains('Profs', case=False)
-keyword_counts = df.groupby(['Weekday'])[['Efrei', 'Pelouse', 'Profs']].sum().reset_index()
+# Preprocess data
+df = preprocess_data(df)
 
-# Initialiser le graphique pour les mots-clés
-def get_keyword_bar(day):
-    filtered_data = keyword_counts[keyword_counts['Weekday'] == day]
-    if filtered_data.empty:
-        return go.Figure()  # Retourner un graphique vide si les données sont vides
-    fig = go.Figure(data=[
-        go.Bar(name='Efrei', x=filtered_data['Weekday'], y=filtered_data['Efrei']),
-        go.Bar(name='Pelouse', x=filtered_data['Weekday'], y=filtered_data['Pelouse']),
-        go.Bar(name='Profs', x=filtered_data['Weekday'], y=filtered_data['Profs']),
-    ])
-    fig.update_layout(barmode='group', title=f'Nombre de mentions par mots-clés pour {day}')
-    return fig
+# Create initial plots
+def create_plots(df):
+    if df.empty:
+        return {}, {}, {}, {}, {}, {}, {}
 
-# Nombre de phrases prononcées par campus
-fig_campus = px.histogram(df, x='Campus', title='Nombre de phrases prononcées par campus')
+    fig_hour = px.histogram(df, x='Hour', nbins=24, title='Nombre de lignes par heure de la journée')
+    fig_month = px.histogram(df, x='Month', nbins=12, title='Nombre de lignes par mois')
+    fig_sentiment = px.histogram(df, x='Sentiment', title='Distribution des sentiments')
 
-# Répartition des étudiants par promo
-fig_promo = px.histogram(df, x='Promo', title='Répartition des étudiants par promo')
+    sentiment_by_month = df.groupby(['Month', 'Sentiment']).size().reset_index(name='Count')
+    fig_sentiment_time_series = px.line(sentiment_by_month, x='Month', y='Count', color='Sentiment', title='Analyse de sentiments par mois')
 
-# Carte de la répartition géographique des messages
-fig_map = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", hover_name="Text", hover_data=["Campus"],
-                            color_discrete_sequence=["fuchsia"], zoom=12, height=300)
-fig_map.update_layout(mapbox_style="open-street-map")
-fig_map.update_layout(margin={"r":0,"t":50,"l":0,"b":0})
-fig_map.update_layout(title="Répartition des phrases prononcées par lieux")
+    keywords = ['Efrei', 'Pelouse', 'Profs']
+    df['Efrei'] = df['Sentence'].str.contains('Efrei', case=False)
+    df['Pelouse'] = df['Sentence'].str.contains('Pelouse', case=False)
+    df['Profs'] = df['Sentence'].str.contains('Profs', case=False)
+    keyword_counts = df.groupby(['Weekday'])[['Efrei', 'Pelouse', 'Profs']].sum().reset_index()
 
-# Créer l'application Dash
+    def get_keyword_bar(day):
+        filtered_data = keyword_counts[keyword_counts['Weekday'] == day]
+        if filtered_data.empty:
+            return go.Figure()  # Return an empty figure if there's no data
+        fig = go.Figure(data=[
+            go.Bar(name='Efrei', x=filtered_data['Weekday'], y=filtered_data['Efrei']),
+            go.Bar(name='Pelouse', x=filtered_data['Weekday'], y=filtered_data['Pelouse']),
+            go.Bar(name='Profs', x=filtered_data['Weekday'], y=filtered_data['Profs']),
+        ])
+        fig.update_layout(barmode='group', title=f'Nombre de mentions par mots-clés pour {day}')
+        return fig
+
+    fig_campus = px.histogram(df, x='campus', title='Nombre de phrases prononcées par campus')
+    fig_promo = px.histogram(df, x='promo', title='Répartition des étudiants par promo')
+
+    fig_map = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", hover_name="Sentence", hover_data=["campus"],
+                                color_discrete_sequence=["fuchsia"], zoom=12, height=300)
+    fig_map.update_layout(mapbox_style="open-street-map")
+    fig_map.update_layout(margin={"r":0,"t":50,"l":0,"b":0})
+    fig_map.update_layout(title="Répartition des phrases prononcées par lieux")
+
+    return fig_hour, fig_month, fig_sentiment, fig_sentiment_time_series, fig_campus, fig_promo, fig_map
+
+fig_hour, fig_month, fig_sentiment, fig_sentiment_time_series, fig_campus, fig_promo, fig_map = create_plots(df)
+
+# Create the Dash application
 app = Dash(__name__)
 
 app.layout = html.Div(children=[
@@ -110,7 +137,7 @@ app.layout = html.Div(children=[
         html.Label('Choisissez un jour de la semaine:'),
         dcc.Dropdown(
             id='day-dropdown',
-            options=[{'label': day, 'value': day} for day in df['Weekday'].unique()],
+            options=[{'label': day, 'value': day} for day in df['Weekday'].unique()] if not df.empty else [],
             value='Monday'
         ),
         dcc.Graph(

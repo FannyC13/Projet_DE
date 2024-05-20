@@ -16,6 +16,7 @@ object HDFSWriter {
     val kafkaHost = args(0)
     val inputTopic = "processed_iot_reports_topic"
     val hdfsPath = "hdfs://localhost:8020/user/hdfs/processed_reports"
+    val checkpointPath = "hdfs://localhost:8020/user/hdfs/checkpoint"
 
     val spark = SparkSession.builder
       .appName("HDFSWriter")
@@ -25,11 +26,16 @@ object HDFSWriter {
     import spark.implicits._
 
     val schema = new StructType()
+      .add("iot_id", IntegerType)
       .add("ID_Student", IntegerType)
+      .add("promo", StringType)
+      .add("annee", StringType)
+      .add("campus", StringType)
       .add("Latitude", DoubleType)
       .add("Longitude", DoubleType)
       .add("Timestamp", StringType)
       .add("Sentence", StringType)
+      .add("Email", StringType)
       .add("Troublesome", BooleanType)
 
     val kafkaDF = spark.readStream
@@ -42,14 +48,13 @@ object HDFSWriter {
     val processedIOTReportsDF = kafkaDF.selectExpr("CAST(value AS STRING) AS json")
       .select(from_json($"json", schema).as("data"))
       .select("data.*")
+      .withColumn("Timestamp", to_timestamp($"Timestamp", "yyyy-MM-dd'T'HH:mm:ss'Z'"))
 
-    val troublesomeReportsDF = processedIOTReportsDF.filter($"Troublesome")
-
-    val query = troublesomeReportsDF.writeStream
+    val query = processedIOTReportsDF.writeStream
       .outputMode("append")
       .format("parquet")
       .option("path", hdfsPath)
-      .option("checkpointLocation", "hdfs://localhost:8020/user/hdfs/checkpoint")
+      .option("checkpointLocation", checkpointPath)
       .trigger(Trigger.ProcessingTime("10 seconds"))
       .start()
 

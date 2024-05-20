@@ -78,7 +78,7 @@ object IOTSimulator {
 
     (newLat, newLong)
   }
-
+  
   // Génère un rapport IoT aléatoire
   def generateRandomIoTReport(): IOTReport = {
     val zones = List(
@@ -91,8 +91,8 @@ object IOTSimulator {
     )
 
     val (centerLat, centerLong, radius, campus) = zones(random.nextInt(zones.length))
-
-    val (latitude, longitude) = randomCoordinatesInCircle(centerLat, centerLong, radius)
+    
+    val (latitude, longitude) = randomPosition(campus) // randomCoordinatesInCircle(centerLat, centerLong, radius)
 
     val studentID = randomStudentID()
     val iotID = randomIotID()
@@ -148,15 +148,27 @@ object IOTSimulator {
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     new KafkaProducer[String, String](props)
   }
+  
 
+  def randomPosition(campus: String): (Double, Double) = {
+    val campuses = Map(
+    "Republique" -> ((48.788806, 48.790083), (2.363417, 2.364028)),
+    "Gorki" -> ((48.789750, 48.790389), (2.367750, 2.368722)),
+    "Home" -> ((48.789500, 48.789806), (2.369083, 2.369389))
+    )
+    val ((latMin, latMax), (lonMin, lonMax)) = campuses(campus)
+    val latitude = latMin + (latMax - latMin) * Random.nextDouble()
+    val longitude = lonMin + (lonMax - lonMin) * Random.nextDouble()
+    (latitude, longitude)
+  }
   def main(args: Array[String]): Unit = {
     if (args.length != 1) {
       logger.error("Please provide the Kafka host as an argument")
       sys.exit(1)
     }
-
+    
     val host = args(0) // Retrieve the Kafka host from the command-line arguments
-    val reports = generateRandomIoTReports(100)
+    val reports = generateRandomIoTReports(500)
     val producer = createKafkaProducer(host)
     val topic = "iot_reports_topic"  // Ensure this topic is created in Kafka
 

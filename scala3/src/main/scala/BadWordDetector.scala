@@ -12,14 +12,14 @@ import scala.util.{Failure, Success, Try}
 import IOTReport._
 
 // Define the ProcessedIOTReport case class with the troublesome field
-case class ProcessedIOTReport(ID_Student: Int, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String, Email : String, Troublesome: Boolean)
+case class ProcessedIOTReport(iot_id: Int, ID_Student: Int, promo: String, annee: String, campus: String, Latitude: Double, Longitude: Double, Timestamp: Instant, Sentence: String, Email: String, Troublesome: Boolean)
 
 // Define the implicit ReadWriter for ProcessedIOTReport
 object ProcessedIOTReport {
   implicit val processedIOTReportRW: ReadWriter[ProcessedIOTReport] = macroRW
 }
 
-object Badword_Detector {
+object BadWordDetector {
   val logger = LoggerFactory.getLogger(this.getClass)
   val wordsToDetect = List("morte", "mourir", "Epita") // List of words to detect in the Sentence
 
@@ -72,11 +72,12 @@ object Badword_Detector {
         records.toList
           .flatMap(record => parseRecord(record, wordsToDetect, outputTopic))
           .foreach { outputRecord =>
+            logger.info(s"Sending record: ${outputRecord.value()} to $outputTopic")
             producer.send(outputRecord, (metadata, exception) => {
               if (exception != null) {
                 logger.error(s"Failed to send record to $outputTopic", exception)
               } else {
-                logger.info(s"Successfully processed and sent report: ${outputRecord.value()} to partition ${metadata.partition()} with offset ${metadata.offset()}")
+                logger.info(s"Successfully sent report: ${outputRecord.value()} to partition ${metadata.partition()} with offset ${metadata.offset()}")
               }
             })
           }
@@ -93,7 +94,9 @@ object Badword_Detector {
 
   def parseRecord(record: ConsumerRecord[String, String], wordsToDetect: List[String], outputTopic: String): Option[ProducerRecord[String, String]] = {
     val reportOption = Try(read[IOTReport](record.value())) match {
-      case Success(report) => Some(report)
+      case Success(report) =>
+        logger.info(s"Read record: ${record.value()}")
+        Some(report)
       case Failure(exception) =>
         logger.error(s"Failed to parse record: ${record.value()}", exception)
         None
@@ -105,7 +108,11 @@ object Badword_Detector {
         logger.debug(s"Detected troublesome word in sentence: ${report.Sentence}")
       }
       val updatedReport = ProcessedIOTReport(
+        report.iot_id,
         report.ID_Student,
+        report.promo,
+        report.annee,
+        report.campus,
         report.Latitude,
         report.Longitude,
         report.Timestamp,
