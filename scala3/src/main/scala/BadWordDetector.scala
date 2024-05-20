@@ -52,6 +52,7 @@ object BadWordDetector {
       .option("kafka.bootstrap.servers", kafkaBootstrapServers)
       .option("subscribe", inputTopic)
       .option("startingOffsets", "latest")
+      .option("failOnDataLoss", "false") // Add this option to handle data loss gracefully
       .load()
 
     val iotReports = rawStream.selectExpr("CAST(value AS STRING)").as[String]
