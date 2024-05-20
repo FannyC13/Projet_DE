@@ -17,7 +17,8 @@ object Notification {
   val logger = LoggerFactory.getLogger(this.getClass)
 
   // Remplacez par le chemin vers votre fichier de clé privée Firebase
-  val serviceAccount = new FileInputStream("src/ressources/my-efrei-detector-y4u29v-firebase-adminsdk-q75hj-373e24ccae.json")
+  val serviceAccountPath = sys.env("GOOGLE_APP_JSON")
+  val serviceAccount = new FileInputStream(serviceAccountPath)
 
   val options = FirebaseOptions.builder()
     .setCredentials(GoogleCredentials.fromStream(serviceAccount))

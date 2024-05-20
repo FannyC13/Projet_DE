@@ -3,8 +3,8 @@ import javax.mail.internet.{InternetAddress, MimeMessage}
 import java.util.Properties
 
 object EmailUtil {
-  val username = "MyEfreiDetector@gmail.com"
-  val password = "gzwm zngz olln nljj"
+  val username = sys.env("MAIL_ACCOUNT")
+  val password = sys.env("MAIL_PASSWORD")
 
   val props = new Properties()
   props.put("mail.smtp.auth", "true")
