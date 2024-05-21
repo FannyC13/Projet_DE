@@ -21,7 +21,7 @@ object ProcessedIOTReport {
 
 object BadWordDetector {
   val logger = LoggerFactory.getLogger(this.getClass)
-  val wordsToDetect = List("morte", "mourir", "Epita") // List of words to detect in the Sentence
+  val wordsToDetect = List("morte", "mourir", "Epita", "pelouse") // List of words to detect in the Sentence
 
   def createKafkaConsumer(kafkaHost: String, groupId: String): KafkaConsumer[String, String] = {
     val props = new Properties()
