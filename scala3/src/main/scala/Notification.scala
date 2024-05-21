@@ -15,11 +15,10 @@ import BadWordDetector._
 
 object Notification {
   val logger = LoggerFactory.getLogger(this.getClass)
-
-  // Remplacez par le chemin vers votre fichier de clé privée Firebase
   val serviceAccountPath = sys.env("GOOGLE_APP_JSON")
   val serviceAccount = new FileInputStream(serviceAccountPath)
 
+  // Connexion au Firestore
   val options = FirebaseOptions.builder()
     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
     .build()
@@ -28,14 +27,16 @@ object Notification {
 
   val db = FirestoreClient.getFirestore()
 
+  // Récupérer le BadWord
   def detectTroublesomeWord(sentence: String, wordsToDetect: List[String]): Option[String] = {
     wordsToDetect.find(word => sentence.contains(word))
   }
 
+  // Mettre le document sur Firestore
   def saveToFirestore(collection: String, data: Map[String, Any]): Unit = {
     val docRef = db.collection(collection).document()
     val convertedData = new HashMap[String, Any]()
-    data.foreach { case (key, value) => 
+    data.foreach { case (key, value) =>
       convertedData.put(key, value match {
         case v: String => v
         case v: Int => v: java.lang.Integer
@@ -45,20 +46,26 @@ object Notification {
     }
     docRef.set(convertedData).get()
     logger.info(s"Saved document to Firestore: $data")
-
-    val message = Message.builder()
-    .putData("title", "Alerte Mauvaise conduite détectée!")
-    .putData("body", "Des nouveaux messages ont été détectés.")
-    .setTopic("all_devices")
-    .build()
-
-    FirebaseMessaging.getInstance().send(message)
-    logger.info("Notification envoyée à FCM.")
   }
 
-  def sendWarningEmail(email: String, sentence: String): Unit = {
-    val subject = "Attention Mauvaise conduite détectée !"
-    val content = s"Une mauvaise conduite a été détectée dans le message suivant : $sentence"
+  // Envoi du mail à l'étudiant
+  def sendWarningEmail(email: String, studentID: Int, sentence: String, heure: String, localisation: String): Unit = {
+    val subject = "⚠️ Attention : Mauvaise conduite détectée !"
+    val content = s"""
+    |Cher(e) Etudiant(e),
+    |
+    |Nous tenons à vous informer qu'une mauvaise conduite de votre part a été détectée.
+    |
+    |Détails de l'incident :
+    |- **Message :** $sentence
+    |- **Heure :** $heure
+    |- **Localisation :** $localisation
+    |
+    |Nous vous prions de bien vouloir prendre les mesures nécessaires pour corriger cette situation.
+    |
+    |Cordialement,
+    |L'équipe de Surveillance MyEfreiDetector
+    """.stripMargin
     EmailUtil.sendEmail(email, subject, content)
   }
 
@@ -68,28 +75,38 @@ object Notification {
       sys.exit(1)
     }
 
+    // Récupérer les données du Kafka consumer
     val kafkaHost = args(0)
     val inputTopic = "processed_iot_reports_topic"
 
     val spark = SparkSession.builder
       .appName("Notification")
-      .master("local[*]") // Change this for production
+      .master("local[*]")
       .getOrCreate()
 
     import spark.implicits._
 
-    // Define the schema for ProcessedIOTReport
-    val schema = new StructType().add("ID_Student", IntegerType).add("Latitude", DoubleType).add("Longitude", DoubleType)
-      .add("Timestamp", StringType).add("Sentence", StringType).add("Email", StringType).add("Troublesome", BooleanType)
+    val schema = new StructType()
+      .add("ID_Student", IntegerType)
+      .add("Latitude", DoubleType)
+      .add("Longitude", DoubleType)
+      .add("Timestamp", StringType)
+      .add("Sentence", StringType)
+      .add("Email", StringType)
+      .add("Troublesome", BooleanType)
 
-    val kafkaDF = spark.readStream.format("kafka").option("kafka.bootstrap.servers", kafkaHost).option("subscribe", inputTopic)
+    val kafkaDF = spark.readStream.format("kafka")
+      .option("kafka.bootstrap.servers", kafkaHost)
+      .option("subscribe", inputTopic)
       .option("startingOffsets", "latest")
       .load()
 
-    val processedIOTReportsDF = kafkaDF.selectExpr("CAST(value AS STRING) AS json")
-      .select(from_json($"json", schema).as("data"))
-      .select("data.*")
+    // Convertir les valeurs du Kafka en chaîne de caractères et les analyser en JSON
+    val jsonDF = kafkaDF.withColumn("json", col("value").cast("string"))
+    val parsedDF = jsonDF.withColumn("data", from_json(col("json"), schema))
+    val processedIOTReportsDF = parsedDF.select("data.*")
 
+    // Filtrer les rapports problématiques
     val troublesomeReportsDF = processedIOTReportsDF.filter($"Troublesome")
       .map { row =>
         val ID_Student = row.getInt(0)
@@ -100,18 +117,17 @@ object Notification {
         val Email = row.getString(5)
         val troublesomeWord = detectTroublesomeWord(Sentence, wordsToDetect).getOrElse("")
         val localisation = s"($Latitude, $Longitude)"
-        
-        
 
         logger.info(s"Row details: ID_Student=$ID_Student, Latitude=$Latitude, Longitude=$Longitude, Timestamp=$Timestamp, Sentence=$Sentence, Email=$Email, troublesomeWord=$troublesomeWord")
 
-        (troublesomeWord, localisation, Sentence, ID_Student, Timestamp,Email)
+        (troublesomeWord, localisation, Sentence, ID_Student, Timestamp, Email)
       }.toDF("BadWord", "Localisation", "Message", "Student_ID", "Timestamp", "Email")
 
+    // Écrire les rapports problématiques en streaming
     val query = troublesomeReportsDF.writeStream
       .outputMode("append")
       .foreachBatch { (batchDF: DataFrame, batchId: Long) =>
-        batchDF.as[(String, String, String, Int, String,String)].collect().foreach { case (badWord, localisation, message, studentId, timestamp,email) =>
+        batchDF.as[(String, String, String, Int, String, String)].collect().foreach { case (badWord, localisation, message, studentId, timestamp, email) =>
           val data = Map(
             "BadWord" -> badWord,
             "Localisation" -> localisation,
@@ -121,7 +137,7 @@ object Notification {
           )
           logger.info(s"Saving data to Firestore: $data")
           saveToFirestore("badwords", data)
-          sendWarningEmail(email, message)
+          sendWarningEmail(email, studentId, message, timestamp, localisation)
         }
       }
       .trigger(Trigger.ProcessingTime("10 seconds"))

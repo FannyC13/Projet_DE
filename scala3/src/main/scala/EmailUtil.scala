@@ -3,6 +3,8 @@ import javax.mail.internet.{InternetAddress, MimeMessage}
 import java.util.Properties
 
 object EmailUtil {
+
+  //Définition des variables
   val username = sys.env("MAIL_ACCOUNT")
   val password = sys.env("MAIL_PASSWORD")
 
@@ -11,6 +13,8 @@ object EmailUtil {
   props.put("mail.smtp.starttls.enable", "true")
   props.put("mail.smtp.host", "smtp.gmail.com")
   props.put("mail.smtp.port", "587")
+
+  //Instance de mail
 
   val session = Session.getInstance(props, new javax.mail.Authenticator() {
     protected override def getPasswordAuthentication: PasswordAuthentication = {
@@ -22,7 +26,7 @@ object EmailUtil {
     try {
       val message = new MimeMessage(session)
       message.setFrom(new InternetAddress(username))
-      // Convert the array of InternetAddress to an array of Address
+
       val addresses: Array[javax.mail.Address] = InternetAddress.parse(recipient).map(_.asInstanceOf[javax.mail.Address])
       message.setRecipients(Message.RecipientType.TO, addresses)
       message.setSubject(subject)
